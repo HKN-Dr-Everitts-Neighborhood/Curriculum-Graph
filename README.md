@@ -29,14 +29,16 @@ The data format needs to support the above design goals.  As long as no new feat
 
 The format looks like this:
 
+````
 [
   {
-    "name": \<course number and name\>,
-    "prereqs": [\<prereq1\>, \<prereq2\>, ... ]
+    "name": <course number and name>,
+    "prereqs": [<prereq1>, <prereq2>, ... ]
   },
   {
     "name": <next course name>,
-    "prereqs": [\<prereq1\>, ... ]
+    "prereqs": [<prereq1>, ... ]
   },
   ...
 ]
+````
