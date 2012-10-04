@@ -31,12 +31,12 @@ The format looks like this:
 
 [
   {
-    "name": <course number and name>,
-    "prereqs": [<prereq1>, <prereq2>, ... ]
+    "name": \<course number and name\>,
+    "prereqs": [\<prereq1\>, \<prereq2\>, ... ]
   },
   {
     "name": <next course name>,
-    "prereqs": [<prereq1>, ... ]
+    "prereqs": [\<prereq1\>, ... ]
   },
   ...
 ]
