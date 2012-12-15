@@ -1,9 +1,7 @@
 <html>
 <head>
-<script src="raphael.js" type="text/javascript"></script>
-<script src="dracula_graph.js" type="text/javascript"></script>
-<script src="dracula_graffle.js" type="text/javascript"></script>
-<script src="jquery-1.8.2.min.js" type="text/javascript"></script>
+
+<script src="d3.v2.js" type="text/javascript"></script>
 
 <style>
 .node circle {
@@ -21,180 +19,187 @@
   stroke: #ccc;
   stroke-width: 1.5px;
 }
+
+.box {
+  border: 1px solid black;
+  width: 150px;
+  margin: 2px;
+  padding: 1px;
+}
 </style>
 
 </head>
 <body>
 
-<div id="chart"></div>
+<svg xlmns="http://www.w3.org/2000/svg" version="1.1" id="chart"></svg>
 
 <script type="text/javascript">
 var json = [
   {
     "name": "flare",
-    "prereqs": []
+    "prereqs": [[]]
   },
-  {"name": "AgglomerativeCluster", "prereqs": ["flare"]},
-  {"name": "CommunityStructure", "prereqs": ["flare"]},
-  {"name": "HierarchicalCluster", "prereqs": ["flare", "CommunityStructure"]},
-  {"name": "MergeEdge", "prereqs": ["flare"]}
+  {"name": "AgglomerativeCluster", "prereqs": [["flare"]]},
+  {"name": "CommunityStructure", "prereqs": [["flare"]]},
+  {"name": "HierarchicalCluster", "prereqs": [["flare", "CommunityStructure"]]},
+  {"name": "MergeEdge", "prereqs": [["flare"]]}
  ];
 
-var margin = {top: 20, right: 120, bottom: 20, left: 120},
-    width = 1280 - margin.right - margin.left,
-    height = 800 - margin.top - margin.bottom,
-    i = 0,
-    duration = 500;
+function DAG(canvas) {
 
+  this.nodes = {};
+  this.roots = [];
+  
+  this.addNode = function(name) {
+    var new_node = {name: name, children: [], parents: []};
+    this.nodes[name] = new_node;
+    return name;
+  };
+  
+  this.addEdge = function(node1, node2) {
+    this.nodes[node1].children.push(node2);
+    this.nodes[node2].parents.push(node1);
+  };
 
-var g = new Graph("chart", 960, 700);
+  this.find_roots = function()
+  {
+    this.roots = [];
+
+    for (var node in this.nodes) {
+      if (this.nodes[node].parents.length === 0)
+        this.roots.push(node);
+    }
+  };
+
+  this.postorder = function(start, reached) {
+    var order = [];
+
+    if (!(start.name in reached))
+    {
+      reached[start.name] = 1;
+
+      for (var i = 0; i < start.children.length; i++)
+      {
+        order = order.concat(this.postorder(this.nodes[start.children[i]], reached));
+      }
+      order.push(start.name);
+    }
+
+    return order;
+  };
+
+  this.compute_order = function()
+  {
+    //parents isn't used by postorder, so we ignore it
+    var fake_entry_node = {children: this.roots, name: "__fake_entry"};
+    var reached = {};
+    var order = this.postorder(fake_entry_node, reached);
+
+    order.pop();
+    order.reverse();
+    return order;
+  };
+
+  this.layout = function()
+  {
+    //order the vertices
+    this.find_roots();
+    var ordering = this.compute_order(); // the topological order
+
+    // Assign levels, and build a mapping of the levels
+    var total_max = -1;
+    var levels = [];
+
+    for (var i = 0; i < ordering.length; i++)
+    {
+      var cur_node = this.nodes[ordering[i]];
+      var max_level = -1; //one less than roots' level
+      
+      for (var j = 0; j < cur_node.parents.length; j++)
+        if (this.nodes[cur_node.parents[j]].level > max_level)
+          max_level = this.nodes[cur_node.parents[j]].level;
+
+      cur_node.level = max_level+1;
+      console.log("Assigned level of " + cur_node.level);
+      if (cur_node.level > total_max)
+      {
+        total_max = cur_node.level;
+	levels.push([]);
+
+        // Sanity check, remove later
+	if (levels.length-1 !== cur_node.level)
+	  console.log("ERROR!");
+	
+	levels[levels.length-1].push(cur_node.name);
+      }
+      else
+      	levels[cur_node.level].push(cur_node.name);
+    }
+
+    console.log(levels);
+    // Assign positions
+    for (var i=0; i < levels.length; i++)
+    {
+      console.log("Layout!");
+      for (var j=0; j < levels[i].length; j++)
+      {
+        this.nodes[levels[i][j]].x = i*150;
+	this.nodes[levels[i][j]].y = j*50+50;
+      }
+    }
+  };
+
+  this.draw = function() {
+    this.layout();
+    
+    var node_list = [];
+    for (var node in this.nodes)
+    {
+      node_list.push(node);
+    }
+
+    d3.select(canvas).selectAll("g").data(node_list)
+      .enter().append("g").attr("transform", 
+        function(datum){
+	  console.log(datum, g.nodes[datum]);
+	  return "translate(" + g.nodes[datum].x + "," + g.nodes[datum].y + ")";
+	}
+      )
+      .append("text").text(function(datum){return datum;})
+
+  };
+}
+
+var g = new DAG("#chart");
 
 var makegraph = function(json) {
-  var roots = [];
-  var remaining = [];
   var index = {};
 
   for (var i = 0; i < json.length; i++) {
-    json[i].children = [];
+    //json[i].children = [];
   
-    if (json[i].prereqs.length === 0)
-      roots.push(json[i]);
-    else
-      remaining.push(json[i]);
     index[json[i].name] = json[i];
     json[i].node = g.addNode(json[i].name);
   }
  
-  var n = roots.length;
-  for (var i=0; i < n; i++) {
-    roots[i].x0 = i * height / n;
-    roots[i].y0 = 0;
-  }
 
-  for (var i = 0; i < remaining.length; i++)
+  //Currently, only support prereqs (no coreqs)
+
+  for (var i = 0; i < json.length; i++)
   {
-    var p = remaining[i].prereqs;
-    for (var j = 0; j < p.length; j++)
+    for (var j=0; j < json[i].prereqs.length; j++)
     {
-      index[p[j]].children.push(remaining[i]);
-      g.addEdge(p[j], remaining[i].name, {directed: true});
+      var p = json[i].prereqs[j];
+      for (var k = 0; k < p.length; k++)
+      {
+        //index[p[k]].children.push(json[i]);
+        g.addEdge(index[p[k]].node, json[i].node);
+      }
     }
   }
-  
-  /*var order = [];
-  for (var i = 0; i < roots.length; i++)
-  {
-	order.push(roots[i]);
-  }
-  for (var i = 0; i < order.length; i++)
-  {
-	order[i].children.forEach(function(c){order.push(c);});
-  }*/
-  
-  var layouter = new Graph.Layout.Spring(g);
-  layouter.layout();
  
-  var renderer = new Graph.Renderer.Raphael('chart', g, 400, 300);
-  renderer.draw();
+  g.draw();
 };
-
-/*function update(source) {
-
-  // Compute the new tree layout.
-  var nodes = tree.nodes(root).reverse();
-
-  // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 180; });
-
-  // Update the nodes…
-  var node = vis.selectAll("g.node")
-      .data(nodes, function(d) { return d.id || (d.id = ++i); });
-
-  // Enter any new nodes at the parent's previous position.
-  var nodeEnter = node.enter().append("g")
-      .attr("class", "node")
-      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
-      .on("click", click);
-
-  nodeEnter.append("circle")
-      .attr("r", 1e-6)
-      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
-
-  nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
-      .attr("dy", ".35em")
-      .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
-      .text(function(d) { return d.name; })
-      .style("fill-opacity", 1e-6);
-
-  // Transition nodes to their new position.
-  var nodeUpdate = node.transition()
-      .duration(duration)
-      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
-
-  nodeUpdate.select("circle")
-      .attr("r", 4.5)
-      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
-
-  nodeUpdate.select("text")
-      .style("fill-opacity", 1);
-
-  // Transition exiting nodes to the parent's new position.
-  var nodeExit = node.exit().transition()
-      .duration(duration)
-      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
-      .remove();
-
-  nodeExit.select("circle")
-      .attr("r", 1e-6);
-
-  nodeExit.select("text")
-      .style("fill-opacity", 1e-6);
-
-  // Update the links…
-  var link = vis.selectAll("path.link")
-      .data(tree.links(nodes), function(d) { return d.target.id; });
-
-  // Enter any new links at the parent's previous position.
-  link.enter().insert("path", "g")
-      .attr("class", "link")
-      .attr("d", function(d) {
-        var o = {x: source.x0, y: source.y0};
-        return diagonal({source: o, target: o});
-      });
-
-  // Transition links to their new position.
-  link.transition()
-      .duration(duration)
-      .attr("d", diagonal);
-
-  // Transition exiting nodes to the parent's new position.
-  link.exit().transition()
-      .duration(duration)
-      .attr("d", function(d) {
-        var o = {x: source.x, y: source.y};
-        return diagonal({source: o, target: o});
-      })
-      .remove();
-
-  // Stash the old positions for transition.
-  nodes.forEach(function(d) {
-    d.x0 = d.x;
-    d.y0 = d.y;
-  });
-}
-
-// Toggle children on click.
-function click(d) {
-  if (d.children) {
-    d._children = d.children;
-    d.children = null;
-  } else {
-    d.children = d._children;
-    d._children = null;
-  }
-  update(d);
-}*/
 
 makegraph(json);
 

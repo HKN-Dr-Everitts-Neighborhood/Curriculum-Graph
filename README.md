@@ -35,8 +35,8 @@ The format looks like this:
     "name": <course number - e.g. ECE 110>
     "title": <course title - e.g. Introduction to Electrical and Computer Engineering>,
     "link": <link to wiki page> // This field is optional
-    "prereqs": [ <prereq1 name>, <prereq2 name>, ... ],
-    "coreqs": [ <coreq1 name>, <coreq2 name>, ... ]
+    "prereqs": [ [<prereq1 name>, <prereq2 name>], ... ],
+    "coreqs": [ [<coreq1 name>, <coreq2 name>], ... ]
   },
   {
     "name": <next course name>,
