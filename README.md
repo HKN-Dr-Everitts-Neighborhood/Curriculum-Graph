@@ -41,13 +41,17 @@ The format looks like this:
   {
     "name": <next course name>,
     "title": <The course's title> //there is no page for this course, and hence no link
-    "prereqs": [ <prereq1 name>, ... ]
-    "coreqs": [ <coreq1 name>, <coreq2 name>, ... ]
+    "prereqs": [ [<prereq1 name>, ... ], ... ]
+    "coreqs": [ [<coreq1 name>, <coreq2 name>, ... ], ... ]
   },
   ...
 ]
 ````
 
-This format is still under development.  Right now, we'll have prereqs and coreqs being the official prereqs / coreqs; in the future, we may extend the format to allow for displaying "DEN recommendations" about prereqs/coreqs.
+This format is still under development.  Right now, we'll have prereqs and coreqs being the official prereqs / coreqs; in the future, we may extend the format to allow for displaying "DEN recommendations" about prereqs/coreqs.  Worth mentioning about prereqs / coreqs: the format is a list of lists: each sublist is a set of prereqs which prepare you for that class.  So for example, if we want to say that for ECE 210 you need (MATH 286 or MATH 285) and PHYS 212, we'd set the prereqs to
+
+````
+[["MATH 286", "PHYS 212"], ["MATH 285", "PHYS 212"]]
+````
 
 One issue is having multiple courses under the same name - e.g. ECE 498.  This issue will have to be tackled if we ever feel it necessary to tackle this in the graph - these courses tend to be outside the normal curriculum, and change from semester to semester.  A possible solution would be to have a suffix added to the name of these courses - e.g. "ECE 498SL" could be Steve Lumetta's "Engineering Parallel Software" class.  It's important that the names be unique.
