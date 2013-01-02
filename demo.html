@@ -1,0 +1,578 @@
+
+<!doctype html>
+
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Dagre Interactive Demo</title>
+
+<style>
+text {
+  font: 300 16px "Helvetica Neue";
+}
+
+rect {
+  fill: #fff;
+}
+
+.node > rect {
+  stroke-width: 3px;
+  stroke: #333;
+  fill: none;
+}
+
+.node:hover {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.edge rect {
+  fill: #fff
+}
+
+.edge path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+.edge:hover {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.cp {
+  opacity: 0;
+}
+
+.cp:hover {
+  cursor:pointer;
+  opacity: 1;
+}
+
+</style>
+
+<style>
+h1, h2 {
+  color: #333;
+}
+
+textarea {
+  width: 800px;
+}
+
+label {
+  margin-top: 1em;
+  display: block;
+}
+
+.error {
+  color: red;
+}
+
+svg {
+  border: 1px solid #999;
+}
+</style>
+
+</head>
+<body>
+
+<svg width=800 height=600>
+  <defs>
+    <marker id="arrowhead"
+            viewBox="0 0 10 10"
+            refX="8"
+            refY="5"
+            markerUnits="strokeWidth"
+            markerWidth="8"
+            markerHeight="5"
+            orient="auto"
+            style="fill: #333">
+      <path d="M 0 0 L 10 5 L 0 10 z"></path>
+    </marker>
+  </defs>
+</svg>
+
+<script src="http://d3js.org/d3.v2.min.js"></script>
+<script src="dagre.js"></script>
+
+<script>
+
+function tryDraw(dot_desc) {
+  
+  var result = dagre.dot.toObjects(dot_desc);
+  result.edges.forEach(function(e) { if (!e.label) { e.label = ""; } });
+
+  result.nodes.forEach(function(node) {
+    node.inEdges = [];
+    node.outEdges = [];
+  });
+  result.edges.forEach(function(edge) {
+    edge.source.outEdges.push(edge);
+    edge.target.inEdges.push(edge);
+  });
+
+  console.log(result);
+  draw(result.nodes, result.edges);
+}
+</script>
+
+<script>
+var svg = d3.select("svg");
+var svgGroup = svg.append("g").attr("transform", "translate(5, 5)");
+
+var nodes, edges;
+function draw(nodeData, edgeData) {
+  // D3 doesn't appear to like rebinding with the same id but a new object,
+  // so for now we remove everything.
+  svgGroup.selectAll("*").remove();
+
+  nodes = svgGroup
+    .selectAll("g .node")
+    .data(nodeData, function(d) { return d.id; });
+
+  var nodeEnter = nodes
+    .enter()
+    .append("g")
+      .attr("class", "node")
+      .attr("id", function(d) { return "node-" + d.id; })
+      .each(function(d) { d.nodePadding = 10; });
+  nodeEnter.append("rect");
+  addLabels(nodeEnter);
+  nodes.exit().remove();
+
+  edges = svgGroup
+    .selectAll("g .edge")
+    .data(edgeData, function(d) { return d.id; });
+
+  var edgeEnter = edges
+    .enter()
+    .append("g")
+      .attr("class", "edge")
+      .attr("id", function(d) { return "edge-" + d.id; })
+      .each(function(d) { d.nodePadding = 0; })
+  edgeEnter
+    .append("path")
+      .attr("marker-end", "url(#arrowhead)");
+  addLabels(edgeEnter);
+  edges.exit().remove();
+
+  recalcLabels();
+
+  // Add zoom behavior to the SVG canvas
+  /*svg.call(d3.behavior.zoom().on("zoom", function redraw() {
+    svgGroup.attr("transform",
+          "translate(" + d3.event.translate + ")"
+          + " scale(" + d3.event.scale + ")");
+  }));*/
+
+  // Run the actual layout
+  dagre.layout()
+    .nodes(nodeData)
+    .edges(edgeData)
+    .debugLevel(2)
+    .run();
+
+  //TODO: make this hack work
+  //root node is a hack to modify the layout; we'll remove it here.
+  nodes = nodes.filter(function(n) {return n.id !== "root";});
+  edges = edges.filter(function(e) {return e.source.id !== "root";});
+  
+  svgGroup.selectAll("#node-root").remove();
+
+  //click handler
+  nodes.on(
+    "click",
+    function(nodes, edges){
+      return function(n){
+        // Right now, the click handler toggles outedges and their targets
+	// (but doesn't go further down the DAG or show other edges pointing to the new nodes)
+
+	// n.display works as a toggle.
+	// Also, the initialization is done here too (sorry about hacky use of undefined)
+	n.display = (n.display !== undefined && n.display === "inline" ) ? "none" : "inline";
+	
+	//this works, but is clumsy.
+	nodes.filter(
+	  function(node){
+	    return n.outEdges.filter(
+	      function(e){return node.id === e.target.id;}
+            ).length !== 0;
+	  }
+	).style("display", n.display);
+	
+	//also clumsy
+	edges.filter(
+	  function(edge) {
+	    return n.outEdges.filter(function(e){return e.id === edge.id;}).length !== 0;
+	  }
+	).style("display", n.display);
+      };
+    }(nodes, edges)
+  );
+
+  // hide all non-roots
+  nodes.filter(function(n) {
+    return (
+      n.inEdges.filter(
+        function(e) {return e.source.id === "root";}
+      ).length === 0
+    );
+  }).style("display", "none");
+  edges.style("display", "none"); //all edges get hidden
+
+  // Ensure that we have at least two points between source and target
+  edges.each(function(d) { ensureTwoControlPoints(d); });
+
+
+  // Re-render
+  update();
+}
+
+function addLabels(selection) {
+  var labelGroup = selection
+    .append("g")
+      .attr("class", "label");
+  labelGroup.append("rect");
+
+  var foLabel = labelGroup
+    .filter(function(d) { return d.label[0] === "<"; })
+    .append("foreignObject")
+      .attr("class", "htmllabel");
+
+  foLabel
+    .append("xhtml:div")
+      .style("float", "left");
+
+  labelGroup
+    .filter(function(d) { return d.label[0] !== "<"; })
+    .append("text")
+}
+
+function recalcLabels() {
+  var labelGroup = svgGroup.selectAll("g.label");
+
+  var foLabel = labelGroup
+    .selectAll(".htmllabel")
+    // TODO find a better way to get the dimensions for foriegnObjects
+    .attr("width", "100000");
+
+  foLabel
+    .select("div")
+      .html(function(d) { return d.label; })
+      .each(function(d) {
+        d.width = this.clientWidth;
+        d.height = this.clientHeight;
+        d.nodePadding = 0;
+      });
+
+  foLabel
+    .attr("width", function(d) { return d.width; })
+    .attr("height", function(d) { return d.height; });
+
+  var textLabel = labelGroup
+    .filter(function(d) { return d.label[0] !== "<"; });
+
+  textLabel
+    .select("text")
+      .attr("text-anchor", "left")
+        .append("tspan")
+        .attr("dy", "1em")
+        .text(function(d) { return d.label; });
+
+  labelGroup
+    .each(function(d) {
+      var bbox = this.getBBox();
+      d.bbox = bbox;
+      if (d.label.length) {
+        d.width = bbox.width + 2 * d.nodePadding;
+        d.height = bbox.height + 2 * d.nodePadding;
+      } else {
+        d.width = d.height = 0;
+      }
+    });
+}
+
+function ensureTwoControlPoints(d) {
+  var points = d.dagre.points;
+  if (!points.length) {
+    var s = d.source.dagre;
+    var t = d.target.dagre;
+    points.push({ x: Math.abs(s.x - t.x) / 2, y: Math.abs(s.y + t.y) / 2 });
+  }
+
+  if (points.length === 1) {
+    points.push({ x: points[0].x, y: points[0].y });
+  }
+}
+
+// Translates all points in the edge using `dx` and `dy`.
+function translateEdge(e, dx, dy) {
+  e.dagre.points.forEach(function(p) {
+    p.x += dx;
+    p.y += dy;
+  });
+}
+
+function update() {
+  nodes
+    .attr("transform", function(d) {
+      return "translate(" + d.dagre.x + "," + d.dagre.y +")"; })
+    .selectAll("g.node rect")
+      .attr("x", function(d) { return -(d.bbox.width / 2 + d.nodePadding); })
+      .attr("y", function(d) { return -(d.bbox.height / 2 + d.nodePadding); })
+      .attr("width", function(d) { return d.width; })
+      .attr("height", function(d) { return d.height; });
+
+  edges
+    .selectAll("path")
+    .attr("d", function(d) {
+      var points = d.dagre.points.slice(0);
+      var source = dagre.util.intersectRect(d.source.dagre, points[0]);
+      var target = dagre.util.intersectRect(d.target.dagre, points[points.length - 1]);
+      points.unshift(source);
+      points.push(target);
+      return d3.svg.line()
+        .x(function(e) { return e.x; })
+        .y(function(e) { return e.y; })
+        .interpolate("linear")
+        (points);
+    });
+
+  edges
+    .selectAll("circle")
+    .attr("r", 5)
+    .attr("cx", function(d) { return d.x; })
+    .attr("cy", function(d) { return d.y; });
+
+  svgGroup
+    .selectAll("g.label rect")
+    .attr("x", function(d) { return -d.nodePadding; })
+    .attr("y", function(d) { return -d.nodePadding; })
+    .attr("width", function(d) { return d.width; })
+    .attr("height", function(d) { return d.height; });
+
+  nodes
+    .selectAll("g.label")
+    .attr("transform", function(d) { return "translate(" + (-d.bbox.width / 2) + "," + (-d.bbox.height / 2) + ")"; })
+
+  edges
+    .selectAll("g.label")
+    .attr("transform", function(d) {
+      var points = d.dagre.points;
+      var x = (points[0].x + points[1].x) / 2;
+      var y = (points[0].y + points[1].y) / 2;
+      return "translate(" + (-d.bbox.width / 2 + x) + "," + (-d.bbox.height / 2 + y) + ")";
+    });
+}
+</script>
+
+<script type="text/javascript">
+var json = [
+  {
+    "name": "MATH 221",
+    "title": "Calculus I",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+221+-+Calculus+I",
+    "prereqs": [[]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "MATH 231",
+    "title": "Calculus II",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+231+-+Calculus+II",
+    "prereqs": [["MATH 221"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "MATH 241",
+    "title": "Calculus III",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+241+-+Calculus+III",
+    "prereqs": [["MATH 231"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "MATH 286",
+    "title": "Intro to Differential Equations Plus",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+286+-+Introduction+to+Differential+Equations+Plus",
+    "prereqs": [["MATH 241"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "PHYS 211",
+    "title": "University Physics: Mechanics",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+211+-+University+Physics%2C+Mechanics",
+    "prereqs": [[]],
+    "coreqs": [["MATH 231"]]
+  },
+  {
+    "name": "PHYS 212",
+    "title": "University Physics: Electricity and Magnetism",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+212+-+University+Physics%2C+Electricity+and+Magnetism",
+    "prereqs": [["PHYS 211"]],
+    "coreqs": [["MATH 241"]]
+  },
+  {
+    "name": "PHYS 213",
+    "title": "University Physics: Thermal Physics",
+    "link": "",
+    "prereqs": [["PHYS 212"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "PHYS 214",
+    "title": "University Physics: Quantum Mechanics",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+214+-+University+Physics%2C+Quantum+Physics",
+    "prereqs": [["PHYS 212"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 110",
+    "title": "Introduction to Electrical and Computer Engineering",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+110+-+Introduction+to+Electrical+and+Computer+Engineering",
+    "prereqs": [[]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 190",
+    "title": "Introduction to Computing Systems",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+190+-+Introduction+to+Computing+Systems",
+    "prereqs": [["ECE 110"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 210",
+    "title": "Analog Signal Processing",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+210+-+Analog+Signal+Processing",
+    "prereqs": [["ECE 110", "PHYS 212"]],
+    "coreqs": [["MATH 286"]]
+  },
+  {
+    "name": "ECE 290",
+    "title": "Computer Engineering I",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+290+-+Computer+Engineering+I",
+    "prereqs": [["ECE 190"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 329",
+    "title": "Fields and Waves I",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+329+-+Fields+and+Waves+I",
+    "prereqs": [["ECE 210"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 340",
+    "title": "Solid State Electronic Devices",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+340+-+Solid+State+Electronic+Devices",
+    "prereqs": [["PHYS 214"]],
+    "coreqs": [["ECE 329"]]
+  }
+ ];
+
+function DAG() {
+
+  this.nodes = {};
+  this.node_list = [];
+  this.edge_list = [];
+  
+  this.addNode = function(name) {
+    var new_node = {name: name, children: [], parents: []};
+    this.nodes[name] = new_node;
+    this.node_list.push(new_node);
+    return name;
+  };
+  
+  this.addEdge = function(node1, node2) {
+    this.nodes[node1].children.push(node2);
+    this.nodes[node2].parents.push(node1);
+    this.edge_list.push([node1, node2]);
+  };
+
+  this.find_roots = function()
+  {
+    var roots = [];
+
+    for (var node in this.nodes) {
+      if (this.nodes[node].parents.length === 0)
+        roots.push(node);
+    }
+    
+    return roots;
+  };
+
+  this.draw = function() {
+
+    var roots = this.find_roots();
+
+    /* build DOT input.  Because this is what dagre expects.  I don't like
+       this interface, but it does work */
+
+    nodes_from_name = {};
+
+    var str = "digraph {\n";
+
+    for (var i = 0; i < this.node_list.length; i++) {
+      nodes_from_name[this.node_list[i].name] = "a" + i;
+      str += "a" + i + " [ label=\"" + this.node_list[i].name + "\" ];\n";
+    }
+
+    for (var i = 0; i < this.edge_list.length; i++) {
+      str += nodes_from_name[this.edge_list[i][0]] + " -> " + nodes_from_name[this.edge_list[i][1]] + ";\n";
+    }
+    
+    for (var i = 0; i < roots.length; i++) {
+      str += "root -> " + nodes_from_name[roots[i]] + ";\n";
+    }
+    str += "}";
+    
+    console.log(str);
+    tryDraw(str);
+  };
+}
+
+var g = new DAG();
+
+var makegraph = function(json) {
+  var index = {};
+
+  for (var i = 0; i < json.length; i++) {
+    //json[i].children = [];
+  
+    index[json[i].name] = json[i];
+    json[i].node = g.addNode(json[i].name);
+  }
+ 
+  //Currently, only support prereqs (no coreqs)
+
+  for (var i = 0; i < json.length; i++)
+  {
+    for (var j = 0; j < json[i].prereqs.length; j++)
+    {
+      var p = json[i].prereqs[j];
+      for (var k = 0; k < p.length; k++)
+      {
+        g.addEdge(index[p[k]].node, json[i].node);
+      }
+    }
+    
+    for (var j = 0; j < json[i].coreqs.length; j++)
+    {
+      var c = json[i].coreqs[j];
+      for (var k = 0; k < c.length; k++)
+      {
+        g.addEdge(index[c[k]].node, json[i].node);
+	//g.addEdge(json[i].node, index[c[k]].node);
+      }
+    }
+  }
+ 
+  g.draw();
+};
+
+makegraph(json);
+</script>
+
+</body>
+<html>

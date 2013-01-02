@@ -144,7 +144,7 @@ function DAG(canvas) {
       for (var j=0; j < levels[i].length; j++)
       {
         this.nodes[levels[i][j]].x = i*150;
-	this.nodes[levels[i][j]].y = j*50+50;
+        this.nodes[levels[i][j]].y = j*50+50;
       }
     }
   };
@@ -192,7 +192,6 @@ var makegraph = function(json) {
       var p = json[i].prereqs[j];
       for (var k = 0; k < p.length; k++)
       {
-        //index[p[k]].children.push(json[i]);
         g.addEdge(index[p[k]].node, json[i].node);
       }
     }
