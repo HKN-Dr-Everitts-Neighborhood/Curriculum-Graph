@@ -186,29 +186,37 @@ function draw(nodeData, edgeData) {
   nodes.on(
     "click",
     function(nodes, edges){
+    
+      var nodes_expanded = {};
       return function(n){
         // Right now, the click handler toggles outedges and their targets
 	// (but doesn't go further down the DAG or show other edges pointing to the new nodes)
 
-	// n.display works as a toggle.
-	// Also, the initialization is done here too (sorry about hacky use of undefined)
-	n.display = (n.display !== undefined && n.display === "inline" ) ? "none" : "inline";
+	if (nodes_expanded[n.id] === undefined)
+	  nodes_expanded[n.id] = false;
 	
-	//this works, but is clumsy.
+	nodes_expanded[n.id] = !nodes_expanded[n.id];
+	var display = (nodes_expanded[n.id]) ? "inline" : "none";
+	
+	//Build sets of neighbors and outedges
+	var neighbors = {};
+	var outedges_set = {}
+	n.outEdges.forEach(function(e){neighbors[e.target.id] = 1; outedges_set[e.id] = 1;});
+	
+	//display the neighbors
 	nodes.filter(
 	  function(node){
-	    return n.outEdges.filter(
-	      function(e){return node.id === e.target.id;}
-            ).length !== 0;
+	    return node.id in neighbors;
 	  }
-	).style("display", n.display);
+	).style("display", display);
 	
-	//also clumsy
+	//display edges to the neighbors
 	edges.filter(
 	  function(edge) {
-	    return n.outEdges.filter(function(e){return e.id === edge.id;}).length !== 0;
+	    return edge.id in outedges_set;
 	  }
-	).style("display", n.display);
+	).style("display", display);
+	
       };
     }(nodes, edges)
   );
