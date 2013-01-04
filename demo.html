@@ -200,20 +200,29 @@ function draw(nodeData, edgeData) {
 	
 	//Build sets of neighbors and outedges
 	var neighbors = {};
-	var outedges_set = {}
-	n.outEdges.forEach(function(e){neighbors[e.target.id] = 1; outedges_set[e.id] = 1;});
+	var edges_to_display = {};
+	n.outEdges.forEach(function(e){neighbors[e.target.id] = 1;});
 	
 	//display the neighbors
 	nodes.filter(
 	  function(node){
-	    return node.id in neighbors;
+	    if (node.id in neighbors) {
+	      var all_src_expanded = true;
+              node.inEdges.forEach(function(e){all_src_expanded = all_src_expanded && (e.source.id in nodes_expanded);});
+	      
+	      if (all_src_expanded)
+	        node.inEdges.forEach(function(e){edges_to_display[e.id] = true;});
+	      
+	      return all_src_expanded;
+	    }
+	    return false;
 	  }
 	).style("display", display);
 	
 	//display edges to the neighbors
 	edges.filter(
 	  function(edge) {
-	    return edge.id in outedges_set;
+	    return edge.id in edges_to_display;
 	  }
 	).style("display", display);
 	
