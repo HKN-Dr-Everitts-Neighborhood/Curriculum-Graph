@@ -27,6 +27,11 @@ rect {
   opacity: 0.4;
 }
 
+.expanded > rect {
+  stroke: green;
+  stroke-width: 5px;
+}
+
 .edge rect {
   fill: #fff
 }
@@ -183,52 +188,7 @@ function draw(nodeData, edgeData) {
   svgGroup.selectAll("#node-root").remove();
 
   //click handler
-  nodes.on(
-    "click",
-    function(nodes, edges){
-    
-      var nodes_expanded = {};
-      return function(n){
-        // Right now, the click handler toggles outedges and their targets
-	// (but doesn't go further down the DAG or show other edges pointing to the new nodes)
-
-	if (nodes_expanded[n.id] === undefined)
-	  nodes_expanded[n.id] = false;
-	
-	nodes_expanded[n.id] = !nodes_expanded[n.id];
-	var display = (nodes_expanded[n.id]) ? "inline" : "none";
-	
-	//Build sets of neighbors and outedges
-	var neighbors = {};
-	var edges_to_display = {};
-	n.outEdges.forEach(function(e){neighbors[e.target.id] = 1;});
-	
-	//display the neighbors
-	nodes.filter(
-	  function(node){
-	    if (node.id in neighbors) {
-	      var all_src_expanded = true;
-              node.inEdges.forEach(function(e){all_src_expanded = all_src_expanded && (e.source.id in nodes_expanded);});
-	      
-	      if (all_src_expanded)
-	        node.inEdges.forEach(function(e){edges_to_display[e.id] = true;});
-	      
-	      return all_src_expanded;
-	    }
-	    return false;
-	  }
-	).style("display", display);
-	
-	//display edges to the neighbors
-	edges.filter(
-	  function(edge) {
-	    return edge.id in edges_to_display;
-	  }
-	).style("display", display);
-	
-      };
-    }(nodes, edges)
-  );
+  nodes.on("click", make_click_handler(nodes, edges));
 
   // hide all non-roots
   nodes.filter(function(n) {
@@ -247,6 +207,87 @@ function draw(nodeData, edgeData) {
   // Re-render
   update();
 }
+
+var make_click_handler = function(nodes, edges){
+  
+  var nodes_expanded = {root: true};
+  return function(n){
+    // Right now, the click handler toggles outedges and their targets
+    // (but doesn't go further down the DAG or show other edges pointing to the new nodes)
+
+    if (nodes_expanded[n.id] === undefined)
+      nodes_expanded[n.id] = false;
+  
+    nodes_expanded[n.id] = !nodes_expanded[n.id];
+    var display = (nodes_expanded[n.id]) ? "inline" : "none";
+  
+    //Build sets of neighbors and outedges
+    var neighbors = {};
+    var edges_to_change = {};
+    n.outEdges.forEach(function(e){neighbors[e.target.id] = 1;});
+  
+    //display the neighbors
+    if (nodes_expanded[n.id])
+    {
+      nodes.filter(
+        function(node){
+          if (node.id in neighbors) {
+            var all_src_expanded = true;
+            node.inEdges.forEach(function(e){all_src_expanded = all_src_expanded && (nodes_expanded[e.source.id]);});
+        
+            node.inEdges.forEach(function(e){edges_to_change[e.id] = all_src_expanded;});
+            return all_src_expanded;
+          }
+          return false;
+        }
+      ).style("display", display);
+      
+      //give current node the expanded class
+      nodes.filter(function(node){return node.id === n.id;}).classed("expanded", true);
+    }
+    else
+    {
+      var following_nodes = {};
+    
+      n.outEdges.forEach(function(e){search_for_nodes(e.target, following_nodes)});
+      
+      nodes.filter(
+        function(node) {
+          if (node.id in following_nodes)
+          {
+            nodes_expanded[node.id] = false;
+            node.inEdges.forEach(function(e){edges_to_change[e.id] = true;});
+            
+            return true;
+          }
+          else
+            return false;
+        }
+      ).style("display", "none").classed("expanded", false);
+      nodes.filter(function(node) {return node.id === n.id;}).classed("expanded", false);
+    }
+
+  
+
+    //display edges to the neighbors
+    edges.filter(
+      function(edge) {
+        return edges_to_change[edge.id];
+      }
+    ).style("display", display);
+  };
+};
+
+function search_for_nodes(n, following_nodes) {
+  
+  if (!(n.id in following_nodes))
+  {
+    following_nodes[n.id] = true;
+    n.outEdges.forEach(function(e){
+      search_for_nodes(e.target, following_nodes);
+    });
+  }
+};
 
 function addLabels(selection) {
   var labelGroup = selection
@@ -580,7 +621,7 @@ var makegraph = function(json) {
       for (var k = 0; k < c.length; k++)
       {
         g.addEdge(index[c[k]].node, json[i].node);
-	//g.addEdge(json[i].node, index[c[k]].node);
+  //g.addEdge(json[i].node, index[c[k]].node);
       }
     }
   }
