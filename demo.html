@@ -23,8 +23,7 @@ rect {
 }
 
 .node:hover {
-  cursor: pointer;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .expanded > rect {
@@ -535,8 +534,8 @@ function DAG() {
   this.node_list = [];
   this.edge_list = [];
   
-  this.addNode = function(name) {
-    var new_node = {name: name, children: [], parents: []};
+  this.addNode = function(name, link) {
+    var new_node = {name: name, children: [], parents: [], link: link};
     this.nodes[name] = new_node;
     this.node_list.push(new_node);
     return name;
@@ -573,7 +572,10 @@ function DAG() {
 
     for (var i = 0; i < this.node_list.length; i++) {
       nodes_from_name[this.node_list[i].name] = "a" + i;
-      str += "a" + i + " [ label=\"" + this.node_list[i].name + "\" ];\n";
+      str += "a" + i + " [ label=\"<div style='padding: 10px;'>" +
+                this.node_list[i].name +
+              " <span onclick=\\\"event.stopPropagation();\\\"><a href=\\\"" + this.node_list[i].link +
+              "\\\" target=\\\"_blank\\\">(+)</a></span></div>\" ];\n";
     }
 
     for (var i = 0; i < this.edge_list.length; i++) {
@@ -599,7 +601,7 @@ var makegraph = function(json) {
     //json[i].children = [];
   
     index[json[i].name] = json[i];
-    json[i].node = g.addNode(json[i].name);
+    json[i].node = g.addNode(json[i].name, json[i].link);
   }
  
   //Currently, only support prereqs (no coreqs)
@@ -621,7 +623,7 @@ var makegraph = function(json) {
       for (var k = 0; k < c.length; k++)
       {
         g.addEdge(index[c[k]].node, json[i].node);
-  //g.addEdge(json[i].node, index[c[k]].node);
+        //g.addEdge(json[i].node, index[c[k]].node);
       }
     }
   }
