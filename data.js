@@ -179,5 +179,152 @@ var json = [
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+350+-+Fields+and+Waves+II",
     "prereqs": [["ECE 329"]],
     "coreqs": [[]]
+  } ,
+{
+    "name": "ECE 361",
+    "title": "Fundamentals of Digital Communications",
+    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289485", 
+    "prereqs": [ ["ECE 210", "ECE 313"]],
+    "coreqs": [ [] ]
+  } ,
+{
+    "name": "ECE 380",
+    "title": "Fundamentals of Digital Communications",
+    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289485", 
+    "prereqs": [ ["MATH 286"]],
+    "coreqs": [ [] ]
+  } , 
+  {
+    "name": "ECE 385",
+    "title": "Digital Systems Laboratory",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+385+-+Digital+Systems+Laboratory", 
+    "prereqs": [ ["ECE 290"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 385",
+    "title": "Digital Systems Laboratory",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+385+-+Digital+Systems+Laboratory", 
+    "prereqs": [ ["ECE 290", "ECE 110"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 391",
+    "title": "Computer Systems Engineering",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+391+-+Computer+Systems+Engineering", 
+    "prereqs": [ ["ECE 290"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 391",
+    "title": "Computer Systems Engineering",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+391+-+Computer+Systems+Engineering", 
+    "prereqs": [ ["ECE 290"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 395",
+    "title": "Advanced Digital Systems Laboratory",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+395+-+Advanced+Digital+Systems+Laboratory", 
+    "prereqs": [ ["ECE 385"]],
+    "coreqs": [ [] ]
+  },
+
+  {
+    "name": "ECE 402",
+    "title": "Electronic Music Synthesis",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+402+-+Electronic+Music+Synthesis", 
+    "prereqs": [ ["ECE 290", "ECE 310"]],
+    "coreqs": [ [] ]
+  },
+
+  {
+    "name": "ECE 403",
+    "title": "Audio Engineering",
+    "prereqs": [ ["ECE 290", "ECE 310", "ECE 473"]],
+    "coreqs": [ [] ]
+  },
+
+  {
+    "name": "ECE 408",
+    "title": "Applied Parallel Programming",
+    "crosslist": ["CS 483"],
+    "prereqs": [ ["ECE 190"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 411",
+    "title": "Computer Organization and Design",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+411+-+Computer+Organization+and+Design", 
+    "prereqs": [ ["ECE 391"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 412",
+    "title": "Microcomputer Laboratory",
+    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289509", 
+    "prereqs": [ ["ECE 385", "ECE 391"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 414",
+    "title": "Biomedical Instrumentation",
+    "crosslist": ["BIOE 414"],
+    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=213221447", 
+    "prereqs": [ ["ECE 210"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 415",
+    "title": "Biomedical Instrumentation Lab",
+    "crosslist": ["BIOE 415"],
+    "prereqs": [ []],
+    "coreqs": [ ["ECE 414"] ]
+  },
+  {
+    "name": "ECE 416",
+    "title": "Biosensors",
+    "crosslist": ["BIOE 416"],
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+416+-+Biosensors", 
+    "prereqs": [ ["ECE 329"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 417",
+    "title": "Multimedia Signal Processing",
+    "prereqs": [ ["ECE 310", "ECE 313"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 418",
+    "title": "Image & Video Processing",
+    "prereqs": [ ["ECE 310", "Math 415", "ECE 313"],
+		["ECE 310", "Math 415", "STAT 400"], 
+		["ECE 310", "Math 415", "IE 300"], 
+		["ECE 310", "Math 415", "MATH 461"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 419",
+    "title": "Security Laboratory",
+    "crosslist": ["CS 460"],
+    "prereqs": [ ["CS 461"], ["ECE 422"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 420",
+    "title": "Embedded DSP Laboratory",
+    "crosslist": ["BIOE 416"],
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+420+-+Embedded+DSP+Laboratory", 
+    "prereqs": [ ["ECE 310"]],
+    "coreqs": [ [] ]
+  },
+  {
+    "name": "ECE 422",
+    "title": "Computer Security I",
+    "crosslist": ["CS 461"],
+    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=213747887", 
+    "prereqs": [ ["ECE 391"], ["CS 241"]],
+    "coreqs": [ [] ]
   }
  ];
