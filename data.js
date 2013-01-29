@@ -327,7 +327,7 @@ var json = [
     "prereqs": [ ["ECE 391"], ["CS 241"]],
     "coreqs": [ [] ]
   },
- {
+  {
     "name": "ECE 424",
     "title": "Computer Security II",
     "crosslist": ["CS 463"],
@@ -514,8 +514,21 @@ var json = [
     "name": "CS 173",
     "title": "Discrete Structures",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+173+-+Discrete+Structures",
-    "prereqs": [ []],
-    "coreqs": [ [] ]
+    "prereqs": [
+        ["CS 101", "MATH 220"],
+        ["CS 125", "MATH 220"],
+        ["ECE 190", "MATH 220"],
+        ["INFO 103", "MATH 220"],
+        ["CS 101", "MATH 221"],
+        ["CS 125", "MATH 221"],
+        ["ECE 190", "MATH 221"],
+        ["INFO 103", "MATH 221"],
+        ["CS 101", "MATH 234"],
+        ["CS 125", "MATH 234"],
+        ["ECE 190", "MATH 234"],
+        ["INFO 103", "MATH 234"]
+    ],
+    "coreqs": [[]]
   },
   {
     "name": "CS 125",
@@ -544,5 +557,186 @@ var json = [
     "title": "Applied Linear Algebra",
     "prereqs": [ ["MATH 241"]],
     "coreqs": [ [] ]
-  }
+  },
+  {
+    "name": "ECE 462",
+    "title": "Logic Design",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+462+-+Logic+Design",
+    "prereqs": [["ECE 290"]],
+    "coreqs": [[]]
+  },
+    {
+      "name": "ECE 463",
+      "title": "Digital Communications Lab",
+      "prereqs": [["ECE 361"], ["ECE 459"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 464",
+      "title": "Power Electronics",
+      "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+464+-+Power+Electronics",
+      "prereqs": [["ECE 342"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 465",
+      "title": "Optical Communications Systems",
+      "prereqs": [["ECE 313", "ECE 350"]],
+      "coreqs": [["ECE 459", "ECE 466"]]
+    },
+    {
+      "name": "ECE 466",
+      "title": "Optical Communications Lab",
+      "prereqs": [[]],
+      "coreqs": [["ECE 465"]]
+    },
+    {
+      "name": "ECE 467",
+      "title": "Biophotonics",
+      "crosslist": ["BIOE 467"],
+      "prereqs": [["ECE 455"], ["ECE 460"], ["PHYS 402"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 468",
+      "title": "Optical Remote Sensing",
+      "crosslist": ["AE 468"],
+      "prereqs": [["ECE 329", "ECE 313"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 469",
+      "title": "Power Electronics Lab",
+      "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+469+-+Power+Electronics+Laboratory",
+      "prereqs": [["ECE 343"]],
+      "coreqs": [["ECE 464"]]
+    },
+    {
+      "name": "ECE 470",
+      "title": "Introduction to Robotics",
+      "crosslist": ["AE 482", "ME 445"],
+      "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+470+-+Introduction+to+Robotics",
+      "prereqs": [["MATH 225"], ["MATH 286"], ["MATH 415"], ["MATH 418"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 472",
+      "title": "Biomedical Ultrasound Imaging",
+      "prereqs": [["ECE 329"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 473",
+      "title": "Fund of Engrg Acoustics",
+      "crosslist": ["TAM 413"],
+      "prereqs": [["MATH 285"], ["MATH 286"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 476",
+      "title": "Power System Analysis",
+      "prereqs": [["ECE 330"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 478",
+      "title": "Formal Software Development Methods",
+      "crosslist": ["CS 477"],
+      "prereqs": [["CS 225", "CS 373"], ["CS 225", "MATH 414"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 480",
+      "title": "Magnetic Resonance Imaging",
+      "crosslist": ["BIOE 480"],
+      "prereqs": [["ECE 310"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 481",
+      "title": "Nanotechnology",
+      "prereqs": [["CHEM 442"], ["CHBE 457"], ["ME 485"], ["MSE 401"], ["PHYS 460"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 482",
+      "title": "Digital IC Design",
+      "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+482+-+Digital+IC+Design",
+      "prereqs": [["ECE 290", "ECE 342"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 483",
+      "title": "Analog IC Design",
+      "prereqs": [["ECE 342"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 484",
+      "title": "Prin Adv Microelec Processing",
+      "prereqs": [["ECE 444"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 485",
+      "title": "MEMS Devices & Systems",
+      "crosslist": ["ME 485"],
+      "prereqs": [[]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 486",
+      "title": "Control Systems",
+      "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289976",
+      "prereqs": [["ECE 210"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 487",
+      "title": "Intro to Quantum Electr for EEs",
+      "prereqs": [["PHYS 485"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 488",
+      "title": "Compound Semicond & Devices",
+      "prereqs": [["ECE 340", "ECE 350"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 490",
+      "title": "Introduction to Optimization",
+      "crosslist": ["CSE 441"],
+      "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289978",
+      "prereqs": [["ECE 190", "MATH 415"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 491",
+      "title": "Numerical Analysis",
+      "crosslist": ["CS 450", "MATH 450", "CSE 401"],
+      "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+450+%28ECE+491%2C+MATH+450%2C+CSE+401%29+-+Numerical+Analysis",
+      "prereqs": [["CS 101", "CS 357", "MATH 285"], ["CS 125", "CS 357", "MATH 285"], ["CS 101", "MATH 415", "MATH 285"], ["CS 125", "MATH 415", "MATH 285"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 492",
+      "title": "Parallel Progrmg: Sci & Engrg",
+      "crosslist": ["CS 420", "CSE 402"], 
+      "prereqs": [["CS 225"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 493",
+      "title": "Advanced Engineering Math",
+      "crosslist": ["MATH 487"],
+      "prereqs": [["MATH 284"], ["MATH 285"], ["MATH 286"], ["MATH 441"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "ECE 495",
+      "title": "Photonic Device Laboratory",
+      "prereqs": [["ECE 487"]],
+      "coreqs": [[]]
+    }
  ];
