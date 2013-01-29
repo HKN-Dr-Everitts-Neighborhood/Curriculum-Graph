@@ -490,9 +490,14 @@ function DAG() {
     for (var i = 0; i < this.node_list.length; i++) {
       nodes_from_name[this.node_list[i].name] = "a" + i;
       str += "a" + i + " [ label=\"<div style='padding: 10px; width: 95px; text-align:center;'>" +
-               this.node_list[i].name + " <span onclick=\\\"event.stopPropagation();\\\"><a href=\\\"" +
+               this.node_list[i].name;
+      if (this.node_list[i].link) //hide link icon if no link
+      {
+        str += " <span onclick=\\\"event.stopPropagation();\\\"><a href=\\\"" +
               this.node_list[i].link +
-              "\\\" target=\\\"_blank\\\"><img src=\\\"link-icon.png\\\" /></a></span></div>\" ];\n";
+              "\\\" target=\\\"_blank\\\"><img src=\\\"link-icon.png\\\" /></a></span>";
+      }
+      str += "</div>\" ];\n";
     }
 
     // put in all prereq edges

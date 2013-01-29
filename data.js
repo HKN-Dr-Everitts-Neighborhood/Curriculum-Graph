@@ -1,5 +1,17 @@
 var json = [
   {
+    "name": "Senior Standing",
+    "title": "Senior Standing",
+    "prereqs": [["Junior Standing"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "Junior Standing",
+    "title": "Junior Standing",
+    "prereqs": [[]],
+    "coreqs": [[]]
+  },
+  {
     "name": "MATH 221",
     "title": "Calculus I",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+221+-+Calculus+I",
@@ -142,7 +154,7 @@ var json = [
     "name": "ECE 316",
     "title": "Ethics and Engineering",
     "crosslist": ["PHIL 316"],
-    "prereqs": [["RHET 105"]],
+    "prereqs": [["RHET 105", "Junior Standing"]],
     "coreqs": [[]]
   },
   {
@@ -549,6 +561,7 @@ var json = [
   {
     "name": "MATH 213",
     "title": "Basic Discrete Mathematics",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+213+-+Basic+Discrete+Mathematics",
     "prereqs": [ ["MATH 220"], ["MATH 221"]],
     "coreqs": [ [] ]
   },
