@@ -210,21 +210,7 @@ var json = [
     "name": "ECE 385",
     "title": "Digital Systems Laboratory",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+385+-+Digital+Systems+Laboratory", 
-    "prereqs": [ ["ECE 290"]],
-    "coreqs": [ [] ]
-  },
-  {
-    "name": "ECE 385",
-    "title": "Digital Systems Laboratory",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+385+-+Digital+Systems+Laboratory", 
     "prereqs": [ ["ECE 290", "ECE 110"]],
-    "coreqs": [ [] ]
-  },
-  {
-    "name": "ECE 391",
-    "title": "Computer Systems Engineering",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+391+-+Computer+Systems+Engineering", 
-    "prereqs": [ ["ECE 290"]],
     "coreqs": [ [] ]
   },
   {
@@ -412,13 +398,6 @@ var json = [
                  ["CS 241", "ECE 313"],
                  ["CS 241", "MATH 461"],
                  ["CS 241", "MATH 463"]],
-    "coreqs": [ [] ]
-  },
-  {
-    "name": "ECE 441",
-    "title": "Physcs & Modeling Semicond Dev",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+441+-+Physics+and+Modeling+of+Semiconductor+Devices", 
-    "prereqs": [ ["ECE 340"]],
     "coreqs": [ [] ]
   },
   {
