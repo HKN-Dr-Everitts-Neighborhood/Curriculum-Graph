@@ -431,37 +431,46 @@ function update() {
 
 <script type="text/javascript">
 
+function isEmpty(object) { for(var i in object) { return false; } return true; };
+
 function DAG() {
 
   this.nodes = {};
-  this.node_list = [];
   this.edge_list = [];
   this.coreq_list = [];
   
   this.addNode = function(name, link) {
-    var new_node = {name: name, children: [], parents: [], coreqs: [], link: link};
+    var new_node = {name: name, children: {}, parents: {}, coreqs: {}, link: link};
     this.nodes[name] = new_node;
-    this.node_list.push(new_node);
     return name;
   };
   
   this.addPrereq = function(node1, node2) {
-    this.nodes[node1].children.push(node2);
-    this.nodes[node2].parents.push(node1);
-    this.edge_list.push([node1, node2]);
+    if (!this.nodes[node1].children[node2])
+      this.edge_list.push([node1, node2]);
+    this.nodes[node1].children[node2] = 1;
+    this.nodes[node2].parents[node1] = 1;
   };
   
   this.addCoreq = function(node1, node2) {
-    this.coreq_list.push([node1, node2]);
-    this.nodes[node2].coreqs.push(node1);
+    if (!this.nodes[node2].coreqs[node1])
+      this.coreq_list.push([node1, node2]);
+    this.nodes[node2].coreqs[node1] = 1;
   };
 
   this.is_root = function (node){
-    var no_prereqs = (this.nodes[node].parents.length === 0);
-    var coreqs_are_roots = true;
-    this.nodes[node].coreqs.forEach(function(c){coreqs_are_roots = coreqs_are_roots && this.is_root(c);}, this);
+    var no_prereqs = isEmpty(this.nodes[node].parents);
     
-    return no_prereqs && coreqs_are_roots;
+    if (!no_prereqs)
+      return false;
+    
+    var coreqs_are_roots = true;
+    for (var c in this.nodes[node].coreqs)
+    {
+      coreqs_are_roots = coreqs_are_roots && this.is_root(c);
+    }
+    
+    return coreqs_are_roots;
   };
 
   this.find_roots = function()
@@ -487,17 +496,20 @@ function DAG() {
 
     var str = "digraph {\n";
 
-    for (var i = 0; i < this.node_list.length; i++) {
-      nodes_from_name[this.node_list[i].name] = "a" + i;
+    var i = 0;
+    for (var n in this.nodes) {
+      var node = this.nodes[n];
+      nodes_from_name[node.name] = "a" + i;
       str += "a" + i + " [ label=\"<div style='padding: 10px; width: 95px; text-align:center;'>" +
-               this.node_list[i].name;
-      if (this.node_list[i].link) //hide link icon if no link
+               node.name;
+      if (node.link) //hide link icon if no link
       {
         str += " <span onclick=\\\"event.stopPropagation();\\\"><a href=\\\"" +
-              this.node_list[i].link +
+              node.link +
               "\\\" target=\\\"_blank\\\"><img src=\\\"link-icon.png\\\" /></a></span>";
       }
       str += "</div>\" ];\n";
+      i++;
     }
 
     // put in all prereq edges

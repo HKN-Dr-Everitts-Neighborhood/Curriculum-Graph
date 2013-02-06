@@ -192,14 +192,14 @@ var json = [
     "prereqs": [["ECE 329"]],
     "coreqs": [[]]
   } ,
-{
+  {
     "name": "ECE 361",
     "title": "Fundamentals of Digital Communications",
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289485", 
     "prereqs": [ ["ECE 210", "ECE 313"]],
     "coreqs": [ [] ]
   } ,
-{
+  {
     "name": "ECE 380",
     "title": "Fundamentals of Digital Communications",
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289485", 
@@ -256,7 +256,6 @@ var json = [
     "prereqs": [ ["ECE 290", "ECE 310", "ECE 473"]],
     "coreqs": [ [] ]
   },
-
   {
     "name": "ECE 408",
     "title": "Applied Parallel Programming",
