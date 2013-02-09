@@ -35,6 +35,8 @@ The format looks like this:
     "name": <course number - e.g. ECE 110>
     "title": <course title - e.g. Introduction to Electrical and Computer Engineering>,
     "link": <link to wiki page> // This field is optional
+    "crosslist": [<name1>, <name2>, ... ], // This field is also optional
+    "nocredit": [<name1>, <name2>, ...], // This field is also optional
     "prereqs": [ [<prereq1 name>, <prereq2 name>], ... ],
     "coreqs": [ [<coreq1 name>, <coreq2 name>], ... ]
   },
@@ -52,6 +54,18 @@ This format is still under development.  Right now, we'll have prereqs and coreq
 
 ````
 [["MATH 286", "PHYS 212"], ["MATH 285", "PHYS 212"]]
+````
+
+The crosslist parameter is a list of names by which the course is crosslisted as.  A valid crosslist might look like this (for ECE 462):
+
+````
+"crosslist": [ "CS 462", "MATH 491"]
+````
+
+The nocredit field is a list of classes for which you can't get credit for if you take this class; for example, if you take Math 286, you can't get credit for Math 285 or Math 441, so Math 286 would have
+
+````
+"nocredit": ["MATH 285", "MATH 441"]
 ````
 
 One issue is having multiple courses under the same name - e.g. ECE 498.  This issue will have to be tackled if we ever feel it necessary to tackle this in the graph - these courses tend to be outside the normal curriculum, and change from semester to semester.  A possible solution would be to have a suffix added to the name of these courses - e.g. "ECE 498SL" could be Steve Lumetta's "Engineering Parallel Software" class.  It's important that the names be unique.
