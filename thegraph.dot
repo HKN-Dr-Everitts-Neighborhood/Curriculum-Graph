@@ -106,6 +106,7 @@ digraph {
     a102 [ label="CS 373" ];
     a103 [ label="CS 473" ];
     a104 [ label="CS 241" ];
+    a105 [ label="PHYS 485" ];
     a1 -> a0;
     a2 -> a3;
     a3 -> a4;
@@ -221,6 +222,7 @@ digraph {
     a25 -> a91;
     a56 -> a92;
     a12 -> a94;
+    a105 -> a95;
     a15 -> a96;
     a27 -> a96;
     a11 -> a97;
@@ -235,6 +237,8 @@ digraph {
     a73 -> a102;
     a102 -> a103;
     a72 -> a104;
+    a5 -> a105;
+    a9 -> a105;
     a3 -> a6 [style=dotted];
     a4 -> a7 [style=dotted];
     a5 -> a12 [style=dotted];
@@ -254,5 +258,4 @@ digraph {
     root -> a71;
     root -> a89;
     root -> a93;
-    root -> a95;
 }
