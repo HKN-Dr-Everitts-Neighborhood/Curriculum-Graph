@@ -295,9 +295,9 @@ var json = [
     "name": "ECE 418",
     "title": "Image & Video Processing",
     "prereqs": [ ["ECE 310", "MATH 415", "ECE 313"],
-		["ECE 310", "MATH 415", "STAT 400"], 
-		["ECE 310", "MATH 415", "IE 300"], 
-		["ECE 310", "MATH 415", "MATH 461"]],
+    ["ECE 310", "MATH 415", "STAT 400"], 
+    ["ECE 310", "MATH 415", "IE 300"], 
+    ["ECE 310", "MATH 415", "MATH 461"]],
     "coreqs": [ [] ]
   },
   {
@@ -728,5 +728,24 @@ var json = [
       "title": "Photonic Device Laboratory",
       "prereqs": [["ECE 487"]],
       "coreqs": [[]]
+    },
+    {
+      "name": "CS 373",
+      "title": "Theory of Computation",
+      "prereqs": [["CS 225", "CS 173"], ["CS 225", "MATH 213"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "CS 473",
+      "title": "Fundamental Algorithms",
+      "crosslist": ["CSE 414", "MATH 473"],
+      "prereqs": [["CS 373"]],
+      "coreqs": [[]]
+    },
+    {
+      "name": "CS 241",
+      "title": "Systems Programming",
+      "prereqs": [["CS 225"]],
+      "coreqs": [["CS 232"]]
     }
  ];
