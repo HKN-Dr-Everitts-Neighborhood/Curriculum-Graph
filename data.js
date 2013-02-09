@@ -747,5 +747,11 @@ var json = [
       "title": "Systems Programming",
       "prereqs": [["CS 225"]],
       "coreqs": [["CS 232"]]
+    },
+    {
+      "name": "PHYS 485",
+      "title": "Atomic Phys and Quantum Theory",
+      "prereqs": [["MATH 286", "PHYS 214"], ["MATH 285", "PHYS 214"]],
+      "coreqs": [[]]
     }
  ];
