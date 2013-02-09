@@ -103,6 +103,9 @@ digraph {
     a99 [ label="ECE 492" ];
     a100 [ label="ECE 493" ];
     a101 [ label="ECE 495" ];
+    a102 [ label="CS 373" ];
+    a103 [ label="CS 473" ];
+    a104 [ label="CS 241" ];
     a1 -> a0;
     a2 -> a3;
     a3 -> a4;
@@ -152,6 +155,7 @@ digraph {
     a45 -> a43;
     a19 -> a44;
     a31 -> a45;
+    a104 -> a45;
     a45 -> a46;
     a30 -> a47;
     a36 -> a47;
@@ -162,8 +166,10 @@ digraph {
     a14 -> a52;
     a31 -> a53;
     a21 -> a53;
+    a104 -> a53;
     a31 -> a54;
     a21 -> a54;
+    a104 -> a54;
     a15 -> a55;
     a15 -> a56;
     a0 -> a57;
@@ -208,6 +214,7 @@ digraph {
     a5 -> a85;
     a23 -> a86;
     a72 -> a87;
+    a102 -> a87;
     a19 -> a88;
     a13 -> a90;
     a25 -> a90;
@@ -223,6 +230,11 @@ digraph {
     a72 -> a99;
     a5 -> a100;
     a95 -> a101;
+    a72 -> a102;
+    a70 -> a102;
+    a73 -> a102;
+    a102 -> a103;
+    a72 -> a104;
     a3 -> a6 [style=dotted];
     a4 -> a7 [style=dotted];
     a5 -> a12 [style=dotted];
