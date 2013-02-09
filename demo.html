@@ -486,12 +486,18 @@ function DAG() {
   };
 
   this.draw = function() {
-
-    var roots = this.find_roots();
-
+  
     /* build DOT input.  Because this is what dagre expects.  I don't like
-       this interface, but it does work */
-
+     this interface, but it does work */
+    
+    var str = this.make_dot(true, true);
+    
+    console.log(str);
+    tryDraw(str);
+  };
+  
+  this.make_dot = function(html, include_root)
+  {
     nodes_from_name = {};
 
     var str = "digraph {\n";
@@ -500,15 +506,22 @@ function DAG() {
     for (var n in this.nodes) {
       var node = this.nodes[n];
       nodes_from_name[node.name] = "a" + i;
-      str += "a" + i + " [ label=\"<div style='padding: 10px; width: 95px; text-align:center;'>" +
-               node.name;
-      if (node.link) //hide link icon if no link
+      str += "a" + i + " [ label=\"";
+      
+      if (html)
+        str += "<div style='padding: 10px; width: 95px; text-align:center;'>";
+      
+      str += node.name;
+      if (node.link && html) //hide link icon if no link
       {
         str += " <span onclick=\\\"event.stopPropagation();\\\"><a href=\\\"" +
               node.link +
               "\\\" target=\\\"_blank\\\"><img src=\\\"link-icon.png\\\" /></a></span>";
       }
-      str += "</div>\" ];\n";
+      if (html)
+        str += "</div>";
+      
+      str += "\" ];\n";
       i++;
     }
 
@@ -522,14 +535,18 @@ function DAG() {
       str += nodes_from_name[this.coreq_list[i][0]] + " -> " + nodes_from_name[this.coreq_list[i][1]] + " [label=\"is a coreq for\"];\n";
     }
     
-    // put in root (later removed)
-    for (var i = 0; i < roots.length; i++) {
-      str += "root -> " + nodes_from_name[roots[i]] + ";\n";
+    if (include_root)
+    {
+      var roots = this.find_roots();
+      
+      // put in root (later removed)
+      for (var i = 0; i < roots.length; i++) {
+        str += "root -> " + nodes_from_name[roots[i]] + ";\n";
+      }
     }
     str += "}";
     
-    console.log(str);
-    tryDraw(str);
+    return str;
   };
 }
 
