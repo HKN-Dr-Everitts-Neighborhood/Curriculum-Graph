@@ -295,17 +295,17 @@ var json = [
   {
     "name": "ECE 418",
     "title": "Image & Video Processing",
-    "prereqs": [ ["ECE 310", "Math 415", "ECE 313"],
-		["ECE 310", "Math 415", "STAT 400"], 
-		["ECE 310", "Math 415", "IE 300"], 
-		["ECE 310", "Math 415", "MATH 461"]],
+    "prereqs": [ ["ECE 310", "MATH 415", "ECE 313"],
+		["ECE 310", "MATH 415", "STAT 400"], 
+		["ECE 310", "MATH 415", "IE 300"], 
+		["ECE 310", "MATH 415", "MATH 461"]],
     "coreqs": [ [] ]
   },
   {
-    "name": "ECE 419",
+    "name": "CS 460",
     "title": "Security Laboratory",
-    "crosslist": ["CS 460"],
-    "prereqs": [ ["CS 461"], ["ECE 422"]],
+    "crosslist": ["ECE 419"],
+    "prereqs": [["CS 461"]],
     "coreqs": [ [] ]
   },
   {
@@ -317,17 +317,17 @@ var json = [
     "coreqs": [ [] ]
   },
   {
-    "name": "ECE 422",
+    "name": "CS 461",
     "title": "Computer Security I",
-    "crosslist": ["CS 461"],
+    "crosslist": ["ECE 422"],
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=213747887", 
     "prereqs": [ ["ECE 391"], ["CS 241"]],
     "coreqs": [ [] ]
   },
   {
-    "name": "ECE 424",
+    "name": "CS 463",
     "title": "Computer Security II",
-    "crosslist": ["CS 463"],
+    "crosslist": ["ECE 424"],
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=213747887", 
     "prereqs": [ ["ECE 422"], ["CS 461"]],
     "coreqs": [ [] ]
@@ -340,9 +340,9 @@ var json = [
     "coreqs": [ [] ]
   },
   {
-    "name": "ECE 428",
+    "name": "CS 425",
     "title": "Distributed Systems",
-    "crosslist": ["CS 425"],
+    "crosslist": ["ECE 428"],
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+425+%28ECE+428%29+-+Distributed+Systems", 
     "prereqs": [ ["ECE 391"], ["CS 232"]],
     "coreqs": [ [] ]
@@ -362,9 +362,9 @@ var json = [
     "coreqs": [ [] ]
   },
   {
-    "name": "ECE 435",
+    "name": "CS 436",
     "title": "Computer Networking Laboratory",
-    "crosslist": ["CS 436"],
+    "crosslist": ["ECE 435"],
     "prereqs": [ ["CS 438"]],
     "coreqs": [ [] ]
   },
@@ -376,9 +376,9 @@ var json = [
     "coreqs": [ [] ]
   },
   {
-    "name": "ECE 438",
+    "name": "CS 438",
     "title": "Communication Networks",
-    "crosslist": ["CS 438"],
+    "crosslist": ["ECE 438"],
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+438+-+Communication+Networks", 
     "prereqs": [ ["ECE 391", "ECE 313"],
                  ["ECE 391", "MATH 461"],
@@ -424,7 +424,7 @@ var json = [
   {
     "name": "ECE 447",
     "title": "Active Microwave Ckt Design",
-    "prereqs": [ ["ECE 350", "ECE 353"]],
+    "prereqs": [ ["ECE 350", "ECE 453"]],
     "coreqs": [ [] ]
   },
   {
@@ -573,7 +573,7 @@ var json = [
       "name": "ECE 465",
       "title": "Optical Communications Systems",
       "prereqs": [["ECE 313", "ECE 350"]],
-      "coreqs": [["ECE 459", "ECE 466"]]
+      "coreqs": [[]]
     },
     {
       "name": "ECE 466",
@@ -630,9 +630,9 @@ var json = [
       "coreqs": [[]]
     },
     {
-      "name": "ECE 478",
+      "name": "CS 477",
       "title": "Formal Software Development Methods",
-      "crosslist": ["CS 477"],
+      "crosslist": ["ECE 478"],
       "prereqs": [["CS 225", "CS 373"], ["CS 225", "MATH 414"]],
       "coreqs": [[]]
     },
