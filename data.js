@@ -232,10 +232,9 @@ var json = [
     "name": "ECE 402",
     "title": "Electronic Music Synthesis",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+402+-+Electronic+Music+Synthesis", 
-    "prereqs": [ ["ECE 290", "ECE 310"]],
+    "prereqs": [ ["MUS 103", "ECE 290", "ECE 310"]],
     "coreqs": [ [] ]
   },
-
   {
     "name": "ECE 403",
     "title": "Audio Engineering",
