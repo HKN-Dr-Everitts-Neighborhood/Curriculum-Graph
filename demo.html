@@ -439,10 +439,11 @@ function DAG() {
   this.edge_list = [];
   this.coreq_list = [];
   
-  this.addNode = function(name, link) {
-    var new_node = {name: name, children: {}, parents: {}, coreqs: {}, link: link};
-    this.nodes[name] = new_node;
-    return name;
+  this.addNode = function(node) {
+
+    var new_node = {name: node.name, children: {}, parents: {}, coreqs: {}, object: node};
+    this.nodes[node.name] = new_node;
+    return node.name;
   };
   
   this.addPrereq = function(node1, node2) {
@@ -501,6 +502,9 @@ function DAG() {
     nodes_from_name = {};
 
     var str = "digraph {\n";
+    
+    if (!html)
+      str += "rankdir=LR;\nranksep=.75;\n"; //dagre ignores these
 
     var i = 0;
     for (var n in this.nodes) {
@@ -512,14 +516,23 @@ function DAG() {
         str += "<div style='padding: 10px; width: 95px; text-align:center;'>";
       
       str += node.name;
-      if (node.link && html) //hide link icon if no link
+      if (node.object.link) //hide link icon if no link
       {
-        str += " <span onclick=\\\"event.stopPropagation();\\\"><a href=\\\"" +
-              node.link +
+        if (html)
+        {
+          str += " <span onclick=\\\"event.stopPropagation();\\\"><a href=\\\"" +
+              node.object.link +
               "\\\" target=\\\"_blank\\\"><img src=\\\"link-icon.png\\\" /></a></span>";
+        }
+        else
+        {
+          str += "\" href=\"" + node.object.link;
+        }
       }
       if (html)
         str += "</div>";
+      else if (node.object.title)
+        str += "\" tooltip=\"" + node.object.title;
       
       str += "\" ];\n";
       i++;
@@ -527,12 +540,22 @@ function DAG() {
 
     // put in all prereq edges
     for (var i = 0; i < this.edge_list.length; i++) {
-      str += nodes_from_name[this.edge_list[i][0]] + " -> " + nodes_from_name[this.edge_list[i][1]] + ";\n";
+      str += nodes_from_name[this.edge_list[i][0]] + " -> " + nodes_from_name[this.edge_list[i][1]];
+
+      if (!html)
+        str += " [tooltip=\"" + this.edge_list[i][0] + " -> " + this.edge_list[i][1] + "\"]";
+
+      str += ";\n";
     }
     
     // put in all coreq edges
     for (var i = 0; i < this.coreq_list.length; i++) {
-      str += nodes_from_name[this.coreq_list[i][0]] + " -> " + nodes_from_name[this.coreq_list[i][1]] + " [label=\"is a coreq for\"];\n";
+      str += nodes_from_name[this.coreq_list[i][0]] + " -> " + nodes_from_name[this.coreq_list[i][1]];
+      
+      if (html)
+        str += " [label=\"is a coreq for\"];\n";
+      else
+        str += " [style=dotted, tooltip=\"" + this.coreq_list[i][0] + " -> " + this.coreq_list[i][1] + "\"];\n";
     }
     
     if (include_root)
@@ -557,7 +580,7 @@ var makegraph = function(json) {
 
   for (var i = 0; i < json.length; i++) {
     index[json[i].name] = json[i];
-    json[i].node = g.addNode(json[i].name, json[i].link);
+    json[i].node = g.addNode(json[i]);
   }
 
   for (var i = 0; i < json.length; i++)

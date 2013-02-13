@@ -151,9 +151,9 @@ var json = [
     "coreqs": [[]]
   },
   {
-    "name": "ECE 316",
+    "name": "PHIL 316",
     "title": "Ethics and Engineering",
-    "crosslist": ["PHIL 316"],
+    "crosslist": ["ECE 316"],
     "prereqs": [["RHET 105", "Junior Standing"]],
     "coreqs": [[]]
   },
@@ -427,9 +427,9 @@ var json = [
     "coreqs": [ [] ]
   },
   {
-    "name": "ECE 448",
+    "name": "CS 440",
     "title": "Artificial Intelligence",
-    "crosslist": ["CS 440"],
+    "crosslist": ["ECE 448"],
     "prereqs": [ ["ECE 391"], ["CS 225"]],
     "coreqs": [ [] ]
   },
@@ -702,9 +702,9 @@ var json = [
       "coreqs": [[]]
     },
     {
-      "name": "ECE 491",
+      "name": "CS 450",
       "title": "Numerical Analysis",
-      "crosslist": ["CS 450", "MATH 450", "CSE 401"],
+      "crosslist": ["ECE 491", "MATH 450", "CSE 401"],
       "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+450+%28ECE+491%2C+MATH+450%2C+CSE+401%29+-+Numerical+Analysis",
       "prereqs": [["CS 101", "CS 357", "MATH 285"], ["CS 125", "CS 357", "MATH 285"], ["CS 101", "MATH 415", "MATH 285"], ["CS 125", "MATH 415", "MATH 285"]],
       "coreqs": [[]]
@@ -753,5 +753,20 @@ var json = [
       "title": "Atomic Phys and Quantum Theory",
       "prereqs": [["MATH 286", "PHYS 214"], ["MATH 285", "PHYS 214"]],
       "coreqs": [[]]
+    },
+    {
+        "name": "CHEM 102",
+        "title": "General Chemistry I",
+        "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=198674689",
+        "nocredit": ["CHEM 202"],
+        "prereqs": [[]],
+        "coreqs": [[]]
+    },
+    {
+        "name": "CHEM 103",
+        "title": "General Chemistry Lab I",
+        "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=198674689",
+        "prereqs": [[]],
+        "coreqs": [["CHEM 102"]]
     }
  ];
