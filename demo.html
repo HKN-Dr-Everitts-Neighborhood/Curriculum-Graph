@@ -501,7 +501,11 @@ function DAG() {
   {
     nodes_from_name = {};
 
-    var str = "digraph {\n";
+    var str = "digraph ";
+    if (!html)
+      str += "\"\""; // empty string makes sure the graph has no title; otherwise _anonymous_0 will show up as a tooltip for the graph
+
+    str += " {\n";
     
     if (!html)
       str += "rankdir=LR;\nranksep=.75;\n"; //dagre ignores these
@@ -532,7 +536,7 @@ function DAG() {
       if (html)
         str += "</div>";
       else if (node.object.title)
-        str += "\" tooltip=\"" + node.object.title;
+        str += "\" tooltip=\"" + node.object.title + "\" style=\"filled\" fillcolor=\"white";
       
       str += "\" ];\n";
       i++;
