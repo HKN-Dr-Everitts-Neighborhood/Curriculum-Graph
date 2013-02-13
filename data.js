@@ -56,7 +56,7 @@ var json = [
   {
     "name": "PHYS 213",
     "title": "University Physics: Thermal Physics",
-    "link": "https://wiki.engr.illinois.edu/diplay/HKNDEN/PHYS+213+-+University+Physics%2C+Thermal+Physics",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+213+-+University+Physics%2C+Thermal+Physics",
     "prereqs": [["PHYS 211"]],
     "coreqs": [["MATH 241"]]
   },
@@ -770,3 +770,6 @@ var json = [
         "coreqs": [["CHEM 102"]]
     }
  ];
+
+ if (exports !== undefined)
+   exports.json = json;
