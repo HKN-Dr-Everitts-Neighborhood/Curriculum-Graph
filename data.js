@@ -56,9 +56,9 @@ var json = [
   {
     "name": "PHYS 213",
     "title": "University Physics: Thermal Physics",
-    "link": "",
-    "prereqs": [["PHYS 212"]],
-    "coreqs": [[]]
+    "link": "https://wiki.engr.illinois.edu/diplay/HKNDEN/PHYS+213+-+University+Physics%2C+Thermal+Physics",
+    "prereqs": [["PHYS 211"]],
+    "coreqs": [["MATH 241"]]
   },
   {
     "name": "PHYS 214",
