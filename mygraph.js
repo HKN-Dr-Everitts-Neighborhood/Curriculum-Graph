@@ -53,7 +53,7 @@ function DAG() {
     return roots;
   };
   
-  this.make_dot = function(html, include_root)
+  this.make_dot = function(html, include_root, options)
   {
     nodes_from_name = {};
 
@@ -63,8 +63,8 @@ function DAG() {
 
     str += " {\n";
     
-    if (!html)
-      str += "rankdir=LR;\nranksep=.75;\n"; //dagre ignores these
+    for (var k in options)
+      str += k + "=" + options[k] + ";\n";
 
     var i = 0;
     for (var n in this.nodes) {
@@ -177,5 +177,5 @@ var makegraph = function(json) {
   return g;
 };
 
-if (exports !== undefined)
+if (typeof exports !== "undefined")
   exports.makegraph = makegraph;

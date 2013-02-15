@@ -771,5 +771,5 @@ var json = [
     }
  ];
 
- if (exports !== undefined)
+ if (typeof exports !== "undefined")
    exports.json = json;

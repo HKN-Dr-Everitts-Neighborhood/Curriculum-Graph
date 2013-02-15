@@ -1,10 +1,10 @@
-ALL: thegraph.png thegraph.svg
+ALL: thegraph-small.svg thegraph.svg
 
-thegraph.dot : data.js
-  node make_dot.js > thegraph.dot
+thegraph.dot thegraph-small.dot: data.js
+	node make_dot.js
 
-thegraph.png : thegraph.dot
-	dot -Tpng thegraph.dot > thegraph.png
-
-thegraph.svg : thegraph.dot
+thegraph.svg: thegraph.dot
 	dot -Tsvg thegraph.dot > thegraph.svg
+
+thegraph-small.svg: thegraph-small.dot
+	dot -Tsvg thegraph-small.dot > thegraph-small.svg
