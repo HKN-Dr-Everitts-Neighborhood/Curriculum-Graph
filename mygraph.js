@@ -53,6 +53,13 @@ function DAG() {
     return roots;
   };
   
+  var color_map = {
+    "ECE tech elective": "blue",
+    "ECE tech elective / lab": "blue",
+    "CS tech elective": "cyan",
+    "required": "red"
+  };
+  
   this.make_dot = function(html, include_root, options)
   {
     nodes_from_name = {};
@@ -65,7 +72,7 @@ function DAG() {
     
     for (var k in options)
       str += k + "=" + options[k] + ";\n";
-
+    
     var i = 0;
     for (var n in this.nodes) {
       var node = this.nodes[n];
@@ -93,6 +100,30 @@ function DAG() {
         str += "</div>";
       else if (node.object.title)
         str += "\" tooltip=\"" + node.object.title + "\" style=\"filled\" fillcolor=\"white";
+
+      if (!html)
+      {
+        var color = undefined;
+        // Color code by type
+        if (node.object.type)
+        {
+          if (node.object.type in color_map)
+          {
+            color = color_map[node.object.type];
+          }
+        }
+        else if (node.object.cetype === "required" || node.object.eetype === "required")
+        {
+          color = "orange";
+        }
+        else if (node.object.eetype === "3of5")
+        {
+          color = "green";
+        }
+
+        if (color)
+          str += "\" penwidth=\"2.0\" color=\"" + color;
+      }
       
       str += "\" ];\n";
       i++;
