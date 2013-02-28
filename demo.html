@@ -434,7 +434,7 @@ function update() {
 
 <script type="text/javascript">
 var g = makegraph(json);
-tryDraw(g.make_dot(true, true, {}));
+tryDraw(g.make_dot(true, true, {}, function(){return undefined;}));
 </script>
 
 </body>

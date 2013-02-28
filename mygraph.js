@@ -53,14 +53,7 @@ function DAG() {
     return roots;
   };
   
-  var color_map = {
-    "ECE tech elective": "blue",
-    "ECE tech elective / lab": "blue",
-    "CS tech elective": "cyan",
-    "required": "red"
-  };
-  
-  this.make_dot = function(html, include_root, options)
+  this.make_dot = function(html, include_root, options, color_func)
   {
     nodes_from_name = {};
 
@@ -103,24 +96,7 @@ function DAG() {
 
       if (!html)
       {
-        var color = undefined;
-        // Color code by type
-        if (node.object.type)
-        {
-          if (node.object.type in color_map)
-          {
-            color = color_map[node.object.type];
-          }
-        }
-        else if (node.object.cetype === "required" || node.object.eetype === "required")
-        {
-          color = "orange";
-        }
-        else if (node.object.eetype === "3of5")
-        {
-          color = "green";
-        }
-
+        var color = color_func(node);
         if (color)
           str += "\" penwidth=\"2.0\" color=\"" + color;
       }

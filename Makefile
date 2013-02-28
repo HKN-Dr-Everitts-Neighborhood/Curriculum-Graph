@@ -1,6 +1,6 @@
-ALL: thegraph-small.svg thegraph.svg
+ALL: thegraph-small.svg thegraph.svg thegraph-ee.svg thegraph-compe.svg
 
-thegraph.dot thegraph-small.dot: data.js
+thegraph.dot thegraph-small.dot thegraph-ee.dot thegraph-compe.dot: data.js
 	node make_dot.js
 
 thegraph.svg: thegraph.dot
@@ -8,3 +8,9 @@ thegraph.svg: thegraph.dot
 
 thegraph-small.svg: thegraph-small.dot
 	dot -Tsvg thegraph-small.dot > thegraph-small.svg
+
+thegraph-ee.svg: thegraph-ee.dot
+	dot -Tsvg thegraph-ee.dot > thegraph-ee.svg
+
+thegraph-compe.svg: thegraph-compe.dot
+	dot -Tsvg thegraph-compe.dot > thegraph-compe.svg
