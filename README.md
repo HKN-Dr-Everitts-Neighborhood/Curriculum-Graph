@@ -12,6 +12,11 @@ We want the graph to be interactive.  We want the code to be easy to develop, ma
 * Classification of courses by specializations, and ability to show / hide whole specializations
 * Distinguish between prereqs and coreqs; we may also want to distinguish between officially pre/coreq classes and DEN recommendations
 
+Requirements
+============
+
+To run our code from the command line, install the latest version of nodejs.
+
 Design Decisions
 ================
 Because we consider interactivity to be a core goal, this project should be in javascript; for maintainability, it's easiest to have everything in javascript (we have no server to run server-side code).
@@ -21,6 +26,8 @@ After evaluating several possible libraries (see the top answer: http://stackove
 Originally, the interactive tree example caught my eye; it might be worth trying to hack the tree code instead of writing our own from the ground up; on the other hand, it might be best to use the tree code as an example.
 
 A bunch of d3 tutorials can be found at https://github.com/mbostock/d3/wiki/Tutorials
+
+So our original intention was for everything to run in a browser, but we've since found that command line tools such as graphviz can do a much better job (although generating static graphs) - hence our use of nodejs; the svg format allows many features, such as tooltips and links, which allow for a decent amount of interactivity, though not quite as much as we had hoped for.
 
 Data Format
 ===========
@@ -37,6 +44,9 @@ The format looks like this:
     "link": <link to wiki page> // This field is optional
     "crosslist": [<name1>, <name2>, ... ], // This field is also optional
     "nocredit": [<name1>, <name2>, ...], // This field is also optional
+    "type": <string>, // Also optional - use instead of eetype/cetype
+    "eetype": <string>, //optional - use with cetype
+    "cetype": <string>, //optional - use with eetype
     "prereqs": [ [<prereq1 name>, <prereq2 name>], ... ],
     "coreqs": [ [<coreq1 name>, <coreq2 name>], ... ]
   },
@@ -67,5 +77,7 @@ The nocredit field is a list of classes for which you can't get credit for if yo
 ````
 "nocredit": ["MATH 285", "MATH 441"]
 ````
+
+Three more fields deserve explanations: type, eetype, and cetype.  The basic idea here is that "type" tells you what kind of credit a class carries - i.e. whether it is required, elective, an ECE tech elective, etc; look at data.js for examples.  eetype and cetype are intended to be used when the two majors disagree on what a course counts as - e.g. ECE 391 is a 3 of 5 course for EE's but for CompE, it's required; thus it's cetype is "required" whereas it's EE type is "3of5".
 
 One issue is having multiple courses under the same name - e.g. ECE 498.  This issue will have to be tackled if we ever feel it necessary to tackle this in the graph - these courses tend to be outside the normal curriculum, and change from semester to semester.  A possible solution would be to have a suffix added to the name of these courses - e.g. "ECE 498SL" could be Steve Lumetta's "Engineering Parallel Software" class.  It's important that the names be unique.
