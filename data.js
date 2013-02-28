@@ -166,6 +166,7 @@ var json = [
     "name": "ECE 313",
     "title": "Probability with Engrg Applic",
     "crosslist": ["MATH 362"],
+    "nocredit": ["MATH 461"],
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+313+-+Probability+with+Engineering+Applications",
     "type": "required",
     "prereqs": [["ECE 210"]],
@@ -439,10 +440,10 @@ var json = [
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 391", "ECE 313"],
                  ["ECE 391", "MATH 461"],
-                 ["ECE 391", "MATH 463"],
+                 ["ECE 391", "STAT 400"],
                  ["CS 241", "ECE 313"],
                  ["CS 241", "MATH 461"],
-                 ["CS 241", "MATH 463"]],
+                 ["CS 241", "STAT 400"]],
     "coreqs": [ [] ]
   },
   {
@@ -452,10 +453,10 @@ var json = [
     "crosslist": ["CS 439"],
     "prereqs": [ ["ECE 391", "ECE 313"],
                  ["ECE 391", "MATH 461"],
-                 ["ECE 391", "MATH 463"],
+                 ["ECE 391", "STAT 400"],
                  ["CS 241", "ECE 313"],
                  ["CS 241", "MATH 461"],
-                 ["CS 241", "MATH 463"]],
+                 ["CS 241", "STAT 400"]],
     "coreqs": [ [] ]
   },
   {
@@ -627,6 +628,7 @@ var json = [
   {
     "name": "MATH 415",
     "title": "Applied Linear Algebra",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/Math+415+-+Applied+Linear+Algebra",
     "type": "tech elective",
     "prereqs": [ ["MATH 241"]],
     "coreqs": [ [] ]
@@ -639,252 +641,280 @@ var json = [
     "prereqs": [["ECE 290"]],
     "coreqs": [[]]
   },
-    {
-      "name": "ECE 463",
-      "title": "Digital Communications Lab",
-      "type": "ECE tech elective / lab",
-      "prereqs": [["ECE 361"], ["ECE 459"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 464",
-      "title": "Power Electronics",
-      "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+464+-+Power+Electronics",
-      "type": "ECE tech elective",
-      "prereqs": [["ECE 342"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 465",
-      "title": "Optical Communications Systems",
-      "type": "ECE tech elective",
-      "prereqs": [["ECE 313", "ECE 350"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 466",
-      "title": "Optical Communications Lab",
-      "type": "ECE tech elective / lab",
-      "prereqs": [[]],
-      "coreqs": [["ECE 465"]]
-    },
-    {
-      "name": "ECE 467",
-      "title": "Biophotonics",
-      "type": "ECE tech elective",
-      "crosslist": ["BIOE 467"],
-      "prereqs": [["ECE 455"], ["ECE 460"], ["PHYS 402"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 468",
-      "title": "Optical Remote Sensing",
-      "type": "ECE tech elective / lab",
-      "crosslist": ["AE 468"],
-      "prereqs": [["ECE 329", "ECE 313"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 469",
-      "title": "Power Electronics Lab",
-      "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+469+-+Power+Electronics+Laboratory",
-      "type": "ECE tech elective / lab",
-      "prereqs": [["ECE 343"]],
-      "coreqs": [["ECE 464"]]
-    },
-    {
-      "name": "ECE 470",
-      "title": "Introduction to Robotics",
-      "crosslist": ["AE 482", "ME 445"],
-      "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+470+-+Introduction+to+Robotics",
-      "type": "ECE tech elective / lab",
-      "prereqs": [["MATH 225"], ["MATH 286"], ["MATH 415"], ["MATH 418"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 472",
-      "title": "Biomedical Ultrasound Imaging",
-      "type": "ECE tech elective",
-      "prereqs": [["ECE 329"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 473",
-      "title": "Fund of Engrg Acoustics",
-      "type": "ECE tech elective",
-      "crosslist": ["TAM 413"],
-      "prereqs": [["MATH 285"], ["MATH 286"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 476",
-      "title": "Power System Analysis",
-      "type": "ECE tech elective",
-      "prereqs": [["ECE 330"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "CS 477",
-      "title": "Formal Software Development Methods",
-      "type": "ECE tech elective",
-      "crosslist": ["ECE 478"],
-      "prereqs": [["CS 225", "CS 373"], ["CS 225", "MATH 414"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 480",
-      "title": "Magnetic Resonance Imaging",
-      "type": "ECE tech elective",
-      "crosslist": ["BIOE 480"],
-      "prereqs": [["ECE 310"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 481",
-      "title": "Nanotechnology",
-      "type": "ECE tech elective",
-      "prereqs": [["CHEM 442"], ["CHBE 457"], ["ME 485"], ["MSE 401"], ["PHYS 460"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 482",
-      "title": "Digital IC Design",
-      "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+482+-+Digital+IC+Design",
-      "type": "ECE tech elective",
-      "prereqs": [["ECE 290", "ECE 342"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 483",
-      "title": "Analog IC Design",
-      "type": "ECE tech elective",
-      "prereqs": [["ECE 342"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 484",
-      "title": "Prin Adv Microelec Processing",
-      "type": "ECE tech elective",
-      "prereqs": [["ECE 444"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 485",
-      "title": "MEMS Devices & Systems",
-      "type": "ECE tech elective",
-      "crosslist": ["ME 485"],
-      "prereqs": [[]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 486",
-      "title": "Control Systems",
-      "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289976",
-      "type": "ECE tech elective / lab",
-      "prereqs": [["ECE 210"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 487",
-      "title": "Intro to Quantum Electr for EEs",
-      "type": "ECE tech elective",
-      "prereqs": [["PHYS 485"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 488",
-      "title": "Compound Semicond & Devices",
-      "type": "ECE tech elective",
-      "prereqs": [["ECE 340", "ECE 350"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 490",
-      "title": "Introduction to Optimization",
-      "type": "ECE tech elective",
-      "crosslist": ["CSE 441"],
-      "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289978",
-      "prereqs": [["ECE 190", "MATH 415"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "CS 450",
-      "title": "Numerical Analysis",
-      "crosslist": ["ECE 491", "MATH 450", "CSE 401"],
-      "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+450+%28ECE+491%2C+MATH+450%2C+CSE+401%29+-+Numerical+Analysis",
-      "type": "ECE tech elective",
-      "prereqs": [["CS 101", "CS 357", "MATH 285"], ["CS 125", "CS 357", "MATH 285"], ["CS 101", "MATH 415", "MATH 285"], ["CS 125", "MATH 415", "MATH 285"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 492",
-      "title": "Parallel Progrmg: Sci & Engrg",
-      "type": "ECE tech elective",
-      "crosslist": ["CS 420", "CSE 402"], 
-      "prereqs": [["CS 225"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 493",
-      "title": "Advanced Engineering Math",
-      "type": "ECE tech elective",
-      "crosslist": ["MATH 487"],
-      "prereqs": [["MATH 284"], ["MATH 285"], ["MATH 286"], ["MATH 441"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "ECE 495",
-      "title": "Photonic Device Laboratory",
-      "type": "ECE tech elective / lab",
-      "prereqs": [["ECE 487"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "CS 373",
-      "title": "Theory of Computation",
-      "type": "CS tech elective",
-      "prereqs": [["CS 225", "CS 173"], ["CS 225", "MATH 213"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "CS 473",
-      "title": "Fundamental Algorithms",
-      "type": "CS tech elective",
-      "crosslist": ["CSE 414", "MATH 473"],
-      "prereqs": [["CS 373"]],
-      "coreqs": [[]]
-    },
-    {
-      "name": "CS 241",
-      "title": "Systems Programming",
-      "type": "elective",
-      "prereqs": [["CS 225"]],
-      "coreqs": [["CS 232"]]
-    },
-    {
-      "name": "PHYS 485",
-      "title": "Atomic Phys and Quantum Theory",
-      "type": "tech elective",
-      "prereqs": [["MATH 286", "PHYS 214"], ["MATH 285", "PHYS 214"]],
-      "coreqs": [[]]
-    },
-    {
-        "name": "CHEM 102",
-        "title": "General Chemistry I",
-        "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=198674689",
-        "type": "required",
-        "nocredit": ["CHEM 202"],
-        "prereqs": [[]],
-        "coreqs": [[]]
-    },
-    {
-        "name": "CHEM 103",
-        "title": "General Chemistry Lab I",
-        "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=198674689",
-        "type": "required",
-        "prereqs": [[]],
-        "coreqs": [["CHEM 102"]]
-    }
+  {
+    "name": "ECE 463",
+    "title": "Digital Communications Lab",
+    "type": "ECE tech elective / lab",
+    "prereqs": [["ECE 361"], ["ECE 459"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 464",
+    "title": "Power Electronics",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+464+-+Power+Electronics",
+    "type": "ECE tech elective",
+    "prereqs": [["ECE 342"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 465",
+    "title": "Optical Communications Systems",
+    "type": "ECE tech elective",
+    "prereqs": [["ECE 313", "ECE 350"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 466",
+    "title": "Optical Communications Lab",
+    "type": "ECE tech elective / lab",
+    "prereqs": [[]],
+    "coreqs": [["ECE 465"]]
+  },
+  {
+    "name": "ECE 467",
+    "title": "Biophotonics",
+    "type": "ECE tech elective",
+    "crosslist": ["BIOE 467"],
+    "prereqs": [["ECE 455"], ["ECE 460"], ["PHYS 402"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 468",
+    "title": "Optical Remote Sensing",
+    "type": "ECE tech elective / lab",
+    "crosslist": ["AE 468"],
+    "prereqs": [["ECE 329", "ECE 313"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 469",
+    "title": "Power Electronics Lab",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+469+-+Power+Electronics+Laboratory",
+    "type": "ECE tech elective / lab",
+    "prereqs": [["ECE 343"]],
+    "coreqs": [["ECE 464"]]
+  },
+  {
+    "name": "ECE 470",
+    "title": "Introduction to Robotics",
+    "crosslist": ["AE 482", "ME 445"],
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+470+-+Introduction+to+Robotics",
+    "type": "ECE tech elective / lab",
+    "prereqs": [["MATH 225"], ["MATH 286"], ["MATH 415"], ["MATH 418"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 472",
+    "title": "Biomedical Ultrasound Imaging",
+    "type": "ECE tech elective",
+    "prereqs": [["ECE 329"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 473",
+    "title": "Fund of Engrg Acoustics",
+    "type": "ECE tech elective",
+    "crosslist": ["TAM 413"],
+    "prereqs": [["MATH 285"], ["MATH 286"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 476",
+    "title": "Power System Analysis",
+    "type": "ECE tech elective",
+    "prereqs": [["ECE 330"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 477",
+    "title": "Formal Software Development Methods",
+    "type": "ECE tech elective",
+    "crosslist": ["ECE 478"],
+    "prereqs": [["CS 225", "CS 373"], ["CS 225", "MATH 414"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 480",
+    "title": "Magnetic Resonance Imaging",
+    "type": "ECE tech elective",
+    "crosslist": ["BIOE 480"],
+    "prereqs": [["ECE 310"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 481",
+    "title": "Nanotechnology",
+    "type": "ECE tech elective",
+    "prereqs": [["CHEM 442"], ["CHBE 457"], ["ECE 485"], ["MSE 401"], ["PHYS 460"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 482",
+    "title": "Digital IC Design",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+482+-+Digital+IC+Design",
+    "type": "ECE tech elective",
+    "prereqs": [["ECE 290", "ECE 342"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 483",
+    "title": "Analog IC Design",
+    "type": "ECE tech elective",
+    "prereqs": [["ECE 342"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 484",
+    "title": "Prin Adv Microelec Processing",
+    "type": "ECE tech elective",
+    "prereqs": [["ECE 444"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 485",
+    "title": "MEMS Devices & Systems",
+    "type": "ECE tech elective",
+    "crosslist": ["ME 485"],
+    "prereqs": [[]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 486",
+    "title": "Control Systems",
+    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289976",
+    "type": "ECE tech elective / lab",
+    "prereqs": [["ECE 210"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 487",
+    "title": "Intro to Quantum Electr for EEs",
+    "type": "ECE tech elective",
+    "prereqs": [["PHYS 485"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 488",
+    "title": "Compound Semicond & Devices",
+    "type": "ECE tech elective",
+    "prereqs": [["ECE 340", "ECE 350"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 490",
+    "title": "Introduction to Optimization",
+    "type": "ECE tech elective",
+    "crosslist": ["CSE 441"],
+    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289978",
+    "prereqs": [["ECE 190", "MATH 415"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 450",
+    "title": "Numerical Analysis",
+    "crosslist": ["ECE 491", "MATH 450", "CSE 401"],
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+450+%28ECE+491%2C+MATH+450%2C+CSE+401%29+-+Numerical+Analysis",
+    "type": "ECE tech elective",
+    "prereqs": [["CS 101", "CS 357", "MATH 285"], ["CS 125", "CS 357", "MATH 285"], ["CS 101", "MATH 415", "MATH 285"], ["CS 125", "MATH 415", "MATH 285"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 492",
+    "title": "Parallel Progrmg: Sci & Engrg",
+    "type": "ECE tech elective",
+    "crosslist": ["CS 420", "CSE 402"], 
+    "prereqs": [["CS 225"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 493",
+    "title": "Advanced Engineering Math",
+    "type": "ECE tech elective",
+    "crosslist": ["MATH 487"],
+    "prereqs": [["MATH 284"], ["MATH 285"], ["MATH 286"], ["MATH 441"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "ECE 495",
+    "title": "Photonic Device Laboratory",
+    "type": "ECE tech elective / lab",
+    "prereqs": [["ECE 487"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 373",
+    "title": "Theory of Computation",
+    "type": "CS tech elective",
+    "prereqs": [["CS 225", "CS 173"], ["CS 225", "MATH 213"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 473",
+    "title": "Fundamental Algorithms",
+    "type": "CS tech elective",
+    "crosslist": ["CSE 414", "MATH 473"],
+    "prereqs": [["CS 373"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 241",
+    "title": "Systems Programming",
+    "type": "elective",
+    "prereqs": [["CS 225"]],
+    "coreqs": [["CS 232"]]
+  },
+  {
+    "name": "PHYS 485",
+    "title": "Atomic Phys and Quantum Theory",
+    "type": "tech elective",
+    "prereqs": [["MATH 286", "PHYS 214"], ["MATH 285", "PHYS 214"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CHEM 102",
+    "title": "General Chemistry I",
+    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=198674689",
+    "type": "required",
+    "nocredit": ["CHEM 202"],
+    "prereqs": [[]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CHEM 103",
+    "title": "General Chemistry Lab I",
+    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=198674689",
+    "type": "required",
+    "prereqs": [[]],
+    "coreqs": [["CHEM 102"]]
+  },
+  {
+    "name": "MATH 461",
+    "title": "Probability Theory",
+    "crosslist": ["STAT 451"],
+    "nocredit": ["STAT 408", "ECE 313"],
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/Math+461+-+Probability+Theory",
+    "type": "elective",
+    "prereqs": [["MATH 241"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "STAT 400",
+    "title": "Statistics and Probability I",
+    "crosslist": ["MATH 463"],
+    "nocredit": ["STAT 408"],
+    "type": "elective",
+    "prereqs": [["MATH 241"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "STAT 410",
+    "title": "Statistics and Probability II",
+    "crosslist": ["MATH 464"],
+    "nocredit": ["STAT 409"],
+    "type": "required",
+    "prereqs": [["STAT 400"], ["STAT 100", "MATH 461"]],
+    "coreqs": [[]]
+  }
  ];
 
  if (typeof exports !== "undefined")
