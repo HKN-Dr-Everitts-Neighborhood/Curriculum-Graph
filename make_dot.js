@@ -46,6 +46,7 @@ var ee_color_map = {
   "tech elective": "magenta",
   "required": "red",
   "3of5": "green",
+  "3of5 / lab": "green"
 };
 var ee_coloring =function(node)
 {
