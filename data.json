@@ -914,5 +914,183 @@
     "type": "required",
     "prereqs": [["STAT 400"], ["STAT 100", "MATH 461"]],
     "coreqs": [[]]
-  }
+  },
+  {
+    "name": "CS 242",
+    "title": "Programming Studio",
+    "type": "CS tech elective",
+    "prereqs": [["CS 241"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 357",
+    "title": "Numerical Methods I",
+    "crosslist": ["MATH 357"],
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+357+-+Numerical+Methods+I",
+    "nocredit": ["CS 450"],
+    "type": "CS tech elective",
+    "prereqs": [["ECE 190","MATH 241","MATH 415"], ["ECE 190","MATH 241","MATH 225"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 410",
+    "title": "Text Information Systems",
+    "type": "CS tech elective",
+    "prereqs": [["CS 225"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 411",
+    "title": "Database Systems",
+    "type": "CS tech elective",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+411+-+Database+Systems",
+    "prereqs": [["CS 225"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 412",
+    "title": "Introduction to Data Mining",
+    "type": "CS tech elective",
+    "prereqs": [["CS 225"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "MATH 413",
+    "title": "Intro to Combinatorics",
+    "type": "CS tech elective",
+    "crosslist": ["CS 413"],
+    "prereqs": [["MATH 347"],["MATH 348"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 414",
+    "title": "Multimedia Systems",
+    "type": "CS tech elective",
+    "prereqs": [["CS 241"],["ECE 391"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 418",
+    "title": "Interactive Computer Graphics",
+    "type": "CS tech elective",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+418+-+Interactive+Computer+Graphics",
+    "crosslist": ["CSE 427"],
+    "prereqs": [["CS 225","MATH 241","MATH 415"], ["CS 225","MATH 241","MATH 225"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 419",
+    "title": "Production Computer Graphics",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+419+-+Production+Computer+Graphics",
+    "type": "CS tech elective",
+    "prereqs": [["CS 418"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 421",
+    "title": "Progrmg Languages & Compilers",
+    "type": "CS tech elective",
+    "prereqs": [["CS 232", "CS 373"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 422",
+    "title": "Programming Language Design",
+    "type": "CS tech elective",
+    "prereqs": [["CS 421"]],
+    "coreqs": [[]]
+  },  
+  {
+    "name": "CS 423",
+    "title": "Operating Systems Design",
+    "type": "CS tech elective",
+    "crosslist": ["CSE 423"],
+    "prereqs": [["CS 241"], ["ECE 391"]],
+    "coreqs": [[]]
+  },  
+  {
+    "name": "CS 424",
+    "title": "Real-Time Systems",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+424+-+Real-Time+Systems",
+    "type": "CS tech elective",
+    "prereqs": [["CS 431"]],
+    "coreqs": [[]]
+  },  
+  {
+    "name": "CS 426",
+    "title": "Compiler Construction",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+426+-+Compiler+Construction",
+    "type": "CS tech elective",
+    "prereqs": [["CS 421"]],
+    "coreqs": [[]]
+  },  
+  {
+    "name": "CS 427",
+    "title": "Software Engineering I",
+    "type": "CS tech elective",
+    "crosslist": ["CSE 426"],
+    "prereqs": [["CS 225", "CS 373"]],
+    "coreqs": [[]]
+  }, 
+  {
+    "name": "CS 428",
+    "title": "Software Engineering II",
+    "type": "CS tech elective",
+    "crosslist": ["CSE 429"],
+    "prereqs": [["CS 427"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 429",
+    "title": "Software Engineering II ACP",
+    "type": "CS tech elective",
+    "prereqs": [["CS 427"]],
+    "coreqs": [[]]
+  },    
+  {
+    "name": "CS 431",
+    "title": "Embedded Systems",
+    "type": "CS tech elective",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+431+-+Embedded+Systems",
+    "prereqs": [["CS 241"], ["ECE 391"]],
+    "coreqs": [[]]
+  },    
+  {
+    "name": "CS 433",
+    "title": "Computer System Organization",
+    "type": "CS tech elective",
+    "prereqs": [["CS 232"]],
+    "crosslist": ["CSE 422"],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 446",
+    "title": "Machine Learning",
+    "type": "CS tech elective",
+    "prereqs": [["CS 373", "CS 440"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 465",
+    "title": "User Interface Design",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+465+-+Principles+of+User+Interface+Design%2C+Implementation+and+Evaluation",
+    "type": "CS tech elective",
+    "prereqs": [["CS 225"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 467",
+    "title": "Social Visualization",
+    "type": "CS tech elective",
+    "prereqs": [["CS 225"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "IE 410",
+    "title": "Stochastic Processes & Applic",
+    "type": "CS tech elective",
+    "crosslist": ["CS 481"],
+    "prereqs": [["IE 310"]],
+    "coreqs": [[]]
+  }  
 ]
