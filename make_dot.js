@@ -36,8 +36,8 @@ var coloring_func = function(node)
   return color;
 };
 
-var small_dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": ".75", "size": "\"8.5,11\""}, coloring_func);
-var dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": ".75"}, coloring_func);
+var small_dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": "1", "size": "\"8.5,11\""}, coloring_func);
+var dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": "1"}, coloring_func);
 
 var ee_color_map = {
   "ECE tech elective": "blue",
@@ -60,8 +60,8 @@ var compe_coloring =function(node)
 };
 
 
-var ee_dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": ".75", "size": "\"8.5,11\""}, ee_coloring);
-var compe_dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": ".75", "size": "\"8.5,11\""}, compe_coloring);
+var ee_dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": "1", "size": "\"8.5,11\""}, ee_coloring);
+var compe_dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": "1", "size": "\"8.5,11\""}, compe_coloring);
 
 var errorfunc = function(err)
 {

@@ -598,13 +598,6 @@
     "coreqs": [[]]
   },
   {
-    "name": "CS 125",
-    "title": "Intro to Computer Science",
-    "type": "elective",
-    "prereqs": [ []],
-    "coreqs": [ [] ]
-  },
-  {
     "name": "CS 225",
     "title": "Data Structures",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+225+-+Data+Structures",
@@ -819,10 +812,10 @@
     "coreqs": [[]]
   },
   {
-    "name": "ECE 492",
+    "name": "CS 420",
     "title": "Parallel Progrmg: Sci & Engrg",
     "type": "ECE tech elective",
-    "crosslist": ["CS 420", "CSE 402"], 
+    "crosslist": ["ECE 492", "CSE 402"], 
     "prereqs": [["CS 225"]],
     "coreqs": [[]]
   },
@@ -855,13 +848,6 @@
     "crosslist": ["CSE 414", "MATH 473"],
     "prereqs": [["CS 373"]],
     "coreqs": [[]]
-  },
-  {
-    "name": "CS 241",
-    "title": "Systems Programming",
-    "type": "elective",
-    "prereqs": [["CS 225"]],
-    "coreqs": [["CS 232"]]
   },
   {
     "name": "PHYS 485",
@@ -919,7 +905,7 @@
     "name": "CS 242",
     "title": "Programming Studio",
     "type": "CS tech elective",
-    "prereqs": [["CS 241"]],
+    "prereqs": [["CS 241"], ["ECE 391"]],
     "coreqs": [[]]
   },
   {
@@ -1059,9 +1045,9 @@
     "name": "CS 433",
     "title": "Computer System Organization",
     "type": "CS tech elective",
-    "prereqs": [["CS 232"]],
     "crosslist": ["CSE 422"],
-    "coreqs": [[]]
+    "prereqs": [["CS 232"]],
+    "coreqs": [["ECE 391"]]
   },
   {
     "name": "CS 446",
@@ -1092,5 +1078,21 @@
     "crosslist": ["CS 481"],
     "prereqs": [["IE 310"]],
     "coreqs": [[]]
-  }  
+  },
+  {
+    "name": "MATH 347",
+    "title": "Fundamental Mathematics",
+    "type": "tech elective",
+    "nocredit": ["MATH 348"],
+    "prereqs": [["MATH 231"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "IE 310",
+    "title": "Operations Research",
+    "type": "tech elective",
+    "nocredit": ["CEE 201"],
+    "prereqs": [[]],
+    "coreqs": [["MATH 415"]]
+  }
 ]
