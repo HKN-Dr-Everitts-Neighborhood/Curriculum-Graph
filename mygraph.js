@@ -53,6 +53,41 @@ function DAG() {
     return roots;
   };
   
+  this.make_tooltip = function(class_obj)
+  {
+    var txt = class_obj.title;
+    
+    // write out crosslist
+    if (class_obj.crosslist) {
+      txt += " (same as ";
+      var len = class_obj.crosslist.length;
+      for (var i=0; i < len; i++) {
+        txt += class_obj.crosslist[i];
+        if (len-2 > i)
+          txt += ", ";
+        else if (i === len-2) {
+          if (len === 2)
+            txt += " and ";
+          else
+            txt += ", and ";
+        }
+      }
+      txt += ")";
+    }
+    
+    /*
+    txt += "\nPrereqs:\n";
+    for (var i=0; i < class_obj.prereqs.length; i++)
+    {
+      var len = class_obj.prereqs[i].length;
+      for (var j=0; j < len-1; j++)
+        txt += class_obj.prereqs[i][j] + " and ";
+      txt += class_obj.prereqs[i][len-1] + " OR\n";
+    }
+    */
+    return txt;
+  };
+  
   this.make_dot = function(html, include_root, options, color_func)
   {
     nodes_from_name = {};
@@ -70,38 +105,43 @@ function DAG() {
     for (var n in this.nodes) {
       var node = this.nodes[n];
       nodes_from_name[node.name] = "a" + i;
-      str += "a" + i + " [ label=\"";
+      str += "a" + i + " [ ";
       
       if (html)
+      {
+        str += "label=\"";
         str += "<div style='padding: 10px; width: 95px; text-align:center;'>";
-      
-      str += node.name;
-      if (node.object.link) //hide link icon if no link
-      {
-        if (html)
+        str += node.name;
+        if (node.object.link)
         {
-          str += " <span onclick=\\\"event.stopPropagation();\\\"><a href=\\\"" +
-              node.object.link +
-              "\\\" target=\\\"_blank\\\"><img src=\\\"link-icon.png\\\" /></a></span>";
+          str += " <span onclick=\\\"event.stopPropagation();\\\">" + 
+                 "<a href=\\\"" + node.object.link + "\\\" target=\\\"_blank\\\">" +
+                 "<img src=\\\"link-icon.png\\\" /></a></span>";
         }
-        else
-        {
-          str += "\" href=\"" + node.object.link;
-        }
+        str += "</div>\" ";
       }
-      if (html)
-        str += "</div>";
-      else if (node.object.title)
-        str += "\" tooltip=\"" + node.object.title + "\" style=\"filled\" fillcolor=\"white";
-
-      if (!html)
+      else
       {
+        str += "label=\"" + node.name + "\" ";
+
+        if (node.object.link) //hide link icon if no link
+        {
+          str += "href=\"" + node.object.link + "\" ";
+        }
+
+        //tooltip
+        str += "tooltip=\"" + this.make_tooltip(node.object) + "\" ";
+        
+        // Make opaque background, so that mouseover background makes tooltip show up
+        str += "style=\"filled\" fillcolor=\"white\" ";
+
+        // color the node
         var color = color_func(node);
         if (color)
-          str += "\" penwidth=\"2.0\" color=\"" + color;
+          str += "penwidth=\"2.0\" color=\"" + color + "\" ";
       }
-      
-      str += "\" ];\n";
+
+      str += "];\n";
       i++;
     }
 
