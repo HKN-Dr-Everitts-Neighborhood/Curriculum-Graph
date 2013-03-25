@@ -353,6 +353,7 @@
     "name": "CS 460",
     "title": "Security Laboratory",
     "type": "ECE tech elective",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+460+%28ECE+419%29+-+Security+Laboratory",
     "crosslist": ["ECE 419"],
     "prereqs": [["CS 461"]],
     "coreqs": [ [] ]
@@ -495,6 +496,7 @@
     "name": "CS 440",
     "title": "Artificial Intelligence",
     "type": "ECE tech elective",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+440+%28ECE+448%29+-+Artificial+Intelligence",
     "crosslist": ["ECE 448"],
     "prereqs": [ ["ECE 391"], ["CS 225"]],
     "coreqs": [ [] ]
