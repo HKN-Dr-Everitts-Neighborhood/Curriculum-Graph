@@ -26,7 +26,7 @@ function DAG() {
     this.nodes[node2].coreqs[node1] = 1;
   };
 
-  this.is_root = function (node){
+  this.is_root = function (node) {
     var no_prereqs = isEmpty(this.nodes[node].parents);
     
     if (!no_prereqs)
@@ -41,8 +41,7 @@ function DAG() {
     return coreqs_are_roots;
   };
 
-  this.find_roots = function()
-  {
+  this.find_roots = function() {
     var roots = [];
 
     for (var node in this.nodes) {
@@ -53,8 +52,7 @@ function DAG() {
     return roots;
   };
   
-  this.make_tooltip = function(class_obj)
-  {
+  this.make_tooltip = function(class_obj) {
     var txt = class_obj.title;
     
     // write out crosslist
@@ -88,7 +86,57 @@ function DAG() {
     return txt;
   };
   
+  this.make_subfield_dot = function(html, include_root, options, color_func, subfield) {
+    var classes_to_include = {};
+    
+    for (var n in this.nodes)
+    {
+      var node = this.nodes[n];
+
+      if (node.object.subfield == subfield)
+      {
+        // DFS from here up the prereqs chain
+        // classes_to_include = set of visited
+        
+        var searchlist = [node];
+        while (searchlist.length !== 0)
+        {
+          var cur_node = searchlist.pop();
+          
+          if (!(cur_node.name in classes_to_include))
+          {
+            // mark for inclusion
+            classes_to_include[cur_node.name] = 1;
+            
+            // add prereqs to search list
+            for (var p in cur_node.parents) {
+              searchlist.push(this.nodes[p]);
+            }
+            
+            // add coreqs to search list
+            for (var c in cur_node.coreqs) {
+              searchlist.push(this.nodes[c]);
+            }
+          }
+        }
+      }
+    }
+    
+    return this.make_dot_of_classes(html, include_root, options, color_func, classes_to_include);
+  }
+  
   this.make_dot = function(html, include_root, options, color_func)
+  {
+    // include all nodes
+    var classes_to_include = {};
+    for (var n in this.nodes) {
+      classes_to_include[this.nodes[n].name] = 1;
+    }
+    
+    return this.make_dot_of_classes(html, include_root, options, color_func, classes_to_include);
+  }
+  
+  this.make_dot_of_classes = function(html, include_root, options, color_func, classes_to_include)
   {
     nodes_from_name = {};
 
@@ -104,65 +152,79 @@ function DAG() {
     var i = 0;
     for (var n in this.nodes) {
       var node = this.nodes[n];
-      nodes_from_name[node.name] = "a" + i;
-      str += "a" + i + " [ ";
       
-      if (html)
+      if (node.name in classes_to_include)
       {
-        str += "label=\"";
-        str += "<div style='padding: 10px; width: 95px; text-align:center;'>";
-        str += node.name;
-        if (node.object.link)
-        {
-          str += " <span onclick=\\\"event.stopPropagation();\\\">" + 
-                 "<a href=\\\"" + node.object.link + "\\\" target=\\\"_blank\\\">" +
-                 "<img src=\\\"link-icon.png\\\" /></a></span>";
-        }
-        str += "</div>\" ";
-      }
-      else
-      {
-        str += "label=\"" + node.name + "\" ";
-
-        if (node.object.link) //hide link icon if no link
-        {
-          str += "href=\"" + node.object.link + "\" ";
-        }
-
-        //tooltip
-        str += "tooltip=\"" + this.make_tooltip(node.object) + "\" ";
+        nodes_from_name[node.name] = "a" + i;
+        str += "a" + i + " [ ";
         
-        // Make opaque background, so that mouseover background makes tooltip show up
-        str += "style=\"filled\" fillcolor=\"white\" ";
+        if (html)
+        {
+          str += "label=\"";
+          str += "<div style='padding: 10px; width: 95px; text-align:center;'>";
+          str += node.name;
+          if (node.object.link)
+          {
+            str += " <span onclick=\\\"event.stopPropagation();\\\">" + 
+                   "<a href=\\\"" + node.object.link + "\\\" target=\\\"_blank\\\">" +
+                   "<img src=\\\"link-icon.png\\\" /></a></span>";
+          }
+          str += "</div>\" ";
+        }
+        else
+        {
+          str += "label=\"" + node.name + "\" ";
 
-        // color the node
-        var color = color_func(node);
-        if (color)
-          str += "penwidth=\"2.0\" color=\"" + color + "\" ";
+          if (node.object.link) //hide link icon if no link
+          {
+            str += "href=\"" + node.object.link + "\" ";
+          }
+
+          //tooltip
+          str += "tooltip=\"" + this.make_tooltip(node.object) + "\" ";
+          
+          // Make opaque background, so that mouseover background makes tooltip show up
+          str += "style=\"filled\" fillcolor=\"white\" ";
+
+          // color the node
+          var color = color_func(node);
+          if (color)
+            str += "penwidth=\"2.0\" color=\"" + color + "\" ";
+        }
+
+        str += "];\n";
+        i++;
       }
-
-      str += "];\n";
-      i++;
     }
 
     // put in all prereq edges
     for (var i = 0; i < this.edge_list.length; i++) {
-      str += nodes_from_name[this.edge_list[i][0]] + " -> " + nodes_from_name[this.edge_list[i][1]];
+      var start = nodes_from_name[this.edge_list[i][0]];
+      var end = nodes_from_name[this.edge_list[i][1]];
+      if (start && end)
+      {
+        str += start + " -> " + end;
 
-      if (!html)
-        str += " [tooltip=\"" + this.edge_list[i][0] + " -> " + this.edge_list[i][1] + "\"]";
+        if (!html)
+          str += " [tooltip=\"" + this.edge_list[i][0] + " -> " + this.edge_list[i][1] + "\"]";
 
-      str += ";\n";
+        str += ";\n";
+      }
     }
     
     // put in all coreq edges
     for (var i = 0; i < this.coreq_list.length; i++) {
-      str += nodes_from_name[this.coreq_list[i][0]] + " -> " + nodes_from_name[this.coreq_list[i][1]];
-      
-      if (html)
-        str += " [label=\"is a coreq for\"];\n";
-      else
-        str += " [style=dotted, tooltip=\"" + this.coreq_list[i][0] + " -> " + this.coreq_list[i][1] + "\"];\n";
+      var start = nodes_from_name[this.coreq_list[i][0]];
+      var end = nodes_from_name[this.coreq_list[i][1]];
+      if (start && end)
+      {
+        str += start + " -> " + end;
+        
+        if (html)
+          str += " [label=\"is a coreq for\"];\n";
+        else
+          str += " [style=dotted, tooltip=\"" + this.coreq_list[i][0] + " -> " + this.coreq_list[i][1] + "\"];\n";
+      }
     }
     
     if (include_root)
@@ -171,7 +233,8 @@ function DAG() {
       
       // put in root (later removed)
       for (var i = 0; i < roots.length; i++) {
-        str += "root -> " + nodes_from_name[roots[i]] + ";\n";
+        if (roots[i] in classes_to_include)
+          str += "root -> " + nodes_from_name[roots[i]] + ";\n";
       }
     }
     str += "}";

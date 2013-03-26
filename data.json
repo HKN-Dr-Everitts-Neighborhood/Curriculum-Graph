@@ -337,7 +337,8 @@
     "title": "Multimedia Signal Processing",
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 310", "ECE 313"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Signal Processing"
   },
   {
     "name": "ECE 418",
@@ -347,7 +348,8 @@
     ["ECE 310", "MATH 415", "STAT 400"], 
     ["ECE 310", "MATH 415", "IE 300"], 
     ["ECE 310", "MATH 415", "MATH 461"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Signal Processing"
   },
   {
     "name": "CS 460",

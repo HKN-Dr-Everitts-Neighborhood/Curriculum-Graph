@@ -36,7 +36,9 @@ var coloring_func = function(node)
   return color;
 };
 
-var small_dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": "1", "size": "\"8.5,11\""}, coloring_func);
+var options = {"rankdir": "LR", "ranksep": "1", "size": "\"8.5,13\""}
+
+var small_dot = g.make_dot(false, true, options, coloring_func);
 var dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": "1"}, coloring_func);
 
 var ee_color_map = {
@@ -60,8 +62,8 @@ var compe_coloring =function(node)
 };
 
 
-var ee_dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": "1", "size": "\"8.5,11\""}, ee_coloring);
-var compe_dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": "1", "size": "\"8.5,11\""}, compe_coloring);
+var ee_dot = g.make_dot(false, true, options, ee_coloring);
+var compe_dot = g.make_dot(false, true, options, compe_coloring);
 
 var errorfunc = function(err)
 {
@@ -73,4 +75,9 @@ fs.writeFile("./thegraph.dot", dot, errorfunc);
 fs.writeFile("./thegraph-small.dot", small_dot, errorfunc);
 fs.writeFile("./thegraph-ee.dot", ee_dot, errorfunc);
 fs.writeFile("./thegraph-compe.dot", compe_dot, errorfunc);
+
+// subfield graphs
+var signal_processing_dot = g.make_subfield_dot(false, true, options, coloring_func, "Signal Processing");
+fs.writeFile("./thegraph-signalprocessing.dot", signal_processing_dot, errorfunc);
+
 
