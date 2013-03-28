@@ -3,9 +3,24 @@
 var mygraph = require('./mygraph.js');
 var data = require('./data.js');
 var fs = require('fs');
+var exec = require('child_process').exec;
 
-var g = mygraph.makegraph(data.json);
+// helper functions
+var errorfunc = function(err)
+{
+  if (err)
+    console.log("Error saving file: " + err);
+};
 
+var exec_callback = function (error, stdout, stderr) {
+  console.log('stdout: ' + stdout);
+  console.log('stderr: ' + stderr);
+  if (error !== null) {
+    console.log('exec error: ' + error);
+  }
+};
+
+// A bunch of stuff related to colorings
 // colorings for everyone
 var color_map = {
   "ECE tech elective": "blue",
@@ -36,11 +51,6 @@ var coloring_func = function(node)
   return color;
 };
 
-var options = {"rankdir": "LR", "ranksep": "1", "size": "\"8.5,13\""}
-
-var small_dot = g.make_dot(false, true, options, coloring_func);
-var dot = g.make_dot(false, true, {"rankdir": "LR", "ranksep": "1"}, coloring_func);
-
 var ee_color_map = {
   "ECE tech elective": "blue",
   "ECE tech elective / lab": "blue",
@@ -61,23 +71,50 @@ var compe_coloring =function(node)
   return ee_color_map[type];
 };
 
-
-var ee_dot = g.make_dot(false, true, options, ee_coloring);
-var compe_dot = g.make_dot(false, true, options, compe_coloring);
-
-var errorfunc = function(err)
+// function that saves the dot file, then runs dot to create svg
+var make_svg_from_dot = function(dot, name)
 {
-  if (err)
-    console.log("Error saving file: " + err);
+  fs.writeFile(name + ".dot", dot, errorfunc);
+  exec("dot -Tsvg " + name +".dot > " + name + ".svg", exec_callback);
 };
 
-fs.writeFile("./thegraph.dot", dot, errorfunc);
-fs.writeFile("./thegraph-small.dot", small_dot, errorfunc);
-fs.writeFile("./thegraph-ee.dot", ee_dot, errorfunc);
-fs.writeFile("./thegraph-compe.dot", compe_dot, errorfunc);
+// function to create and save graphs
+var make_svg = function(g, options, coloring, name)
+{
+  var dot = g.make_dot(false, true, options, coloring);
+  make_svg_from_dot(dot, name);
+};
+
+// function to create and save subfield graphs
+var make_subfield_svg = function(g, options, coloring, subfield)
+{
+  var dot = g.make_subfield_dot(false, true, options, coloring, subfield);
+  make_svg_from_dot(dot, "thegraph-" + subfield.toLowerCase().replace(' ', '_'));
+};
+
+// Actual code - no more helpers.
+
+var options = {"rankdir": "LR", "ranksep": "1", "size": "\"8.5,13\""};
+
+// parse the data
+var g = mygraph.makegraph(data.json);
+
+make_svg(g, options, coloring_func, "thegraph-small");
+make_svg(g, {"rankdir": "LR", "ranksep": "1"}, coloring_func, "thegraph");
+make_svg(g, options, ee_coloring, "thegraph-ee");
+make_svg(g, options, compe_coloring, "thegraph-compe");
 
 // subfield graphs
-var signal_processing_dot = g.make_subfield_dot(false, true, options, coloring_func, "Signal Processing");
-fs.writeFile("./thegraph-signalprocessing.dot", signal_processing_dot, errorfunc);
+// first, identify all subfields.
+var subfields = {};
+for (var i=0; i<data.json.length; i++)
+{
+  if (data.json[i].subfield)
+    subfields[data.json[i].subfield] = 1;
+}
 
-
+// make graphs for each subfield
+for (var s in subfields)
+{
+  make_subfield_svg(g, options, coloring_func, s);
+}
