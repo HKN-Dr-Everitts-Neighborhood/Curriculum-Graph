@@ -238,7 +238,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+380+-+Biomedical+Imaging", 
     "type": "ECE tech elective",
     "prereqs": [["MATH 286"], ["MATH 285"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   } , 
   {
     "name": "ECE 385",
@@ -263,7 +264,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+395+-+Advanced+Digital+Systems+Laboratory", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 385"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Engineering: Architecture / Digital Logic"
   },
 
   {
@@ -272,14 +274,16 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+402+-+Electronic+Music+Synthesis", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["MUS 103", "ECE 290", "ECE 310"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   },
   {
     "name": "ECE 403",
     "title": "Audio Engineering",
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 290", "ECE 310", "ECE 473"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   },
   {
     "name": "ECE 408",
@@ -296,7 +300,8 @@
     "cetype": "required",
     "eetype": "ECE tech elective / lab",
     "prereqs": [ ["ECE 391"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Engineering: Architecture / Digital Logic"
   },
   {
     "name": "ECE 412",
@@ -313,7 +318,8 @@
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=213221447", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 210"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   },
   {
     "name": "ECE 415",
@@ -321,7 +327,8 @@
     "type": "ECE tech elective / lab",
     "crosslist": ["BIOE 415"],
     "prereqs": [ []],
-    "coreqs": [ ["ECE 414"] ]
+    "coreqs": [ ["ECE 414"] ],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   },
   {
     "name": "ECE 416",
@@ -330,7 +337,8 @@
     "crosslist": ["BIOE 416"],
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+416+-+Biosensors", 
     "prereqs": [ ["ECE 329"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   },
   {
     "name": "ECE 417",
@@ -392,7 +400,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+425+-+Intro+to+VLSI+System+Design", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 385", "ECE 411"], ["CS 232"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Engineering: Architecture / Digital Logic"
   },
   {
     "name": "CS 425",
@@ -636,7 +645,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+462+-+Logic+Design",
     "type": "ECE tech elective",
     "prereqs": [["ECE 290"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Engineering: Architecture / Digital Logic"
   },
   {
     "name": "ECE 463",
@@ -673,7 +683,8 @@
     "type": "ECE tech elective",
     "crosslist": ["BIOE 467"],
     "prereqs": [["ECE 455"], ["ECE 460"], ["PHYS 402"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   },
   {
     "name": "ECE 468",
@@ -705,7 +716,8 @@
     "title": "Biomedical Ultrasound Imaging",
     "type": "ECE tech elective",
     "prereqs": [["ECE 329"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   },
   {
     "name": "ECE 473",
@@ -713,7 +725,8 @@
     "type": "ECE tech elective",
     "crosslist": ["TAM 413"],
     "prereqs": [["MATH 285"], ["MATH 286"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   },
   {
     "name": "ECE 476",
@@ -736,7 +749,8 @@
     "type": "ECE tech elective",
     "crosslist": ["BIOE 480"],
     "prereqs": [["ECE 310"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   },
   {
     "name": "ECE 481",
@@ -829,7 +843,8 @@
     "type": "ECE tech elective",
     "crosslist": ["MATH 487"],
     "prereqs": [["MATH 284"], ["MATH 285"], ["MATH 286"], ["MATH 441"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
   },
   {
     "name": "ECE 495",
@@ -927,9 +942,9 @@
     "title": "Text Information Systems",
     "type": "CS tech elective",
     "prereqs": [["CS 225"]],
-    "coreqs": [[]]
-  },
-  {
+    
+    
+  },"coreqs": [[]]
     "name": "CS 411",
     "title": "Database Systems",
     "type": "CS tech elective",
@@ -1051,14 +1066,15 @@
     "type": "CS tech elective",
     "crosslist": ["CSE 422"],
     "prereqs": [["CS 232"]],
-    "coreqs": [["ECE 391"]]
+    "coreqs": [["ECE 391"]],
+    "subfield": "Computer Engineering: Architecture / Digital Logic"
   },
   {
     "name": "CS 446",
     "title": "Machine Learning",
     "type": "CS tech elective",
-    "prereqs": [["CS 373", "CS 440"]],
-    "coreqs": [[]]
+    "prereqs": [["
+    "subfield": "Computer Engineering: Artificial Intelligence"
   },
   {
     "name": "CS 465",
