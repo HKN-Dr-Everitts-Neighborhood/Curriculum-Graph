@@ -510,7 +510,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+440+%28ECE+448%29+-+Artificial+Intelligence",
     "crosslist": ["ECE 448"],
     "prereqs": [ ["ECE 391"], ["CS 225"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Engineering: Artificial Intelligence"
   },
   {
     "name": "ECE 451",
@@ -709,7 +710,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+470+-+Introduction+to+Robotics",
     "type": "ECE tech elective / lab",
     "prereqs": [["MATH 225"], ["MATH 286"], ["MATH 415"], ["MATH 418"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Engineering: Artificial Intelligence"
   },
   {
     "name": "ECE 472",
@@ -1073,7 +1075,7 @@
     "name": "CS 446",
     "title": "Machine Learning",
     "type": "CS tech elective",
-    "prereqs": [["
+    "prereqs": [["CS 373"], ["CS 440"]],
     "subfield": "Computer Engineering: Artificial Intelligence"
   },
   {
