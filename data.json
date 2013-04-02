@@ -944,9 +944,9 @@
     "title": "Text Information Systems",
     "type": "CS tech elective",
     "prereqs": [["CS 225"]],
-    
-    
-  },"coreqs": [[]]
+    "coreqs": [[]]
+  },
+  {
     "name": "CS 411",
     "title": "Database Systems",
     "type": "CS tech elective",
