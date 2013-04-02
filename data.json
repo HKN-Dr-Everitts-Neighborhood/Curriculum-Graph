@@ -672,7 +672,7 @@
     "coreqs": [[]]
   },
   {
-    "name": "ECE 466",
+    "name": "ECE ",
     "title": "Optical Communications Lab",
     "type": "ECE tech elective / lab",
     "prereqs": [[]],
@@ -944,7 +944,8 @@
     "title": "Text Information Systems",
     "type": "CS tech elective",
     "prereqs": [["CS 225"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Data Systems"
   },
   {
     "name": "CS 411",
@@ -952,14 +953,16 @@
     "type": "CS tech elective",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+411+-+Database+Systems",
     "prereqs": [["CS 225"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Data Systems"
   },
   {
     "name": "CS 412",
     "title": "Introduction to Data Mining",
     "type": "CS tech elective",
     "prereqs": [["CS 225"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Data Systems"
   },
   {
     "name": "MATH 413",
