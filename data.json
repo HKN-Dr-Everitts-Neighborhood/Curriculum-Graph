@@ -152,7 +152,8 @@
     "cetype": "ECE tech elective",
     "eetype": "3of5",
     "prereqs": [["ECE 210"]],
-    "coreqs": [[]]
+    "coreqs": [["ECE 311"]],
+    "subfield": "Signal Processing"
   },
   {
     "name": "ECE 311",
@@ -160,7 +161,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+311+-+Digital+Signal+Processing+Lab",
     "type": "ECE tech elective",
     "prereqs": [[]],
-    "coreqs": [["ECE 310"]]
+    "coreqs": [["ECE 310"]],
+    "subfield": "Signal Processing"
   },
   {
     "name": "ECE 313",
@@ -187,7 +189,8 @@
     "cetype": "ECE tech elective",
     "eetype": "3of5",
     "prereqs": [["ECE 210"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Power and Energy Systems"
   },
   {
     "name": "ECE 333",
@@ -195,7 +198,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+333+-+Green+Electric+Energy",
     "type": "ECE tech elective",
     "prereqs": [["ECE 210"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Power and Energy Systems"
   },
   {
     "name": "ECE 342",
@@ -204,7 +208,8 @@
     "cetype": "ECE tech elective",
     "eetype": "3of5",
     "prereqs": [["ECE 210"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Integrated Circuits and Systems"
   },
   {
     "name": "ECE 343",
@@ -212,7 +217,8 @@
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289968",
     "type": "ECE tech elective / lab",
     "prereqs": [[]],
-    "coreqs": [["ECE 342"]]
+    "coreqs": [["ECE 342"]],
+    "subfield": "Integrated Circuits and Systems"
   },
   {
     "name": "ECE 350",
@@ -221,7 +227,8 @@
     "cetype": "ECE tech elective",
     "eetype": "3of5",
     "prereqs": [["ECE 329"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   } ,
   {
     "name": "ECE 361",
@@ -229,7 +236,8 @@
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289485", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 210", "ECE 313"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Communications"
   } ,
   {
     "name": "ECE 380",
@@ -256,7 +264,8 @@
     "cetype": "required",
     "eetype": "3of5 / lab",
     "prereqs": [ ["ECE 290"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Science: Systems"
   },
   {
     "name": "ECE 395",
@@ -291,7 +300,8 @@
     "type": "ECE tech elective",
     "crosslist": ["CS 483"],
     "prereqs": [ ["ECE 190"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Science: Parallel Programming"
   },
   {
     "name": "ECE 411",
@@ -366,7 +376,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+460+%28ECE+419%29+-+Security+Laboratory",
     "crosslist": ["ECE 419"],
     "prereqs": [["CS 461"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Science: Security & Information Assurance"
   },
   {
     "name": "ECE 420",
@@ -374,7 +385,8 @@
     "type": "ECE tech elective / lab",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+420+-+Embedded+DSP+Laboratory", 
     "prereqs": [ ["ECE 310"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Signal Processing"
   },
   {
     "name": "CS 461",
@@ -383,7 +395,8 @@
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=213747887", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 391"], ["CS 241"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Science: Security & Information Assurance"
   },
   {
     "name": "CS 463",
@@ -392,7 +405,8 @@
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=213747887", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 422"], ["CS 461"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Science: Security & Information Assurance"
   },
   {
     "name": "ECE 425",
@@ -401,7 +415,7 @@
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 385", "ECE 411"], ["CS 232"]],
     "coreqs": [ [] ],
-    "subfield": "Computer Engineering: Architecture / Digital Logic"
+    "subfield": [["Computer Engineering: Architecture / Digital Logic"], ["Integrated Circuits and Systems"]]
   },
   {
     "name": "CS 425",
@@ -418,7 +432,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+431+-+Electric+Machinery", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 330"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Power and Energy Systems"
   },
   {
     "name": "ECE 432",
@@ -426,7 +441,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+431+-+Electric+Machinery", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 431"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Power and Energy Systems"
   },
   {
     "name": "CS 436",
@@ -434,7 +450,8 @@
     "type": "ECE tech elective / lab",
     "crosslist": ["ECE 435"],
     "prereqs": [ ["CS 438"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Engineering: Networking"
   },
   {
     "name": "ECE 437",
@@ -442,7 +459,8 @@
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289962", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 329"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "CS 438",
@@ -456,7 +474,8 @@
                  ["CS 241", "ECE 313"],
                  ["CS 241", "MATH 461"],
                  ["CS 241", "STAT 400"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Engineering: Networking"
   },
   {
     "name": "ECE 439",
@@ -469,7 +488,8 @@
                  ["CS 241", "ECE 313"],
                  ["CS 241", "MATH 461"],
                  ["CS 241", "STAT 400"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Engineering: Networking"
   },
   {
     "name": "ECE 441",
@@ -477,7 +497,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+441+-+Physics+and+Modeling+of+Semiconductor+Devices", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 340"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Microelectronics and Photonics"
   },
   {
     "name": "ECE 444",
@@ -485,7 +506,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+444+-+Theory+and+Fabrication+of+Integrated+Circuits", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 340"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Microelectronics and Photonics"
   },
   {
     "name": "ECE 445",
@@ -501,7 +523,8 @@
     "title": "Active Microwave Ckt Design",
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 350", "ECE 453"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "CS 440",
@@ -518,7 +541,8 @@
     "title": "Adv Microwave Measurements",
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 350"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "ECE 452",
@@ -526,7 +550,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+452+-+Electromagnetic+Fields+and+Electro-Optics", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "ECE 453",
@@ -534,7 +559,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+453+-+Wireless+Communications+Systems", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 329"]],
-    "coreqs": [ ["ECE 342"] ]
+    "coreqs": [ ["ECE 342"] ],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "ECE 454",
@@ -542,7 +568,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+454+-+Antennas", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "ECE 455",
@@ -550,14 +577,16 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+455+-+Optical+Electronics", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": [["Electromagnetics, Optics and Remote Sensing"],["Microelectronics and Photonics"]]
   },
   {
     "name": "ECE 456",
     "title": "Global Nav Satellite Systems",
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 329", "ECE 310"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "ECE 457",
@@ -565,14 +594,16 @@
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=200478916", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "ECE 458",
     "title": "Applic of Radio Wave Propag",
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "ECE 459",
@@ -580,14 +611,16 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+459+-+Communication+Systems", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 313"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Communications"
   },
   {
     "name": "ECE 460",
     "title": "Optical Imaging",
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 329"]],
-    "coreqs": [ ["ECE 313"] ]
+    "coreqs": [ ["ECE 313"] ],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "CS 173",
@@ -609,7 +642,8 @@
         ["ECE 190", "MATH 234"],
         ["INFO 103", "MATH 234"]
     ],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Theory"
   },
   {
     "name": "CS 225",
@@ -621,7 +655,8 @@
                  ["ECE 190", "MATH 213"],
                  ["CS 125", "MATH 213"],
                  ["CS 125", "CS 173"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Science: Programming and Software Engineering"
   },
   {
     "name": "MATH 213",
@@ -654,7 +689,8 @@
     "title": "Digital Communications Lab",
     "type": "ECE tech elective / lab",
     "prereqs": [["ECE 361"], ["ECE 459"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Communications"
   },
   {
     "name": "ECE 464",
@@ -662,21 +698,24 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+464+-+Power+Electronics",
     "type": "ECE tech elective",
     "prereqs": [["ECE 342"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Power and Energy Systems"
   },
   {
     "name": "ECE 465",
     "title": "Optical Communications Systems",
     "type": "ECE tech elective",
     "prereqs": [["ECE 313", "ECE 350"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Communications"
   },
   {
-    "name": "ECE ",
+    "name": "ECE 466",
     "title": "Optical Communications Lab",
     "type": "ECE tech elective / lab",
     "prereqs": [[]],
-    "coreqs": [["ECE 465"]]
+    "coreqs": [["ECE 465"]],
+    "subfield": "Communications"
   },
   {
     "name": "ECE 467",
@@ -693,7 +732,8 @@
     "type": "ECE tech elective / lab",
     "crosslist": ["AE 468"],
     "prereqs": [["ECE 329", "ECE 313"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Electromagnetics, Optics and Remote Sensing"
   },
   {
     "name": "ECE 469",
@@ -701,7 +741,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+469+-+Power+Electronics+Laboratory",
     "type": "ECE tech elective / lab",
     "prereqs": [["ECE 343"]],
-    "coreqs": [["ECE 464"]]
+    "coreqs": [["ECE 464"]],
+    "subfield": "Power and Energy Systems"
   },
   {
     "name": "ECE 470",
@@ -735,7 +776,8 @@
     "title": "Power System Analysis",
     "type": "ECE tech elective",
     "prereqs": [["ECE 330"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Power and Energy Systems"
   },
   {
     "name": "CS 477",
@@ -743,7 +785,8 @@
     "type": "ECE tech elective",
     "crosslist": ["ECE 478"],
     "prereqs": [["CS 225", "CS 373"], ["CS 225", "MATH 414"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Theory"
   },
   {
     "name": "ECE 480",
@@ -759,7 +802,8 @@
     "title": "Nanotechnology",
     "type": "ECE tech elective",
     "prereqs": [["CHEM 442"], ["CHBE 457"], ["ECE 485"], ["MSE 401"], ["PHYS 460"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Microelectronics and Photonics"
   },
   {
     "name": "ECE 482",
@@ -767,21 +811,24 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+482+-+Digital+IC+Design",
     "type": "ECE tech elective",
     "prereqs": [["ECE 290", "ECE 342"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Integrated Circuits and Systems"
   },
   {
     "name": "ECE 483",
     "title": "Analog IC Design",
     "type": "ECE tech elective",
     "prereqs": [["ECE 342"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Integrated Circuits and Systems"
   },
   {
     "name": "ECE 484",
     "title": "Prin Adv Microelec Processing",
     "type": "ECE tech elective",
     "prereqs": [["ECE 444"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Microelectronics and Photonics"
   },
   {
     "name": "ECE 485",
@@ -789,7 +836,8 @@
     "type": "ECE tech elective",
     "crosslist": ["ME 485"],
     "prereqs": [[]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Microelectronics and Photonics"
   },
   {
     "name": "ECE 486",
@@ -797,21 +845,24 @@
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289976",
     "type": "ECE tech elective / lab",
     "prereqs": [["ECE 210"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Control Systems"
   },
   {
     "name": "ECE 487",
     "title": "Intro to Quantum Electr for EEs",
     "type": "ECE tech elective",
     "prereqs": [["PHYS 485"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Microelectronics and Photonics"
   },
   {
     "name": "ECE 488",
     "title": "Compound Semicond & Devices",
     "type": "ECE tech elective",
     "prereqs": [["ECE 340", "ECE 350"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Microelectronics and Photonics"
   },
   {
     "name": "ECE 490",
@@ -821,6 +872,7 @@
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289978",
     "prereqs": [["ECE 190", "MATH 415"]],
     "coreqs": [[]]
+    "subfield": "Control Systems"
   },
   {
     "name": "CS 450",
@@ -829,7 +881,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+450+%28ECE+491%2C+MATH+450%2C+CSE+401%29+-+Numerical+Analysis",
     "type": "ECE tech elective",
     "prereqs": [["CS 101", "CS 357", "MATH 285"], ["CS 125", "CS 357", "MATH 285"], ["CS 101", "MATH 415", "MATH 285"], ["CS 125", "MATH 415", "MATH 285"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Numerical Analysis and Scientific Computing"
   },
   {
     "name": "CS 420",
@@ -837,7 +890,8 @@
     "type": "ECE tech elective",
     "crosslist": ["ECE 492", "CSE 402"], 
     "prereqs": [["CS 225"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Parallel Programming"
   },
   {
     "name": "ECE 493",
@@ -853,7 +907,8 @@
     "title": "Photonic Device Laboratory",
     "type": "ECE tech elective / lab",
     "prereqs": [["ECE 487"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Microelectronics and Photonics"
   },
   {
     "name": "CS 373",
@@ -868,7 +923,8 @@
     "type": "CS tech elective",
     "crosslist": ["CSE 414", "MATH 473"],
     "prereqs": [["CS 373"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Theory"
   },
   {
     "name": "PHYS 485",
@@ -927,7 +983,8 @@
     "title": "Programming Studio",
     "type": "CS tech elective",
     "prereqs": [["CS 241"], ["ECE 391"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Programming and Software Engineering"
   },
   {
     "name": "CS 357",
@@ -937,7 +994,8 @@
     "nocredit": ["CS 450"],
     "type": "CS tech elective",
     "prereqs": [["ECE 190","MATH 241","MATH 415"], ["ECE 190","MATH 241","MATH 225"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Numerical Analysis and Scientific Computing"
   },
   {
     "name": "CS 410",
@@ -977,7 +1035,8 @@
     "title": "Multimedia Systems",
     "type": "CS tech elective",
     "prereqs": [["CS 241"],["ECE 391"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Systems"
   },
   {
     "name": "CS 418",
@@ -986,7 +1045,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+418+-+Interactive+Computer+Graphics",
     "crosslist": ["CSE 427"],
     "prereqs": [["CS 225","MATH 241","MATH 415"], ["CS 225","MATH 241","MATH 225"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Graphics & HCI"
   },
   {
     "name": "CS 419",
@@ -994,21 +1054,24 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+419+-+Production+Computer+Graphics",
     "type": "CS tech elective",
     "prereqs": [["CS 418"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Graphics & HCI"
   },
   {
     "name": "CS 421",
     "title": "Progrmg Languages & Compilers",
     "type": "CS tech elective",
     "prereqs": [["CS 232", "CS 373"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Programming Languages and Compilers"
   },
   {
     "name": "CS 422",
     "title": "Programming Language Design",
     "type": "CS tech elective",
     "prereqs": [["CS 421"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Programming Languages and Compilers"
   },  
   {
     "name": "CS 423",
@@ -1016,7 +1079,8 @@
     "type": "CS tech elective",
     "crosslist": ["CSE 423"],
     "prereqs": [["CS 241"], ["ECE 391"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Systems"
   },  
   {
     "name": "CS 424",
@@ -1024,7 +1088,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+424+-+Real-Time+Systems",
     "type": "CS tech elective",
     "prereqs": [["CS 431"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Systems"
   },  
   {
     "name": "CS 426",
@@ -1032,7 +1097,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+426+-+Compiler+Construction",
     "type": "CS tech elective",
     "prereqs": [["CS 421"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Programming Languages and Compilers"
   },  
   {
     "name": "CS 427",
@@ -1040,7 +1106,8 @@
     "type": "CS tech elective",
     "crosslist": ["CSE 426"],
     "prereqs": [["CS 225", "CS 373"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Programming and Software Engineering"
   }, 
   {
     "name": "CS 428",
@@ -1048,14 +1115,16 @@
     "type": "CS tech elective",
     "crosslist": ["CSE 429"],
     "prereqs": [["CS 427"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Programming and Software Engineering"
   },
   {
     "name": "CS 429",
     "title": "Software Engineering II ACP",
     "type": "CS tech elective",
-    "prereqs": [["CS 427"]],
-    "coreqs": [[]]
+    
+    "coreqs": [[]],
+    "subfield": "Computer Science: Programming and Software Engineering"
   },    
   {
     "name": "CS 431",
@@ -1063,7 +1132,8 @@
     "type": "CS tech elective",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+431+-+Embedded+Systems",
     "prereqs": [["CS 241"], ["ECE 391"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Systems"
   },    
   {
     "name": "CS 433",
@@ -1087,14 +1157,16 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+465+-+Principles+of+User+Interface+Design%2C+Implementation+and+Evaluation",
     "type": "CS tech elective",
     "prereqs": [["CS 225"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Graphics & HCI"
   },
   {
     "name": "CS 467",
     "title": "Social Visualization",
     "type": "CS tech elective",
     "prereqs": [["CS 225"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Graphics & HCI"
   },
   {
     "name": "IE 410",
@@ -1102,7 +1174,8 @@
     "type": "CS tech elective",
     "crosslist": ["CS 481"],
     "prereqs": [["IE 310"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Numerical Analysis and Scientific Computing"
   },
   {
     "name": "MATH 347",
