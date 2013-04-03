@@ -5,12 +5,7 @@ var data = require('./data.js');
 var fs = require('fs');
 var exec = require('child_process').exec;
 
-// helper functions
-var errorfunc = function(err)
-{
-  if (err)
-    console.log("Error saving file: " + err);
-};
+// helper function
 
 var exec_callback = function (error, stdout, stderr) {
   console.log('stdout: ' + stdout);
@@ -74,8 +69,13 @@ var compe_coloring =function(node)
 // function that saves the dot file, then runs dot to create svg
 var make_svg_from_dot = function(dot, name)
 {
-  fs.writeFile(name + ".dot", dot, errorfunc);
-  exec("dot -Tsvg " + name +".dot > " + name + ".svg", exec_callback);
+  fs.writeFile(name + ".dot", dot, function(err)
+  {
+    if (err)
+      console.log("Error saving file: " + err);
+    else
+      exec("dot -Tsvg " + name +".dot > " + name + ".svg", exec_callback);
+  });
 };
 
 // function to create and save graphs
@@ -89,7 +89,9 @@ var make_svg = function(g, options, coloring, name)
 var make_subfield_svg = function(g, options, coloring, subfield)
 {
   var dot = g.make_subfield_dot(false, true, options, coloring, subfield);
-  make_svg_from_dot(dot, "thegraph-" + subfield.toLowerCase().replace(' ', '_'));
+  var filename = "thegraph-" + subfield.toLowerCase().replace(/[ :,/]/g, '_').replace(/&/g, 'and');
+  console.log(filename);
+  make_svg_from_dot(dot, filename);
 };
 
 // Actual code - no more helpers.

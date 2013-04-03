@@ -415,7 +415,7 @@
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 385", "ECE 411"], ["CS 232"]],
     "coreqs": [ [] ],
-    "subfield": [["Computer Engineering: Architecture / Digital Logic"], ["Integrated Circuits and Systems"]]
+    "subfield": "Computer Engineering: Architecture / Digital Logic"
   },
   {
     "name": "CS 425",
@@ -424,7 +424,8 @@
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+425+%28ECE+428%29+-+Distributed+Systems", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 391"], ["CS 232"]],
-    "coreqs": [ [] ]
+    "coreqs": [ [] ],
+    "subfield": "Computer Science: Systems"
   },
   {
     "name": "ECE 431",
@@ -578,7 +579,7 @@
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
     "coreqs": [ [] ],
-    "subfield": [["Electromagnetics, Optics and Remote Sensing"],["Microelectronics and Photonics"]]
+    "subfield": "Microelectronics and Photonics"
   },
   {
     "name": "ECE 456",
@@ -871,7 +872,7 @@
     "crosslist": ["CSE 441"],
     "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289978",
     "prereqs": [["ECE 190", "MATH 415"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
     "subfield": "Control Systems"
   },
   {
@@ -1122,7 +1123,7 @@
     "name": "CS 429",
     "title": "Software Engineering II ACP",
     "type": "CS tech elective",
-    
+    "prereqs": [["CS 427"]],
     "coreqs": [[]],
     "subfield": "Computer Science: Programming and Software Engineering"
   },    
@@ -1148,7 +1149,8 @@
     "name": "CS 446",
     "title": "Machine Learning",
     "type": "CS tech elective",
-    "prereqs": [["CS 373"], ["CS 440"]],
+    "prereqs": [["CS 373", "CS 440"]],
+    "coreqs": [[]],
     "subfield": "Computer Engineering: Artificial Intelligence"
   },
   {
