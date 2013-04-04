@@ -152,7 +152,7 @@
     "cetype": "ECE tech elective",
     "eetype": "3of5",
     "prereqs": [["ECE 210"]],
-    "coreqs": [["ECE 311"]],
+    "coreqs": [[]],
     "subfield": "Signal Processing"
   },
   {
