@@ -922,6 +922,7 @@
     "name": "CS 473",
     "title": "Fundamental Algorithms",
     "type": "CS tech elective",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+473+-+Algorithms",
     "crosslist": ["CSE 414", "MATH 473"],
     "prereqs": [["CS 373"]],
     "coreqs": [[]],
