@@ -135,8 +135,10 @@
     "name": "ECE 304",
     "title": "Photonic Devices",
     "type": "ECE tech elective",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+304+-+Photonic+Devices",
     "prereqs": [["PHYS 214"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Microelectronics and Photonics"
   },
   {
     "name": "ECE 307",
@@ -915,8 +917,10 @@
     "name": "CS 373",
     "title": "Theory of Computation",
     "type": "CS tech elective",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+373+-+Theory+of+Computation",
     "prereqs": [["CS 225", "CS 173"], ["CS 225", "MATH 213"]],
-    "coreqs": [[]]
+    "coreqs": [[]],
+    "subfield": "Computer Science: Theory"
   },
   {
     "name": "CS 473",
@@ -1078,6 +1082,7 @@
     "name": "CS 423",
     "title": "Operating Systems Design",
     "type": "CS tech elective",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+423+-+Operating+Systems+Design",
     "crosslist": ["CSE 423"],
     "prereqs": [["CS 241"], ["ECE 391"]],
     "coreqs": [[]],

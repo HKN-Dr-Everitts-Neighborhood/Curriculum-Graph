@@ -1,7 +1,9 @@
-#! /c/Program Files/nodejs/node.exe
+#! node.exe
 
 var mygraph = require('./mygraph.js');
 var data = require('./data.js');
+var common = require('./common.js');
+
 var fs = require('fs');
 var exec = require('child_process').exec;
 
@@ -89,7 +91,7 @@ var make_svg = function(g, options, coloring, name)
 var make_subfield_svg = function(g, options, coloring, subfield)
 {
   var dot = g.make_subfield_dot(false, true, options, coloring, subfield);
-  var filename = "thegraph-" + subfield.toLowerCase().replace(/[ :,/]/g, '_').replace(/&/g, 'and');
+  var filename = common.subfield_to_file_name(subfield);
   console.log(filename);
   make_svg_from_dot(dot, filename);
 };
@@ -114,6 +116,10 @@ for (var i=0; i<data.json.length; i++)
   if (data.json[i].subfield)
     subfields[data.json[i].subfield] = 1;
 }
+
+// This makes the subfield graphs narrower = helps at right margin of the
+// tech electives by subfield page
+options.size = "\"8,13\"";
 
 // make graphs for each subfield
 for (var s in subfields)
