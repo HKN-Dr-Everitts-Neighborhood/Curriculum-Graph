@@ -81,3 +81,15 @@ The nocredit field is a list of classes for which you can't get credit for if yo
 Three more fields deserve explanations: type, eetype, and cetype.  The basic idea here is that "type" tells you what kind of credit a class carries - i.e. whether it is required, elective, an ECE tech elective, etc; look at data.js for examples.  eetype and cetype are intended to be used when the two majors disagree on what a course counts as - e.g. ECE 391 is a 3 of 5 course for EE's but for CompE, it's required; thus it's cetype is "required" whereas it's EE type is "3of5".
 
 One issue is having multiple courses under the same name - e.g. ECE 498.  This issue will have to be tackled if we ever feel it necessary to tackle this in the graph - these courses tend to be outside the normal curriculum, and change from semester to semester.  A possible solution would be to have a suffix added to the name of these courses - e.g. "ECE 498SL" could be Steve Lumetta's "Engineering Parallel Software" class.  It's important that the names be unique.
+
+Building & Deploying
+======================
+
+Running build.sh rebuilds everything (it's not smart about dependencies - it does extra work, as compared to a makefile).  The makefile isn't typically used, so is not up to date.
+
+Deploying new graphs takes several steps:
+* copying thegraph-small.svg to the Curriculum Graph page on the wiki (between {html} tags in wiki markup)
+* copying thegraph-ee.svg to the EE Curriculum Graph page on the wiki (between {html} tags in wiki markup)
+* copying thegraph-compe.svg to the CompE curriculum Graph page on the wiki (between {html} tags in wiki markup)
+* uploading thegraph.svg as an attachment to the Curriculum Graph page
+* copying tech_electives_by_subfields.txt to the ECE & CS Tech Electives by Subfields page on the wiki - this should replace most the wiki markup of the page (currently, all).
