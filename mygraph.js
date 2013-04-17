@@ -1,3 +1,5 @@
+var common = require('./common.js');
+
 function isEmpty(object) { for(var i in object) { return false; } return true; };
 
 function DAG() {
@@ -55,23 +57,8 @@ function DAG() {
   this.make_tooltip = function(class_obj) {
     var txt = class_obj.title;
     
-    // write out crosslist
-    if (class_obj.crosslist) {
-      txt += " (same as ";
-      var len = class_obj.crosslist.length;
-      for (var i=0; i < len; i++) {
-        txt += class_obj.crosslist[i];
-        if (len-2 > i)
-          txt += ", ";
-        else if (i === len-2) {
-          if (len === 2)
-            txt += " and ";
-          else
-            txt += ", and ";
-        }
-      }
-      txt += ")";
-    }
+    // "same as" text
+    txt += common.same_as(class_obj);
     
     /*
     txt += "\nPrereqs:\n";

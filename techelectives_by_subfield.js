@@ -56,6 +56,13 @@ for (var i = 0; i < fields.length; i++)
 }
 output += "\n";
 
+function link(course)
+{
+  if (course.crosslist)
+    return course.name + " (" +course.crosslist.join(', ') + ") - " + course.title;
+  return course.name + " - " + course.title;
+}
+
 // print out the subfields / graphs / bullets
 for (var j = 0; j < fields.length; j++)
 {
@@ -66,10 +73,13 @@ for (var j = 0; j < fields.length; j++)
   for (var i = 0; i < subfields[subfield].length; i++)
   {
     var course = subfields[subfield][i];
+	  
     if (course.link)
-      output += "* [" + course.name + " - " + course.title + "|" + course.link + "]\n";
+      output += "* [" + course.name + " - " + course.title + "|" + link(course) + "]";
     else
-      output += "* " + course.name + " - " + course.title + "\n";
+      output += "* " + course.name + " - " + course.title;
+    
+    output += common.same_as(course) + "\n";
   }
   output += "\n{html}"
   var graph = fs.readFileSync(
