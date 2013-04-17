@@ -441,7 +441,6 @@
   {
     "name": "ECE 432",
     "title": "Advanced Electric Machinery",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+431+-+Electric+Machinery", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 431"]],
     "coreqs": [ [] ],
@@ -496,7 +495,7 @@
   },
   {
     "name": "ECE 441",
-    "title": "Physcs & Modeling Semicond Dev",
+    "title": "Physics & Modeling Semicond Dev",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+441+-+Physics+and+Modeling+of+Semiconductor+Devices", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 340"]],
@@ -1024,6 +1023,7 @@
     "name": "CS 412",
     "title": "Introduction to Data Mining",
     "type": "CS tech elective",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+412+-+Introduction+to+Data+Mining",
     "prereqs": [["CS 225"]],
     "coreqs": [[]],
     "subfield": "Computer Science: Data Systems"
