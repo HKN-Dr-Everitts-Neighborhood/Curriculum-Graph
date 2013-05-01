@@ -8,7 +8,7 @@ Design Goals
 
 We want the graph to be interactive.  We want the code to be easy to develop, maintain, and extend.  Some features we'd like to implement:
 * Automatic layout - fosters easier maintainence
-* Ability to show / hide courses (and their prereqs) - the full graph will most likely be too large to be comfortably viewed
+* Ability to show / hide courses (and their prereqs) - the full graph will most likely be too large to be comfortably viewed.
 * Classification of courses by specializations, and ability to show / hide whole specializations
 * Distinguish between prereqs and coreqs; we may also want to distinguish between officially pre/coreq classes and DEN recommendations
 
@@ -27,7 +27,7 @@ Originally, the interactive tree example caught my eye; it might be worth trying
 
 A bunch of d3 tutorials can be found at https://github.com/mbostock/d3/wiki/Tutorials
 
-So our original intention was for everything to run in a browser, but we've since found that command line tools such as graphviz can do a much better job (although generating static graphs) - hence our use of nodejs; the svg format allows many features, such as tooltips and links, which allow for a decent amount of interactivity, though not quite as much as we had hoped for.
+*Our original intention was for everything to run in a browser*, but we've since found that command line tools such as graphviz can do a much better job (although generating static graphs) - hence our use of nodejs; the svg format allows many features, such as tooltips and links, which allow for a decent amount of interactivity, though not quite as much as we had hoped for.
 
 Data Format
 ===========
