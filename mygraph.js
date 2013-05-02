@@ -4,6 +4,7 @@ function isEmpty(object) { for(var i in object) { return false; } return true; }
 
 function DAG() {
 
+  // object mapping class names to objects representing those classes.
   this.nodes = {};
   this.edge_list = [];
   this.coreq_list = [];
@@ -12,20 +13,27 @@ function DAG() {
 
     var new_node = {name: node.name, children: {}, parents: {}, coreqs: {}, object: node};
     this.nodes[node.name] = new_node;
-    return node.name;
   };
   
   this.addPrereq = function(node1, node2) {
-    if (!this.nodes[node1].children[node2])
-      this.edge_list.push([node1, node2]);
-    this.nodes[node1].children[node2] = 1;
-    this.nodes[node2].parents[node1] = 1;
+    
+    var n1 = this.nodes[node1];
+    var n2 = this.nodes[node2];
+    
+    if (!n1.children[node2])
+      this.edge_list.push([n1, n2]);
+    n1.children[node2] = 1;
+    n2.parents[node1] = 1;
   };
   
   this.addCoreq = function(node1, node2) {
-    if (!this.nodes[node2].coreqs[node1])
-      this.coreq_list.push([node1, node2]);
-    this.nodes[node2].coreqs[node1] = 1;
+    
+    var n1 = this.nodes[node1];
+    var n2 = this.nodes[node2];
+    
+    if (!n2.coreqs[node1])
+      this.coreq_list.push([n1, n2]);
+    n2.coreqs[node1] = 1;
   };
 
   this.is_root = function (node) {
@@ -186,14 +194,17 @@ function DAG() {
 
     // put in all prereq edges
     for (var i = 0; i < this.edge_list.length; i++) {
-      var start = nodes_from_name[this.edge_list[i][0]];
-      var end = nodes_from_name[this.edge_list[i][1]];
+      var start_name = this.edge_list[i][0].name;
+      var end_name = this.edge_list[i][1].name;
+      
+      var start = nodes_from_name[start_name];
+      var end = nodes_from_name[end_name];
       if (start && end)
       {
         str += start + " -> " + end;
 
         if (!html)
-          str += " [tooltip=\"" + this.edge_list[i][0] + " -> " + this.edge_list[i][1] + "\"]";
+          str += " [tooltip=\"" + start_name + " -> " + end_name + "\"]";
 
         str += ";\n";
       }
@@ -201,8 +212,11 @@ function DAG() {
     
     // put in all coreq edges
     for (var i = 0; i < this.coreq_list.length; i++) {
-      var start = nodes_from_name[this.coreq_list[i][0]];
-      var end = nodes_from_name[this.coreq_list[i][1]];
+      var start_name = this.coreq_list[i][0].name;
+      var end_name = this.coreq_list[i][0].name;
+      
+      var start = nodes_from_name[start_name];
+      var end = nodes_from_name[end_name];
       if (start && end)
       {
         str += start + " -> " + end;
@@ -210,7 +224,7 @@ function DAG() {
         if (html)
           str += " [label=\"is a coreq for\"];\n";
         else
-          str += " [style=dotted, tooltip=\"" + this.coreq_list[i][0] + " -> " + this.coreq_list[i][1] + "\"];\n";
+          str += " [style=dotted, tooltip=\"" + start+name + " -> " + end_name + "\"];\n";
       }
     }
     
@@ -233,11 +247,11 @@ function DAG() {
 var makegraph = function(json) {
   
   var g = new DAG();
-  var index = {};
+  var index = {}; // keep a set of class names that we've seen in our json data.
 
   for (var i = 0; i < json.length; i++) {
-    index[json[i].name] = json[i];
-    json[i].node = g.addNode(json[i]);
+    index[json[i].name] = 1;
+    g.addNode(json[i]);
   }
 
   for (var i = 0; i < json.length; i++)
@@ -250,7 +264,7 @@ var makegraph = function(json) {
       {
         // ignore prereqs not in our dataset
         if (p[k] in index)
-            g.addPrereq(index[p[k]].node, json[i].node);
+            g.addPrereq(p[k], json[i].name);
         else
             console.error("Warning: ignoring prereq " + p[k]);
       }
@@ -264,7 +278,7 @@ var makegraph = function(json) {
       {
         // ignore coreqs not in our dataset
         if (c[k] in index)
-            g.addCoreq(index[c[k]].node, json[i].node);
+            g.addCoreq(c[k], json[i].name);
         else
             console.error("Warning: ignoring coreq " + c[k]);
       }
