@@ -224,7 +224,7 @@ function DAG() {
         if (html)
           str += " [label=\"is a coreq for\"];\n";
         else
-          str += " [style=dotted, tooltip=\"" + start+name + " -> " + end_name + "\"];\n";
+          str += " [style=dotted, tooltip=\"" + start_name + " -> " + end_name + "\"];\n";
       }
     }
     
