@@ -213,7 +213,7 @@ function DAG() {
     // put in all coreq edges
     for (var i = 0; i < this.coreq_list.length; i++) {
       var start_name = this.coreq_list[i][0].name;
-      var end_name = this.coreq_list[i][0].name;
+      var end_name = this.coreq_list[i][1].name;
       
       var start = nodes_from_name[start_name];
       var end = nodes_from_name[end_name];
