@@ -37,15 +37,15 @@
   },
   {
     "name": "MATH 286",
-    "title": "Intro to Differential Equations Plus",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+286+-+Introduction+to+Differential+Equations+Plus",
+    "title": "Intro to Differential Eq Plus",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+286+-+Intro+to+Differential+Eq+Plus",
     "type": "required",
     "prereqs": [["MATH 241"]],
     "coreqs": [[]]
   },
   {
     "name": "PHYS 211",
-    "title": "University Physics: Mechanics",
+    "title": "University Physics, Mechanics",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+211+-+University+Physics%2C+Mechanics",
     "type": "required",
     "prereqs": [[]],
@@ -53,7 +53,7 @@
   },
   {
     "name": "PHYS 212",
-    "title": "University Physics: Electricity and Magnetism",
+    "title": "University Physics, Electricity and Magnetism",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+212+-+University+Physics%2C+Electricity+and+Magnetism",
     "type": "required",
     "prereqs": [["PHYS 211"]],
@@ -61,7 +61,7 @@
   },
   {
     "name": "PHYS 213",
-    "title": "University Physics: Thermal Physics",
+    "title": "University Physics, Thermal Physics",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+213+-+University+Physics%2C+Thermal+Physics",
     "type": "required",
     "prereqs": [["PHYS 211"]],
@@ -69,7 +69,7 @@
   },
   {
     "name": "PHYS 214",
-    "title": "University Physics: Quantum Mechanics",
+    "title": "University Physics, Quantum Mechanics",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+214+-+University+Physics%2C+Quantum+Physics",
     "type": "required",
     "prereqs": [["PHYS 212"]],
@@ -171,7 +171,7 @@
     "title": "Probability with Engrg Applic",
     "crosslist": ["MATH 362"],
     "nocredit": ["MATH 461"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+313+-+Probability+with+Engineering+Applications",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+313+%28MATH+362%29+-+Probability+with+Engrg+Applic",
     "type": "required",
     "prereqs": [["ECE 210"]],
     "coreqs": [[]]
@@ -206,7 +206,7 @@
   {
     "name": "ECE 342",
     "title": "Electronic Circuits",
-    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289968",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+342+-+Electronic+Circuits",
     "cetype": "ECE tech elective",
     "eetype": "3of5",
     "prereqs": [["ECE 210"]],
@@ -216,7 +216,7 @@
   {
     "name": "ECE 343",
     "title": "Electronic Circuits Laboratory",
-    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289968",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+343+-+Electronic+Circuits+Laboratory",
     "type": "ECE tech elective / lab",
     "prereqs": [[]],
     "coreqs": [["ECE 342"]],
@@ -318,7 +318,7 @@
   {
     "name": "ECE 412",
     "title": "Microcomputer Laboratory",
-    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289509", 
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+412+-+Microcomputer+Laboratory", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 385", "ECE 391"]],
     "coreqs": [ [] ]
@@ -347,7 +347,7 @@
     "title": "Biosensors",
     "type": "ECE tech elective",
     "crosslist": ["BIOE 416"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+416+%2528BIOE+416%2529+-+Biosensors", 
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+416+%28BIOE+416%29+-+Biosensors", 
     "prereqs": [ ["ECE 329"]],
     "coreqs": [ [] ],
     "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
@@ -457,7 +457,7 @@
   {
     "name": "ECE 437",
     "title": "Sensors and Instrumentation",
-    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289962", 
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+437+-+Sensors+and+Instrumentation", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 329"]],
     "coreqs": [ [] ],
@@ -591,8 +591,8 @@
   },
   {
     "name": "ECE 457",
-    "title": "Microwave Devices & Circuits",
-    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=200478916", 
+    "title": "Microwave Devices and Circuits",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+457+-+Microwave+Devices+and+Circuits", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
     "coreqs": [ [] ],
@@ -671,7 +671,7 @@
   {
     "name": "MATH 415",
     "title": "Applied Linear Algebra",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/Math+415+-+Applied+Linear+Algebra",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+415+-+Applied+Linear+Algebra",
     "type": "tech elective",
     "prereqs": [ ["MATH 241"]],
     "coreqs": [ [] ]
@@ -843,7 +843,7 @@
   {
     "name": "ECE 486",
     "title": "Control Systems",
-    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=194289976",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+486+-+Control+Systems",
     "type": "ECE tech elective / lab",
     "prereqs": [["ECE 210"]],
     "coreqs": [[]],
@@ -959,7 +959,7 @@
     "title": "Probability Theory",
     "crosslist": ["STAT 451"],
     "nocredit": ["STAT 408", "ECE 313"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/Math+461+-+Probability+Theory",
+    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+461+%28STAT+451%29+-+Probability+Theory",
     "type": "elective",
     "prereqs": [["MATH 241"]],
     "coreqs": [[]]

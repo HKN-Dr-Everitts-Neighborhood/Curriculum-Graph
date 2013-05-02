@@ -19,6 +19,9 @@ To run our code from the command line, install the latest version of nodejs.
 
 Design Decisions
 ================
+
+Our original plan was to implement everything in the browser; much of our design is a consequence of our original design decisions:
+
 Because we consider interactivity to be a core goal, this project should be in javascript; for maintainability, it's easiest to have everything in javascript (we have no server to run server-side code).
 
 After evaluating several possible libraries (see the top answer: http://stackoverflow.com/questions/7034/graph-visualization-code-in-javascript), two alternatives seem reasonable: d3, or jsplumb/jquery/etc.  Either way we'll have to write our own layout code, since the graph is a DAG (plenty of tools exist for trees); moreover, d3 has a lot of tutorials, and looks like it will be a more maintainable/sensible choice.  Thus, we'll be implementing everything on top of d3.
@@ -27,7 +30,7 @@ Originally, the interactive tree example caught my eye; it might be worth trying
 
 A bunch of d3 tutorials can be found at https://github.com/mbostock/d3/wiki/Tutorials
 
-*Our original intention was for everything to run in a browser*, but we've since found that command line tools such as graphviz can do a much better job (although generating static graphs) - hence our use of nodejs; the svg format allows many features, such as tooltips and links, which allow for a decent amount of interactivity, though not quite as much as we had hoped for.
+*Our original intention was for everything to run in a browser*, but we've since found that command line tools such as graphviz can do a much better job (although generating static graphs) - hence our use of nodejs; the svg format allows many features, such as tooltips and links, which allow for a decent amount of interactivity, though not quite as much as we had hoped for.  It may be possible to build more interactivity on top of the pre-layed-out graphiz generated svg.
 
 Data Format
 ===========
@@ -86,6 +89,8 @@ Building & Deploying
 ======================
 
 Running build.sh rebuilds everything (it's not smart about dependencies - it does extra work, as compared to a makefile).  The makefile isn't typically used, so is not up to date.
+
+The other useful script to run directly is verify_links.py; this script goes through the links in data.json and checks 1) if they are valid (it accesses every link, so is a little slow), and 2) if the link it generates as an internal link is the same as the link in data.json (if this fails, tech_electives_by_subfields.txt will probably include broken internal links).
 
 Deploying new graphs takes several steps:
 * copying thegraph-small.svg to the Curriculum Graph page on the wiki (between {html} tags in wiki markup)
