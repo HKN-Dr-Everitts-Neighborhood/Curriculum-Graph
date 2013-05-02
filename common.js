@@ -1,4 +1,3 @@
-#! node.exe
 
 // You add your own extension.
 var subfield_to_file_name = function(subfield)
@@ -31,5 +30,8 @@ var same_as = function(course)
   return txt;
 };
 
-exports.subfield_to_file_name = subfield_to_file_name;
-exports.same_as = same_as;
+if (typeof exports !== "undefined")
+{
+  exports.subfield_to_file_name = subfield_to_file_name;
+  exports.same_as = same_as;
+}

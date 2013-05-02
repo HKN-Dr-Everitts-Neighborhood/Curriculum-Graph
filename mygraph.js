@@ -1,4 +1,4 @@
-var common = require('./common.js');
+var common = (typeof(require) !== "undefined") ? require('./common.js') : window;
 
 function isEmpty(object) { for(var i in object) { return false; } return true; };
 
