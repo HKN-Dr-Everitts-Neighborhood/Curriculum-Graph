@@ -83,11 +83,11 @@ for (var j = 0; j < fields.length; j++)
   }
   output += "\n{html}"
   var graph = fs.readFileSync(
-    common.subfield_to_file_name(subfield)+".svg"
+    "temp/" + common.subfield_to_file_name(subfield) + ".svg"
   );
   output += graph;
   output += "{html}"
   output += "\n\n";
 }
 
-fs.writeFileSync("tech_electives_by_subfields.txt", output);
+fs.writeFileSync("output/tech_electives_by_subfields.txt", output);

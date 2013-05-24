@@ -69,14 +69,15 @@ var compe_coloring =function(node)
 };
 
 // function that saves the dot file, then runs dot to create svg
-var make_svg_from_dot = function(dot, name)
+var make_svg_from_dot = function(dot, name, dot_folder, svg_folder)
 {
-  fs.writeFile(name + ".dot", dot, function(err)
+  fs.writeFile(dot_folder + "/" + name + ".dot", dot, function(err)
   {
     if (err)
       console.log("Error saving file: " + err);
     else
-      exec("dot -Tsvg " + name +".dot > " + name + ".svg", exec_callback);
+      exec("dot -Tsvg " + dot_folder + "/" + name + ".dot > "
+           + svg_folder + "/" + name + ".svg", exec_callback);
   });
 };
 
@@ -84,7 +85,10 @@ var make_svg_from_dot = function(dot, name)
 var make_svg = function(g, options, coloring, name)
 {
   var dot = g.make_dot(false, true, options, coloring);
-  make_svg_from_dot(dot, name);
+
+  // main graphs: svg is final output, so it goes in the output folder.  dot
+  // goes in the temp folder.
+  make_svg_from_dot(dot, name, "temp", "output");
 };
 
 // function to create and save subfield graphs
@@ -93,7 +97,9 @@ var make_subfield_svg = function(g, options, coloring, subfield)
   var dot = g.make_subfield_dot(false, true, options, coloring, subfield);
   var filename = common.subfield_to_file_name(subfield);
   console.log(filename);
-  make_svg_from_dot(dot, filename);
+
+  // dot and svg of subfields goes in temp
+  make_svg_from_dot(dot, filename, "temp", "temp");
 };
 
 // Actual code - no more helpers.
