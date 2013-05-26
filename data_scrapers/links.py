@@ -9,16 +9,7 @@ def get_tiny_link(url, soup):
     '''Take the url and soup of a wiki page and returns the wiki tinylink.
     '''
 
-    info_url = soup.find(id="link-to-page-link")['href']
-    
-    # get the info page, and soupify it
-    info_response = requests.get(urlparse.urljoin(url, info_url))
-    info_soup = BeautifulSoup(info_response.text)
-
-    # find the td with the text Tiny Link: 
-    tiny_link_td = info_soup.find(text="Tiny Link: ").parent
-    # go to the next td over and extract the link
-    tiny_link = tiny_link_td.find_next_sibling('td').find('a')
+    tiny_link = soup.find('link', rel='shortlink')
 
     return tiny_link['href']
 
