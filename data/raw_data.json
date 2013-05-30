@@ -211,7 +211,6 @@
   {
     "name": "ECE 361",
     "title": "Fundamentals of Digital Communications",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+361+-+Fundamentals+of+Digital+Communications", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 210", "ECE 313"]],
     "coreqs": [ [] ],
@@ -221,7 +220,6 @@
     "name": "ECE 380",
     "title": "Biomedical Imaging",
     "crosslist": ["BIOE 380"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+380+%28BIOE+380%29+-+Biomedical+Imaging", 
     "type": "ECE tech elective",
     "prereqs": [["MATH 286"], ["MATH 285"]],
     "coreqs": [ [] ],
@@ -230,7 +228,6 @@
   {
     "name": "ECE 385",
     "title": "Digital Systems Laboratory",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+385+-+Digital+Systems+Laboratory", 
     "type": "required",
     "prereqs": [ ["ECE 290", "ECE 110"]],
     "coreqs": [ [] ]
@@ -238,7 +235,6 @@
   {
     "name": "ECE 391",
     "title": "Computer Systems Engineering",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+391+-+Computer+Systems+Engineering", 
     "cetype": "required",
     "eetype": "3of5 / lab",
     "prereqs": [ ["ECE 290"]],
@@ -248,7 +244,6 @@
   {
     "name": "ECE 395",
     "title": "Advanced Digital Systems Laboratory",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+395+-+Advanced+Digital+Systems+Laboratory", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 385"]],
     "coreqs": [ [] ],
@@ -258,7 +253,6 @@
   {
     "name": "ECE 402",
     "title": "Electronic Music Synthesis",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+402+-+Electronic+Music+Synthesis", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["MUS 103", "ECE 290", "ECE 310"]],
     "coreqs": [ [] ],
@@ -284,7 +278,6 @@
   {
     "name": "ECE 411",
     "title": "Computer Organization and Design",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+411+-+Computer+Organization+and+Design", 
     "cetype": "required",
     "eetype": "ECE tech elective / lab",
     "prereqs": [ ["ECE 391"]],
@@ -294,7 +287,6 @@
   {
     "name": "ECE 412",
     "title": "Microcomputer Laboratory",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+412+-+Microcomputer+Laboratory", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 385", "ECE 391"]],
     "coreqs": [ [] ]
@@ -303,7 +295,6 @@
     "name": "ECE 414",
     "title": "Biomedical Instrumentation",
     "crosslist": ["BIOE 414"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+414+%28BIOE+414%29+-+Biomedical+Instrumentation", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 210"]],
     "coreqs": [ [] ],
@@ -323,7 +314,6 @@
     "title": "Biosensors",
     "type": "ECE tech elective",
     "crosslist": ["BIOE 416"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+416+%28BIOE+416%29+-+Biosensors", 
     "prereqs": [ ["ECE 329"]],
     "coreqs": [ [] ],
     "subfield": "Biomedical Imaging, Bioengineering, and Acoustics"
@@ -360,7 +350,6 @@
     "name": "ECE 420",
     "title": "Embedded DSP Laboratory",
     "type": "ECE tech elective / lab",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+420+-+Embedded+DSP+Laboratory", 
     "prereqs": [ ["ECE 310"]],
     "coreqs": [ [] ],
     "subfield": "Signal Processing"
@@ -369,7 +358,6 @@
     "name": "CS 461",
     "title": "Computer Security I",
     "crosslist": ["ECE 422"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+461+%28ECE+422%29+-+Computer+Security+I", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 391"], ["CS 241"]],
     "coreqs": [ [] ],
@@ -387,7 +375,6 @@
   {
     "name": "ECE 425",
     "title": "Intro to VLSI System Design",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+425+-+Intro+to+VLSI+System+Design", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 385", "ECE 411"], ["CS 232"]],
     "coreqs": [ [] ],
@@ -397,7 +384,6 @@
     "name": "CS 425",
     "title": "Distributed Systems",
     "crosslist": ["ECE 428"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+425+%28ECE+428%29+-+Distributed+Systems", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 391"], ["CS 232"]],
     "coreqs": [ [] ],
@@ -406,7 +392,6 @@
   {
     "name": "ECE 431",
     "title": "Electric Machinery",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+431+-+Electric+Machinery", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 330"]],
     "coreqs": [ [] ],
@@ -432,7 +417,6 @@
   {
     "name": "ECE 437",
     "title": "Sensors and Instrumentation",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+437+-+Sensors+and+Instrumentation", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 329"]],
     "coreqs": [ [] ],
@@ -442,7 +426,6 @@
     "name": "CS 438",
     "title": "Communication Networks",
     "crosslist": ["ECE 438"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+438+%28ECE+438%29+-+Communication+Networks", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 391", "ECE 313"],
                  ["ECE 391", "MATH 461"],
@@ -470,7 +453,6 @@
   {
     "name": "ECE 441",
     "title": "Physics & Modeling Semicond Dev",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+441+-+Physics+and+Modeling+Semicond+Dev", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 340"]],
     "coreqs": [ [] ],
@@ -479,7 +461,6 @@
   {
     "name": "ECE 444",
     "title": "Theory and Fabrication of Integrated Circuits",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+444+-+Theory+and+Fabrication+of+Integrated+Circuits", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 340"]],
     "coreqs": [ [] ],
@@ -488,7 +469,6 @@
   {
     "name": "ECE 445",
     "title": "Senior Design",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+445+-+Senior+Design", 
     "eetype": "required",
     "cetype": "ECE tech elective",
     "prereqs": [ ["Senior Standing"]],
@@ -522,7 +502,6 @@
   {
     "name": "ECE 452",
     "title": "Electromagnetic Fields and Electro-Optics",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+452+-+Electromagnetic+Fields+and+Electro-Optics", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
     "coreqs": [ [] ],
@@ -531,7 +510,6 @@
   {
     "name": "ECE 453",
     "title": "Wireless Communication Systems",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+453+-+Wireless+Communication+Systems", 
     "type": "ECE tech elective / lab",
     "prereqs": [ ["ECE 329"]],
     "coreqs": [ ["ECE 342"] ],
@@ -540,7 +518,6 @@
   {
     "name": "ECE 454",
     "title": "Antennas",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+454+-+Antennas", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
     "coreqs": [ [] ],
@@ -549,7 +526,6 @@
   {
     "name": "ECE 455",
     "title": "Optical Electronics",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+455+-+Optical+Electronics", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
     "coreqs": [ [] ],
@@ -566,7 +542,6 @@
   {
     "name": "ECE 457",
     "title": "Microwave Devices and Circuits",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+457+-+Microwave+Devices+and+Circuits", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 350"]],
     "coreqs": [ [] ],
@@ -583,7 +558,6 @@
   {
     "name": "ECE 459",
     "title": "Communications Systems",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+459+-+Communications+Systems", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 313"]],
     "coreqs": [ [] ],
