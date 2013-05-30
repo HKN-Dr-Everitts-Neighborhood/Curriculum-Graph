@@ -88,7 +88,7 @@ One issue is having multiple courses under the same name - e.g. ECE 498.  This i
 Building & Deploying
 ======================
 
-Running build.sh rebuilds everything (it's not smart about dependencies - it does extra work, as compared to a makefile).  The makefile isn't typically used, so is not up to date.
+Running build.sh rebuilds everything (it's not smart about dependencies - it does extra work, as compared to a makefile).  The makefile isn't typically used, so is not up to date.  Note that the scrapers need to be run first, if you want to update the input data - see the readme in the data_scrapers directory.
 
 The other useful script to run directly is verify_links.py; this script goes through the links in data.json and checks 1) if they are valid (it accesses every link, so is a little slow), and 2) if the link it generates as an internal link is the same as the link in data.json (if this fails, tech_electives_by_subfields.txt will probably include broken internal links).
 
