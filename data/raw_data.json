@@ -14,7 +14,6 @@
   {
     "name": "MATH 221",
     "title": "Calculus I",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+221+-+Calculus+I",
     "type": "required",
     "prereqs": [[]],
     "coreqs": [[]]
@@ -22,7 +21,6 @@
   {
     "name": "MATH 231",
     "title": "Calculus II",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+231+-+Calculus+II",
     "type": "required",
     "prereqs": [["MATH 221"]],
     "coreqs": [[]]
@@ -30,7 +28,6 @@
   {
     "name": "MATH 241",
     "title": "Calculus III",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+241+-+Calculus+III",
     "type": "required",
     "prereqs": [["MATH 231"]],
     "coreqs": [[]]
@@ -38,7 +35,6 @@
   {
     "name": "MATH 286",
     "title": "Intro to Differential Eq Plus",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+286+-+Intro+to+Differential+Eq+Plus",
     "type": "required",
     "prereqs": [["MATH 241"]],
     "coreqs": [[]]
@@ -46,7 +42,6 @@
   {
     "name": "PHYS 211",
     "title": "University Physics, Mechanics",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+211+-+University+Physics%2C+Mechanics",
     "type": "required",
     "prereqs": [[]],
     "coreqs": [["MATH 231"]]
@@ -54,7 +49,6 @@
   {
     "name": "PHYS 212",
     "title": "University Physics, Electricity and Magnetism",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+212+-+University+Physics%2C+Electricity+and+Magnetism",
     "type": "required",
     "prereqs": [["PHYS 211"]],
     "coreqs": [["MATH 241"]]
@@ -62,7 +56,6 @@
   {
     "name": "PHYS 213",
     "title": "University Physics, Thermal Physics",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+213+-+University+Physics%2C+Thermal+Physics",
     "type": "required",
     "prereqs": [["PHYS 211"]],
     "coreqs": [["MATH 241"]]
@@ -70,7 +63,6 @@
   {
     "name": "PHYS 214",
     "title": "University Physics, Quantum Mechanics",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/PHYS+214+-+University+Physics%2C+Quantum+Physics",
     "type": "required",
     "prereqs": [["PHYS 212"]],
     "coreqs": [[]]
@@ -78,7 +70,6 @@
   {
     "name": "ECE 110",
     "title": "Introduction to Electrical and Computer Engineering",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+110+-+Introduction+to+Electrical+and+Computer+Engineering",
     "type": "required",
     "prereqs": [[]],
     "coreqs": [[]]
@@ -86,7 +77,6 @@
   {
     "name": "ECE 190",
     "title": "Introduction to Computing Systems",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+190+-+Introduction+to+Computing+Systems",
     "type": "required",
     "prereqs": [["ECE 110"]],
     "coreqs": [[]]
@@ -94,7 +84,6 @@
   {
     "name": "ECE 210",
     "title": "Analog Signal Processing",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+210+-+Analog+Signal+Processing",
     "type": "required",
     "prereqs": [["ECE 110", "PHYS 212"]],
     "coreqs": [["MATH 286"]]
@@ -102,7 +91,6 @@
   {
     "name": "ECE 290",
     "title": "Computer Engineering I",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+290+-+Computer+Engineering+I",
     "type": "required",
     "prereqs": [["ECE 190"]],
     "coreqs": [[]]
@@ -110,7 +98,6 @@
   {
     "name": "ECE 329",
     "title": "Fields and Waves I",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+329+-+Fields+and+Waves+I",
     "type": "required",
     "prereqs": [["ECE 210"]],
     "coreqs": [[]]
@@ -118,7 +105,6 @@
   {
     "name": "ECE 340",
     "title": "Solid State Electronic Devices",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+340+-+Solid+State+Electronic+Devices",
     "type": "required",
     "prereqs": [["PHYS 214"]],
     "coreqs": [["ECE 329"]]
@@ -126,7 +112,6 @@
   {
     "name": "RHET 105",
     "title": "Principles of Composition",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/RHET+105+-+Principles+of+Composition",
     "type": "required",
     "prereqs": [[]],
     "coreqs": [[]]
@@ -135,7 +120,6 @@
     "name": "ECE 304",
     "title": "Photonic Devices",
     "type": "ECE tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+304+-+Photonic+Devices",
     "prereqs": [["PHYS 214"]],
     "coreqs": [[]],
     "subfield": "Microelectronics and Photonics"
@@ -150,7 +134,6 @@
   {
     "name": "ECE 310",
     "title": "Digital Signal Processing",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+310+-+Digital+Signal+Processing",
     "cetype": "ECE tech elective",
     "eetype": "3of5",
     "prereqs": [["ECE 210"]],
@@ -160,7 +143,6 @@
   {
     "name": "ECE 311",
     "title": "Digital Signal Processing Lab",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+311+-+Digital+Signal+Processing+Lab",
     "type": "ECE tech elective",
     "prereqs": [[]],
     "coreqs": [["ECE 310"]],
@@ -171,7 +153,6 @@
     "title": "Probability with Engrg Applic",
     "crosslist": ["MATH 362"],
     "nocredit": ["MATH 461"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+313+%28MATH+362%29+-+Probability+with+Engrg+Applic",
     "type": "required",
     "prereqs": [["ECE 210"]],
     "coreqs": [[]]
@@ -187,7 +168,6 @@
   {
     "name": "ECE 330",
     "title": "Power Circuits and Electromechanics",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+330+-+Power+Circuits+and+Electromechanics",
     "cetype": "ECE tech elective",
     "eetype": "3of5",
     "prereqs": [["ECE 210"]],
@@ -197,7 +177,6 @@
   {
     "name": "ECE 333",
     "title": "Green Electric Energy",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+333+-+Green+Electric+Energy",
     "type": "ECE tech elective",
     "prereqs": [["ECE 210"]],
     "coreqs": [[]],
@@ -206,7 +185,6 @@
   {
     "name": "ECE 342",
     "title": "Electronic Circuits",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+342+-+Electronic+Circuits",
     "cetype": "ECE tech elective",
     "eetype": "3of5",
     "prereqs": [["ECE 210"]],
@@ -216,7 +194,6 @@
   {
     "name": "ECE 343",
     "title": "Electronic Circuits Laboratory",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+343+-+Electronic+Circuits+Laboratory",
     "type": "ECE tech elective / lab",
     "prereqs": [[]],
     "coreqs": [["ECE 342"]],
@@ -225,7 +202,6 @@
   {
     "name": "ECE 350",
     "title": "Fields and Waves II",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+350+-+Fields+and+Waves+II",
     "cetype": "ECE tech elective",
     "eetype": "3of5",
     "prereqs": [["ECE 329"]],
@@ -375,7 +351,6 @@
     "name": "CS 460",
     "title": "Security Laboratory",
     "type": "ECE tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+460+%28ECE+419%29+-+Security+Laboratory",
     "crosslist": ["ECE 419"],
     "prereqs": [["CS 461"]],
     "coreqs": [ [] ],
@@ -494,7 +469,7 @@
   },
   {
     "name": "ECE 441",
-    "title": "Physics and Modeling Semicond Dev",
+    "title": "Physics & Modeling Semicond Dev",
     "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+441+-+Physics+and+Modeling+Semicond+Dev", 
     "type": "ECE tech elective",
     "prereqs": [ ["ECE 340"]],
@@ -531,7 +506,6 @@
     "name": "CS 440",
     "title": "Artificial Intelligence",
     "type": "ECE tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+440+%28ECE+448%29+-+Artificial+Intelligence",
     "crosslist": ["ECE 448"],
     "prereqs": [ ["ECE 391"], ["CS 225"]],
     "coreqs": [ [] ],
@@ -628,7 +602,6 @@
     "title": "Discrete Structures",
     "cetype": "required",
     "eetype": "CS tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+173+-+Discrete+Structures",
     "prereqs": [
         ["CS 101", "MATH 220"],
         ["CS 125", "MATH 220"],
@@ -649,7 +622,6 @@
   {
     "name": "CS 225",
     "title": "Data Structures",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+225+-+Data+Structures",
     "cetype": "required",
     "eetype": "3of5",
     "prereqs": [ ["ECE 190", "CS 173"], 
@@ -662,7 +634,6 @@
   {
     "name": "MATH 213",
     "title": "Basic Discrete Mathematics",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+213+-+Basic+Discrete+Mathematics",
     "cetype": "required",
     "eetype": "tech elective",
     "prereqs": [ ["MATH 220"], ["MATH 221"]],
@@ -671,7 +642,6 @@
   {
     "name": "MATH 415",
     "title": "Applied Linear Algebra",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+415+-+Applied+Linear+Algebra",
     "type": "tech elective",
     "prereqs": [ ["MATH 241"]],
     "coreqs": [ [] ]
@@ -679,7 +649,6 @@
   {
     "name": "ECE 462",
     "title": "Logic Design",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+462+-+Logic+Design",
     "type": "ECE tech elective",
     "prereqs": [["ECE 290"]],
     "coreqs": [[]],
@@ -696,7 +665,6 @@
   {
     "name": "ECE 464",
     "title": "Power Electronics",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+464+-+Power+Electronics",
     "type": "ECE tech elective",
     "prereqs": [["ECE 342"]],
     "coreqs": [[]],
@@ -739,7 +707,6 @@
   {
     "name": "ECE 469",
     "title": "Power Electronics Laboratory",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+469+-+Power+Electronics+Laboratory",
     "type": "ECE tech elective / lab",
     "prereqs": [["ECE 343"]],
     "coreqs": [["ECE 464"]],
@@ -749,7 +716,6 @@
     "name": "ECE 470",
     "title": "Introduction to Robotics",
     "crosslist": ["AE 482", "ME 445"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+470+%28AE+482%2C+ME+445%29+-+Introduction+to+Robotics",
     "type": "ECE tech elective / lab",
     "prereqs": [["MATH 225"], ["MATH 286"], ["MATH 415"], ["MATH 418"]],
     "coreqs": [[]],
@@ -809,7 +775,6 @@
   {
     "name": "ECE 482",
     "title": "Digital IC Design",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+482+-+Digital+IC+Design",
     "type": "ECE tech elective",
     "prereqs": [["ECE 290", "ECE 342"]],
     "coreqs": [[]],
@@ -843,7 +808,6 @@
   {
     "name": "ECE 486",
     "title": "Control Systems",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+486+-+Control+Systems",
     "type": "ECE tech elective / lab",
     "prereqs": [["ECE 210"]],
     "coreqs": [[]],
@@ -870,7 +834,6 @@
     "title": "Introduction to Optimization",
     "type": "ECE tech elective",
     "crosslist": ["CSE 441"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/ECE+490+%28CSE+441%29+-+Introduction+to+Optimization",
     "prereqs": [["ECE 190", "MATH 415"]],
     "coreqs": [[]],
     "subfield": "Control Systems"
@@ -879,7 +842,6 @@
     "name": "CS 450",
     "title": "Numerical Analysis",
     "crosslist": ["ECE 491", "MATH 450", "CSE 401"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+450+%28ECE+491%2C+MATH+450%2C+CSE+401%29+-+Numerical+Analysis",
     "type": "ECE tech elective",
     "prereqs": [["CS 101", "CS 357", "MATH 285"], ["CS 125", "CS 357", "MATH 285"], ["CS 101", "MATH 415", "MATH 285"], ["CS 125", "MATH 415", "MATH 285"]],
     "coreqs": [[]],
@@ -915,7 +877,6 @@
     "name": "CS 373",
     "title": "Theory of Computation",
     "type": "CS tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+373+-+Theory+of+Computation",
     "prereqs": [["CS 225", "CS 173"], ["CS 225", "MATH 213"]],
     "coreqs": [[]],
     "subfield": "Computer Science: Theory"
@@ -924,7 +885,6 @@
     "name": "CS 473",
     "title": "Fundamental Algorithms",
     "type": "CS tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+473+%28CSE+414%2C+MATH+473%29+-+Fundamental+Algorithms",
     "crosslist": ["CSE 414", "MATH 473"],
     "prereqs": [["CS 373"]],
     "coreqs": [[]],
@@ -940,7 +900,6 @@
   {
     "name": "CHEM 102",
     "title": "General Chemistry I",
-    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=198674689",
     "type": "required",
     "nocredit": ["CHEM 202"],
     "prereqs": [[]],
@@ -949,7 +908,6 @@
   {
     "name": "CHEM 103",
     "title": "General Chemistry Lab I",
-    "link": "https://wiki.engr.illinois.edu/pages/viewpage.action?pageId=198674689",
     "type": "required",
     "prereqs": [[]],
     "coreqs": [["CHEM 102"]]
@@ -959,7 +917,6 @@
     "title": "Probability Theory",
     "crosslist": ["STAT 451"],
     "nocredit": ["STAT 408", "ECE 313"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/MATH+461+%28STAT+451%29+-+Probability+Theory",
     "type": "elective",
     "prereqs": [["MATH 241"]],
     "coreqs": [[]]
@@ -994,7 +951,6 @@
     "name": "CS 357",
     "title": "Numerical Methods I",
     "crosslist": ["MATH 357"],
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+357+%28MATH+357%29+-+Numerical+Methods+I",
     "nocredit": ["CS 450"],
     "type": "CS tech elective",
     "prereqs": [["ECE 190","MATH 241","MATH 415"], ["ECE 190","MATH 241","MATH 225"]],
@@ -1013,7 +969,6 @@
     "name": "CS 411",
     "title": "Database Systems",
     "type": "CS tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+411+-+Database+Systems",
     "prereqs": [["CS 225"]],
     "coreqs": [[]],
     "subfield": "Computer Science: Data Systems"
@@ -1022,7 +977,6 @@
     "name": "CS 412",
     "title": "Introduction to Data Mining",
     "type": "CS tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+412+-+Introduction+to+Data+Mining",
     "prereqs": [["CS 225"]],
     "coreqs": [[]],
     "subfield": "Computer Science: Data Systems"
@@ -1047,7 +1001,6 @@
     "name": "CS 418",
     "title": "Interactive Computer Graphics",
     "type": "CS tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+418+%28CSE+427%29+-+Interactive+Computer+Graphics",
     "crosslist": ["CSE 427"],
     "prereqs": [["CS 225","MATH 241","MATH 415"], ["CS 225","MATH 241","MATH 225"]],
     "coreqs": [[]],
@@ -1056,7 +1009,6 @@
   {
     "name": "CS 419",
     "title": "Production Computer Graphics",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+419+-+Production+Computer+Graphics",
     "type": "CS tech elective",
     "prereqs": [["CS 418"]],
     "coreqs": [[]],
@@ -1082,7 +1034,6 @@
     "name": "CS 423",
     "title": "Operating Systems Design",
     "type": "CS tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+423+%28CSE+423%29+-+Operating+Systems+Design",
     "crosslist": ["CSE 423"],
     "prereqs": [["CS 241"], ["ECE 391"]],
     "coreqs": [[]],
@@ -1091,7 +1042,6 @@
   {
     "name": "CS 424",
     "title": "Real-Time Systems",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+424+-+Real-Time+Systems",
     "type": "CS tech elective",
     "prereqs": [["CS 431"]],
     "coreqs": [[]],
@@ -1100,7 +1050,6 @@
   {
     "name": "CS 426",
     "title": "Compiler Construction",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+426+-+Compiler+Construction",
     "type": "CS tech elective",
     "prereqs": [["CS 421"]],
     "coreqs": [[]],
@@ -1136,7 +1085,6 @@
     "name": "CS 431",
     "title": "Embedded Systems",
     "type": "CS tech elective",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+431+-+Embedded+Systems",
     "prereqs": [["CS 241"], ["ECE 391"]],
     "coreqs": [[]],
     "subfield": "Computer Science: Systems"
@@ -1161,7 +1109,6 @@
   {
     "name": "CS 465",
     "title": "User Interface Design",
-    "link": "https://wiki.engr.illinois.edu/display/HKNDEN/CS+465+-+User+Interface+Design",
     "type": "CS tech elective",
     "prereqs": [["CS 225"]],
     "coreqs": [[]],
