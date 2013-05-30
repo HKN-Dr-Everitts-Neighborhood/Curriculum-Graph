@@ -1,6 +1,16 @@
 #! node
 
 function make_internal_link(course){
+
+  /*
+  takes a course, and returns the pagetitle of the course OR if there is
+  no corresponding wiki page, creates a title for the course based on the
+  encoded convention.
+
+  Make sure this stays in sync with the corresponding function in
+  link_utils.js
+  */
+
   if (course.pagetitle !== undefined)
     return course.pagetitle;
 
