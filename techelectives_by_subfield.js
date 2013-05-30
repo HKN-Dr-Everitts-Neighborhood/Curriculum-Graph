@@ -2,6 +2,7 @@
 
 var data = require('./data.js');
 var common = require('./common.js');
+var link = require('./link_utils.js').make_internal_link;
 
 var fs = require('fs');
 
@@ -55,13 +56,6 @@ for (var i = 0; i < fields.length; i++)
   output += "* [" + subfield + "|#" + to_anchor(subfield) + "]\n";
 }
 output += "\n";
-
-function link(course)
-{
-  if (course.crosslist)
-    return course.name + " (" +course.crosslist.join(', ') + ") - " + course.title;
-  return course.name + " - " + course.title;
-}
 
 // print out the subfields / graphs / bullets
 for (var j = 0; j < fields.length; j++)

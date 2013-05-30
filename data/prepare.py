@@ -24,20 +24,16 @@ with open('links.json', 'r') as f:
 links = json.loads(links_json)
 
 
-# build a mapping from class name (e.g. 'ECE 110') to link info
-
-link_map = dict(
-    (item['pagetitle'].split('-')[0].strip(),item)
-    for item in links
-)
-
-# go through all courses, and add links and pagetitles
-# when a corresponding wiki page exists.
+# go through all courses, and look for a corresponding link.
+# old implementation set up a dictionary to speed this up,
+# but crosslisted courses caused trouble - hence now we look through
+# all links looking for a match
 for course in data:
-    # not all courses have corresponding wiki pages.
-    if course['name'] in link_map:
-        course['link'] = link_map[course['name']]['tinylink']
-        course['pagetitle'] = link_map[course['name']]['pagetitle']
+    for link_info in links:
+        if course['name'] in link_info['pagetitle']:
+            course['link'] = link_info['tinylink']
+            course['pagetitle'] = link_info['pagetitle']
+            break
 
 # write to data.json
 with open('../data.json', 'w') as outfile:
