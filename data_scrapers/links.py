@@ -45,7 +45,8 @@ def crawl(url):
     # This is slow because it crawls the wiki serially.
     # May be worth trying to do some threading here in the future.
     urls = child_page_urls(url, soup)
-    results.extend(crawl(url) for url in urls)
+    for url in urls:
+        results.extend(crawl(url))
 
     return results
 
