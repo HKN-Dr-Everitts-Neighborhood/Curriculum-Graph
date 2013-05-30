@@ -1,14 +1,21 @@
 #! python
 
-import json
+import json, os, sys
 
-# combine all the data in here into data.json.
+# The point of this script is to take raw_data.json and links.json
+# and combine it into data.json.
+
+
+
+# first, set the working directory.  Important since we use relative paths.
+os.chdir(os.path.dirname(sys.argv[0]))
 
 # read in raw_data.json
 with open('raw_data.json', 'r') as f:
     raw_data = f.read()
 
 data = json.loads(raw_data)
+
 
 # read in links.json
 with open('links.json', 'r') as f:
@@ -32,6 +39,7 @@ for course in data:
         course['link'] = link_map[course['name']]['tinylink']
         course['pagetitle'] = link_map[course['name']]['pagetitle']
 
+# write to data.json
 with open('../data.json', 'w') as outfile:
     outfile.write(json.dumps(data))
 
