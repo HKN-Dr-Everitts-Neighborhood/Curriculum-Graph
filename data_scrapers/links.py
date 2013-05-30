@@ -51,7 +51,7 @@ def crawl(url):
 
 def main():
     results = crawl("https://wiki.engr.illinois.edu/display/HKNDEN/Home")
-    with open('links.json', 'w') as f:
+    with open('../data/links.json', 'w') as f:
         f.write(json.dumps(results))
 
 if __name__ == '__main__':
