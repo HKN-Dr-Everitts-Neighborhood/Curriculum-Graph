@@ -44,7 +44,9 @@ The format looks like this:
   {
     "name": <course number - e.g. ECE 110>
     "title": <course title - e.g. Introduction to Electrical and Computer Engineering>,
-    "link": <link to wiki page> // This field is optional
+    "link": <link to wiki page>, // This field exists iff there is a corresponding wiki page. It contains the wiki tiny link, which is a permanent link.
+    "pagetitle": <title of the corresponding wiki page>, // this field exists iff there is a corresponding wiki page
+    "internallink": <title of wiki page>, //MANDATORY field.  If there is a corresponding wiki page, this is the same as the pagetitle.  Otherwise, this is what the page title will be in the future, and can be used to create the red "add page here" links for this course.
     "crosslist": [<name1>, <name2>, ... ], // This field is also optional
     "nocredit": [<name1>, <name2>, ...], // This field is also optional
     "type": <string>, // Also optional - use instead of eetype/cetype
@@ -55,9 +57,10 @@ The format looks like this:
   },
   {
     "name": <next course name>,
-    "title": <The course's title> //there is no page for this course, and hence no link
-    "prereqs": [ [<prereq1 name>, ... ], ... ]
-    "coreqs": [ [<coreq1 name>, <coreq2 name>, ... ], ... ]
+    "title": <The course's title>, //there is no page for this course, and hence no link
+    "prereqs": [ [<prereq1 name>, ... ], ... ],
+    "coreqs": [ [<coreq1 name>, <coreq2 name>, ... ], ... ],
+    "internallink": <page title>
   },
   ...
 ]

@@ -2,7 +2,6 @@
 
 var data = require('./data.js');
 var common = require('./common.js');
-var link = require('./link_utils.js').make_internal_link;
 
 var fs = require('fs');
 
@@ -69,7 +68,7 @@ for (var j = 0; j < fields.length; j++)
     var course = subfields[subfield][i];
 	  
     if (course.link)
-      output += "* [" + course.name + " - " + course.title + "|" + link(course) + "]";
+      output += "* [" + course.name + " - " + course.title + "|" + course.internallink + "]";
     else
       output += "* " + course.name + " - " + course.title;
     

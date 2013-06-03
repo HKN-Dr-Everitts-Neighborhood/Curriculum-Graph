@@ -1,1 +1,2572 @@
-[{"coreqs": [[]], "prereqs": [["Junior Standing"]], "name": "Senior Standing", "title": "Senior Standing"}, {"coreqs": [[]], "prereqs": [[]], "name": "Junior Standing", "title": "Junior Standing"}, {"name": "MATH 221", "title": "Calculus I", "coreqs": [[]], "pagetitle": "MATH 221 - Calculus I", "prereqs": [[]], "link": "https://wiki.engr.illinois.edu/x/Q7rCCw", "type": "required"}, {"name": "MATH 231", "title": "Calculus II", "coreqs": [[]], "pagetitle": "MATH 231 - Calculus II", "prereqs": [["MATH 221"]], "link": "https://wiki.engr.illinois.edu/x/H6HXCw", "type": "required"}, {"name": "MATH 241", "title": "Calculus III", "coreqs": [[]], "pagetitle": "MATH 241 - Calculus III", "prereqs": [["MATH 231"]], "link": "https://wiki.engr.illinois.edu/x/1RDzCw", "type": "required"}, {"name": "MATH 286", "title": "Intro to Differential Eq Plus", "coreqs": [[]], "pagetitle": "What's the Difference between MATH 286 and MATH 415?", "prereqs": [["MATH 241"]], "link": "https://wiki.engr.illinois.edu/x/wQlVDQ", "type": "required"}, {"name": "PHYS 211", "title": "University Physics, Mechanics", "coreqs": [["MATH 231"]], "pagetitle": "PHYS 211 - University Physics, Mechanics", "prereqs": [[]], "link": "https://wiki.engr.illinois.edu/x/3RBbD", "type": "required"}, {"name": "PHYS 212", "title": "University Physics, Electricity and Magnetism", "coreqs": [["MATH 241"]], "pagetitle": "Should I take PHYS 212 with PHYS 213?", "prereqs": [["PHYS 211"]], "link": "https://wiki.engr.illinois.edu/x/Vg5eDQ", "type": "required"}, {"name": "PHYS 213", "title": "University Physics, Thermal Physics", "coreqs": [["MATH 241"]], "pagetitle": "Should I take PHYS 212 with PHYS 213?", "prereqs": [["PHYS 211"]], "link": "https://wiki.engr.illinois.edu/x/Vg5eDQ", "type": "required"}, {"name": "PHYS 214", "title": "University Physics, Quantum Mechanics", "coreqs": [[]], "pagetitle": "PHYS 214 - University Physics, Quantum Physics", "prereqs": [["PHYS 212"]], "link": "https://wiki.engr.illinois.edu/x/lI7XCw", "type": "required"}, {"name": "ECE 110", "title": "Introduction to Electrical and Computer Engineering", "coreqs": [[]], "pagetitle": "Should I take ECE 110 with ECE 190?", "prereqs": [[]], "link": "https://wiki.engr.illinois.edu/x/FJtDDQ", "type": "required"}, {"name": "ECE 190", "title": "Introduction to Computing Systems", "coreqs": [[]], "pagetitle": "Should I take ECE 110 with ECE 190?", "prereqs": [["ECE 110"]], "link": "https://wiki.engr.illinois.edu/x/FJtDDQ", "type": "required"}, {"name": "ECE 210", "title": "Analog Signal Processing", "coreqs": [["MATH 286"]], "pagetitle": "Should I take ECE 190 with ECE 210?", "prereqs": [["ECE 110", "PHYS 212"]], "link": "https://wiki.engr.illinois.edu/x/_45DDQ", "type": "required"}, {"name": "ECE 290", "title": "Computer Engineering I", "coreqs": [[]], "pagetitle": "Should I take ECE 210 with ECE 290?", "prereqs": [["ECE 190"]], "link": "https://wiki.engr.illinois.edu/x/-Y5DDQ", "type": "required"}, {"name": "ECE 329", "title": "Fields and Waves I", "coreqs": [[]], "pagetitle": "ECE 329 - Fields and Waves I", "prereqs": [["ECE 210"]], "link": "https://wiki.engr.illinois.edu/x/R5_UCw", "type": "required"}, {"name": "ECE 340", "title": "Solid State Electronic Devices", "coreqs": [["ECE 329"]], "pagetitle": "Should I take ECE 340 with ECE 304?", "prereqs": [["PHYS 214"]], "link": "https://wiki.engr.illinois.edu/x/ww1VDQ", "type": "required"}, {"name": "RHET 105", "title": "Principles of Composition", "coreqs": [[]], "pagetitle": "RHET 105 - Principles of Composition", "prereqs": [[]], "link": "https://wiki.engr.illinois.edu/x/PqHXCw", "type": "required"}, {"name": "ECE 304", "title": "Photonic Devices", "subfield": "Microelectronics and Photonics", "coreqs": [[]], "pagetitle": "Should I take ECE 340 with ECE 304?", "prereqs": [["PHYS 214"]], "link": "https://wiki.engr.illinois.edu/x/ww1VDQ", "type": "ECE tech elective"}, {"coreqs": [["ECE 313"]], "prereqs": [["ECE 210"]], "type": "ECE tech elective", "name": "ECE 307", "title": "Techniques for Engrg Decisions"}, {"cetype": "ECE tech elective", "name": "ECE 310", "title": "Digital Signal Processing", "subfield": "Signal Processing", "eetype": "3of5", "coreqs": [[]], "pagetitle": "Should I take ECE 311 with ECE 310?", "prereqs": [["ECE 210"]], "link": "https://wiki.engr.illinois.edu/x/yAdVDQ"}, {"name": "ECE 311", "title": "Digital Signal Processing Lab", "subfield": "Signal Processing", "coreqs": [["ECE 310"]], "pagetitle": "Should I take ECE 311 with ECE 310?", "prereqs": [[]], "link": "https://wiki.engr.illinois.edu/x/yAdVDQ", "type": "ECE tech elective"}, {"name": "ECE 313", "title": "Probability with Engrg Applic", "coreqs": [[]], "pagetitle": "ECE 313 (MATH 362) - Probability with Engrg Applic", "nocredit": ["MATH 461"], "prereqs": [["ECE 210"]], "link": "https://wiki.engr.illinois.edu/x/Qp_UCw", "crosslist": ["MATH 362"], "type": "required"}, {"name": "PHIL 316", "title": "Ethics and Engineering", "coreqs": [[]], "prereqs": [["RHET 105", "Junior Standing"]], "crosslist": ["ECE 316"], "type": "elective"}, {"cetype": "ECE tech elective", "name": "ECE 330", "title": "Power Circuits and Electromechanics", "subfield": "Power and Energy Systems", "eetype": "3of5", "coreqs": [[]], "pagetitle": "ECE 330 - Power Circuits and Electromechanics", "prereqs": [["ECE 210"]], "link": "https://wiki.engr.illinois.edu/x/JaGUCw"}, {"name": "ECE 333", "title": "Green Electric Energy", "subfield": "Power and Energy Systems", "coreqs": [[]], "pagetitle": "ECE 333 - Green Electric Energy", "prereqs": [["ECE 210"]], "link": "https://wiki.engr.illinois.edu/x/NwTPCw", "type": "ECE tech elective"}, {"cetype": "ECE tech elective", "name": "ECE 342", "title": "Electronic Circuits", "subfield": "Integrated Circuits and Systems", "eetype": "3of5", "coreqs": [[]], "pagetitle": "ECE 342 - Electronic Circuits", "prereqs": [["ECE 210"]], "link": "https://wiki.engr.illinois.edu/x/MKGUCw"}, {"name": "ECE 343", "title": "Electronic Circuits Laboratory", "subfield": "Integrated Circuits and Systems", "coreqs": [["ECE 342"]], "pagetitle": "ECE 343 - Electronic Circuits Laboratory", "prereqs": [[]], "link": "https://wiki.engr.illinois.edu/x/xQFeDQ", "type": "ECE tech elective / lab"}, {"cetype": "ECE tech elective", "name": "ECE 350", "title": "Fields and Waves II", "subfield": "Electromagnetics, Optics and Remote Sensing", "eetype": "3of5", "coreqs": [[]], "pagetitle": "ECE 350 - Fields and Waves II", "prereqs": [["ECE 329"]], "link": "https://wiki.engr.illinois.edu/x/NKGUCw"}, {"name": "ECE 361", "title": "Fundamentals of Digital Communications", "subfield": "Communications", "coreqs": [[]], "pagetitle": "ECE 361 - Fundamentals of Digital Communications", "prereqs": [["ECE 210", "ECE 313"]], "link": "https://wiki.engr.illinois.edu/x/TZ_UCw", "type": "ECE tech elective"}, {"name": "ECE 380", "title": "Biomedical Imaging", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [[]], "pagetitle": "ECE 380 (BIOE 380) - Biomedical Imaging", "prereqs": [["MATH 286"], ["MATH 285"]], "link": "https://wiki.engr.illinois.edu/x/Uw6rCw", "crosslist": ["BIOE 380"], "type": "ECE tech elective"}, {"name": "ECE 385", "title": "Digital Systems Laboratory", "coreqs": [[]], "pagetitle": "Should I take ECE 385 with ECE 391?", "prereqs": [["ECE 290", "ECE 110"]], "link": "https://wiki.engr.illinois.edu/x/XbA1DQ", "type": "required"}, {"cetype": "required", "name": "ECE 391", "title": "Computer Systems Engineering", "subfield": "Computer Science: Systems", "eetype": "3of5 / lab", "coreqs": [[]], "pagetitle": "Should I take CS 225 with ECE 391?", "prereqs": [["ECE 290"]], "link": "https://wiki.engr.illinois.edu/x/0glVDQ"}, {"name": "ECE 395", "title": "Advanced Digital Systems Laboratory", "subfield": "Computer Engineering: Architecture / Digital Logic", "coreqs": [[]], "pagetitle": "ECE 395 - Advanced Digital Systems Laboratory", "prereqs": [["ECE 385"]], "link": "https://wiki.engr.illinois.edu/x/8bXCCw", "type": "ECE tech elective / lab"}, {"name": "ECE 402", "title": "Electronic Music Synthesis", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [[]], "pagetitle": "ECE 402 - Electronic Music Synthesis", "prereqs": [["MUS 103", "ECE 290", "ECE 310"]], "link": "https://wiki.engr.illinois.edu/x/V5_UCw", "type": "ECE tech elective / lab"}, {"name": "ECE 403", "title": "Audio Engineering", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [[]], "prereqs": [["ECE 290", "ECE 310", "ECE 473"]], "type": "ECE tech elective"}, {"name": "ECE 408", "title": "Applied Parallel Programming", "subfield": "Computer Science: Parallel Programming", "coreqs": [[]], "prereqs": [["ECE 190"]], "crosslist": ["CS 483"], "type": "ECE tech elective"}, {"cetype": "required", "name": "ECE 411", "title": "Computer Organization and Design", "subfield": "Computer Engineering: Architecture / Digital Logic", "eetype": "ECE tech elective / lab", "coreqs": [[]], "pagetitle": "ECE 411 - Computer Organization and Design", "prereqs": [["ECE 391"]], "link": "https://wiki.engr.illinois.edu/x/Yp_UCw"}, {"name": "ECE 412", "title": "Microcomputer Laboratory", "coreqs": [[]], "pagetitle": "ECE 412 - Microcomputer Laboratory", "prereqs": [["ECE 385", "ECE 391"]], "link": "https://wiki.engr.illinois.edu/x/ZZ_UCw", "type": "ECE tech elective / lab"}, {"name": "ECE 414", "title": "Biomedical Instrumentation", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [[]], "pagetitle": "ECE 414 (BIOE 414) - Biomedical Instrumentation", "prereqs": [["ECE 210"]], "link": "https://wiki.engr.illinois.edu/x/R4C1D", "crosslist": ["BIOE 414"], "type": "ECE tech elective"}, {"name": "ECE 415", "title": "Biomedical Instrumentation Lab", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [["ECE 414"]], "prereqs": [[]], "crosslist": ["BIOE 415"], "type": "ECE tech elective / lab"}, {"name": "ECE 416", "title": "Biosensors", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [[]], "pagetitle": "ECE 416 (BIOE 416) - Biosensors", "prereqs": [["ECE 329"]], "link": "https://wiki.engr.illinois.edu/x/XxRbD", "crosslist": ["BIOE 416"], "type": "ECE tech elective"}, {"name": "ECE 417", "title": "Multimedia Signal Processing", "subfield": "Signal Processing", "coreqs": [[]], "prereqs": [["ECE 310", "ECE 313"]], "type": "ECE tech elective"}, {"name": "ECE 418", "title": "Image & Video Processing", "subfield": "Signal Processing", "coreqs": [[]], "prereqs": [["ECE 310", "MATH 415", "ECE 313"], ["ECE 310", "MATH 415", "STAT 400"], ["ECE 310", "MATH 415", "IE 300"], ["ECE 310", "MATH 415", "MATH 461"]], "type": "ECE tech elective"}, {"name": "CS 460", "title": "Security Laboratory", "subfield": "Computer Science: Security & Information Assurance", "coreqs": [[]], "pagetitle": "CS 460 (ECE 419) - Security Laboratory", "prereqs": [["CS 461"]], "link": "https://wiki.engr.illinois.edu/x/HohDDQ", "crosslist": ["ECE 419"], "type": "ECE tech elective"}, {"name": "ECE 420", "title": "Embedded DSP Laboratory", "subfield": "Signal Processing", "coreqs": [[]], "pagetitle": "ECE 420 - Embedded DSP Laboratory", "prereqs": [["ECE 310"]], "link": "https://wiki.engr.illinois.edu/x/Z5_UCw", "type": "ECE tech elective / lab"}, {"name": "CS 461", "title": "Computer Security I", "subfield": "Computer Science: Security & Information Assurance", "coreqs": [[]], "pagetitle": "CS 461 (ECE 422) - Computer Security I", "prereqs": [["ECE 391"], ["CS 241"]], "link": "https://wiki.engr.illinois.edu/x/r4i9D", "crosslist": ["ECE 422"], "type": "ECE tech elective"}, {"name": "CS 463", "title": "Computer Security II", "subfield": "Computer Science: Security & Information Assurance", "coreqs": [[]], "pagetitle": "CS 463 (ECE 424) - Computer Security II", "prereqs": [["ECE 422"], ["CS 461"]], "link": "https://wiki.engr.illinois.edu/x/sSheDQ", "crosslist": ["ECE 424"], "type": "ECE tech elective"}, {"name": "ECE 425", "title": "Intro to VLSI System Design", "subfield": "Computer Engineering: Architecture / Digital Logic", "coreqs": [[]], "pagetitle": "ECE 425 - Intro to VLSI System Design", "prereqs": [["ECE 385", "ECE 411"], ["CS 232"]], "link": "https://wiki.engr.illinois.edu/x/TQWfCw", "type": "ECE tech elective"}, {"name": "CS 425", "title": "Distributed Systems", "subfield": "Computer Science: Systems", "coreqs": [[]], "pagetitle": "CS 425 (ECE 428) - Distributed Systems", "prereqs": [["ECE 391"], ["CS 232"]], "link": "https://wiki.engr.illinois.edu/x/5UmfCw", "crosslist": ["ECE 428"], "type": "ECE tech elective"}, {"name": "ECE 431", "title": "Electric Machinery", "subfield": "Power and Energy Systems", "coreqs": [[]], "pagetitle": "ECE 431 - Electric Machinery", "prereqs": [["ECE 330"]], "link": "https://wiki.engr.illinois.edu/x/PIa1D", "type": "ECE tech elective / lab"}, {"name": "ECE 432", "title": "Advanced Electric Machinery", "subfield": "Power and Energy Systems", "coreqs": [[]], "prereqs": [["ECE 431"]], "type": "ECE tech elective"}, {"name": "CS 436", "title": "Computer Networking Laboratory", "subfield": "Computer Engineering: Networking", "coreqs": [[]], "prereqs": [["CS 438"]], "crosslist": ["ECE 435"], "type": "ECE tech elective / lab"}, {"name": "ECE 437", "title": "Sensors and Instrumentation", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [[]], "pagetitle": "ECE 437 - Sensors and Instrumentation", "prereqs": [["ECE 329"]], "link": "https://wiki.engr.illinois.edu/x/KqGUCw", "type": "ECE tech elective / lab"}, {"name": "CS 438", "title": "Communication Networks", "subfield": "Computer Engineering: Networking", "coreqs": [[]], "pagetitle": "CS 438 (ECE 438) - Communication Networks", "prereqs": [["ECE 391", "ECE 313"], ["ECE 391", "MATH 461"], ["ECE 391", "STAT 400"], ["CS 241", "ECE 313"], ["CS 241", "MATH 461"], ["CS 241", "STAT 400"]], "link": "https://wiki.engr.illinois.edu/x/uoIMD", "crosslist": ["ECE 438"], "type": "ECE tech elective / lab"}, {"name": "ECE 439", "title": "Wireless Networks", "subfield": "Computer Engineering: Networking", "coreqs": [[]], "prereqs": [["ECE 391", "ECE 313"], ["ECE 391", "MATH 461"], ["ECE 391", "STAT 400"], ["CS 241", "ECE 313"], ["CS 241", "MATH 461"], ["CS 241", "STAT 400"]], "crosslist": ["CS 439"], "type": "ECE tech elective / lab"}, {"name": "ECE 441", "title": "Physics & Modeling Semicond Dev", "subfield": "Microelectronics and Photonics", "coreqs": [[]], "pagetitle": "ECE 441 - Physics and Modeling Semicond Dev", "prereqs": [["ECE 340"]], "link": "https://wiki.engr.illinois.edu/x/FxjzCw", "type": "ECE tech elective"}, {"name": "ECE 444", "title": "Theory and Fabrication of Integrated Circuits", "subfield": "Microelectronics and Photonics", "coreqs": [[]], "pagetitle": "ECE 444 - Theory and Fabrication of Integrated Circuits", "prereqs": [["ECE 340"]], "link": "https://wiki.engr.illinois.edu/x/MqGUCw", "type": "ECE tech elective / lab"}, {"cetype": "ECE tech elective", "name": "ECE 445", "title": "Senior Design", "eetype": "required", "coreqs": [[]], "pagetitle": "ECE 445 - Senior Design", "prereqs": [["Senior Standing"]], "link": "https://wiki.engr.illinois.edu/x/dBLPCw"}, {"name": "ECE 447", "title": "Active Microwave Ckt Design", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [[]], "pagetitle": "ECE 447 - Active Microwave Circuits", "prereqs": [["ECE 350", "ECE 453"]], "link": "https://wiki.engr.illinois.edu/x/lh5eDQ", "type": "ECE tech elective / lab"}, {"name": "CS 440", "title": "Artificial Intelligence", "subfield": "Computer Engineering: Artificial Intelligence", "coreqs": [[]], "pagetitle": "CS 440 (ECE 448) - Artificial Intelligence", "prereqs": [["ECE 391"], ["CS 225"]], "link": "https://wiki.engr.illinois.edu/x/6IhDDQ", "crosslist": ["ECE 448"], "type": "ECE tech elective"}, {"name": "ECE 451", "title": "Adv Microwave Measurements", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [[]], "prereqs": [["ECE 350"]], "type": "ECE tech elective / lab"}, {"name": "ECE 452", "title": "Electromagnetic Fields and Electro-Optics", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [[]], "pagetitle": "ECE 452 - Electromagnetic Fields and Electro-Optics", "prereqs": [["ECE 350"]], "link": "https://wiki.engr.illinois.edu/x/qwWfCw", "type": "ECE tech elective"}, {"name": "ECE 453", "title": "Wireless Communication Systems", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [["ECE 342"]], "pagetitle": "Should I take ECE 453 with ECE 459?", "prereqs": [["ECE 329"]], "link": "https://wiki.engr.illinois.edu/x/yglVDQ", "type": "ECE tech elective / lab"}, {"name": "ECE 454", "title": "Antennas", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [[]], "pagetitle": "ECE 454 - Antennas", "prereqs": [["ECE 350"]], "link": "https://wiki.engr.illinois.edu/x/HQWfCw", "type": "ECE tech elective"}, {"name": "ECE 455", "title": "Optical Electronics", "subfield": "Microelectronics and Photonics", "coreqs": [[]], "pagetitle": "ECE 455 - Optical Electronics", "prereqs": [["ECE 350"]], "link": "https://wiki.engr.illinois.edu/x/2RafCw", "type": "ECE tech elective"}, {"name": "ECE 456", "title": "Global Nav Satellite Systems", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [[]], "pagetitle": "ECE 456 - Global Satellite Navigation Systems", "prereqs": [["ECE 329", "ECE 310"]], "link": "https://wiki.engr.illinois.edu/x/rSVeDQ", "type": "ECE tech elective / lab"}, {"name": "ECE 457", "title": "Microwave Devices and Circuits", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [[]], "pagetitle": "ECE 457 - Microwave Devices and Circuits", "prereqs": [["ECE 350"]], "link": "https://wiki.engr.illinois.edu/x/xBDzCw", "type": "ECE tech elective"}, {"name": "ECE 458", "title": "Applic of Radio Wave Propag", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [[]], "prereqs": [["ECE 350"]], "type": "ECE tech elective"}, {"name": "ECE 459", "title": "Communications Systems", "subfield": "Communications", "coreqs": [[]], "pagetitle": "Should I take ECE 453 with ECE 459?", "prereqs": [["ECE 313"]], "link": "https://wiki.engr.illinois.edu/x/yglVDQ", "type": "ECE tech elective"}, {"name": "ECE 460", "title": "Optical Imaging", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [["ECE 313"]], "prereqs": [["ECE 329"]], "type": "ECE tech elective / lab"}, {"cetype": "required", "name": "CS 173", "title": "Discrete Structures", "subfield": "Computer Science: Theory", "eetype": "CS tech elective", "coreqs": [[]], "pagetitle": "Should I take CS 225 with CS 173?", "prereqs": [["CS 101", "MATH 220"], ["CS 125", "MATH 220"], ["ECE 190", "MATH 220"], ["INFO 103", "MATH 220"], ["CS 101", "MATH 221"], ["CS 125", "MATH 221"], ["ECE 190", "MATH 221"], ["INFO 103", "MATH 221"], ["CS 101", "MATH 234"], ["CS 125", "MATH 234"], ["ECE 190", "MATH 234"], ["INFO 103", "MATH 234"]], "link": "https://wiki.engr.illinois.edu/x/pwNMDQ"}, {"cetype": "required", "name": "CS 225", "title": "Data Structures", "subfield": "Computer Science: Programming and Software Engineering", "eetype": "3of5", "coreqs": [[]], "pagetitle": "Should I take CS 225 with CS 173?", "prereqs": [["ECE 190", "CS 173"], ["ECE 190", "MATH 213"], ["CS 125", "MATH 213"], ["CS 125", "CS 173"]], "link": "https://wiki.engr.illinois.edu/x/pwNMDQ"}, {"cetype": "required", "name": "MATH 213", "title": "Basic Discrete Mathematics", "eetype": "tech elective", "coreqs": [[]], "pagetitle": "MATH 213 - Basic Discrete Mathematics", "prereqs": [["MATH 220"], ["MATH 221"]], "link": "https://wiki.engr.illinois.edu/x/1AX8D"}, {"name": "MATH 415", "title": "Applied Linear Algebra", "coreqs": [[]], "pagetitle": "What's the Difference between MATH 286 and MATH 415?", "prereqs": [["MATH 241"]], "link": "https://wiki.engr.illinois.edu/x/wQlVDQ", "type": "tech elective"}, {"name": "ECE 462", "title": "Logic Design", "subfield": "Computer Engineering: Architecture / Digital Logic", "coreqs": [[]], "pagetitle": "ECE 462 - Logic Design", "prereqs": [["ECE 290"]], "link": "https://wiki.engr.illinois.edu/x/6xLiCw", "type": "ECE tech elective"}, {"name": "ECE 463", "title": "Digital Communications Lab", "subfield": "Communications", "coreqs": [[]], "prereqs": [["ECE 361"], ["ECE 459"]], "type": "ECE tech elective / lab"}, {"name": "ECE 464", "title": "Power Electronics", "subfield": "Power and Energy Systems", "coreqs": [[]], "pagetitle": "ECE 464 - Power Electronics", "prereqs": [["ECE 342"]], "link": "https://wiki.engr.illinois.edu/x/DALzCw", "type": "ECE tech elective"}, {"name": "ECE 465", "title": "Optical Communications Systems", "subfield": "Communications", "coreqs": [[]], "prereqs": [["ECE 313", "ECE 350"]], "type": "ECE tech elective"}, {"name": "ECE 466", "title": "Optical Communications Lab", "subfield": "Communications", "coreqs": [["ECE 465"]], "prereqs": [[]], "type": "ECE tech elective / lab"}, {"name": "ECE 467", "title": "Biophotonics", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [[]], "prereqs": [["ECE 455"], ["ECE 460"], ["PHYS 402"]], "crosslist": ["BIOE 467"], "type": "ECE tech elective"}, {"name": "ECE 468", "title": "Optical Remote Sensing", "subfield": "Electromagnetics, Optics and Remote Sensing", "coreqs": [[]], "prereqs": [["ECE 329", "ECE 313"]], "crosslist": ["AE 468"], "type": "ECE tech elective / lab"}, {"name": "ECE 469", "title": "Power Electronics Laboratory", "subfield": "Power and Energy Systems", "coreqs": [["ECE 464"]], "pagetitle": "ECE 469 - Power Electronics Laboratory", "prereqs": [["ECE 343"]], "link": "https://wiki.engr.illinois.edu/x/LoDoD", "type": "ECE tech elective / lab"}, {"name": "ECE 470", "title": "Introduction to Robotics", "subfield": "Computer Engineering: Artificial Intelligence", "coreqs": [[]], "pagetitle": "ECE 470 (AE 482, ME 445) - Introduction to Robotics", "prereqs": [["MATH 225"], ["MATH 286"], ["MATH 415"], ["MATH 418"]], "link": "https://wiki.engr.illinois.edu/x/04DoD", "crosslist": ["AE 482", "ME 445"], "type": "ECE tech elective / lab"}, {"name": "ECE 472", "title": "Biomedical Ultrasound Imaging", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [[]], "prereqs": [["ECE 329"]], "type": "ECE tech elective"}, {"name": "ECE 473", "title": "Fund of Engrg Acoustics", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [[]], "prereqs": [["MATH 285"], ["MATH 286"]], "crosslist": ["TAM 413"], "type": "ECE tech elective"}, {"name": "ECE 476", "title": "Power System Analysis", "subfield": "Power and Energy Systems", "coreqs": [[]], "prereqs": [["ECE 330"]], "type": "ECE tech elective"}, {"name": "CS 477", "title": "Formal Software Development Methods", "subfield": "Computer Science: Theory", "coreqs": [[]], "prereqs": [["CS 225", "CS 373"], ["CS 225", "MATH 414"]], "crosslist": ["ECE 478"], "type": "ECE tech elective"}, {"name": "ECE 480", "title": "Magnetic Resonance Imaging", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [[]], "prereqs": [["ECE 310"]], "crosslist": ["BIOE 480"], "type": "ECE tech elective"}, {"name": "ECE 481", "title": "Nanotechnology", "subfield": "Microelectronics and Photonics", "coreqs": [[]], "prereqs": [["CHEM 442"], ["CHBE 457"], ["ECE 485"], ["MSE 401"], ["PHYS 460"]], "type": "ECE tech elective"}, {"name": "ECE 482", "title": "Digital IC Design", "subfield": "Integrated Circuits and Systems", "coreqs": [[]], "pagetitle": "ECE 482 - Digital IC Design", "prereqs": [["ECE 290", "ECE 342"]], "link": "https://wiki.engr.illinois.edu/x/LTafCw", "type": "ECE tech elective"}, {"name": "ECE 483", "title": "Analog IC Design", "subfield": "Integrated Circuits and Systems", "coreqs": [[]], "prereqs": [["ECE 342"]], "type": "ECE tech elective"}, {"name": "ECE 484", "title": "Prin Adv Microelec Processing", "subfield": "Microelectronics and Photonics", "coreqs": [[]], "prereqs": [["ECE 444"]], "type": "ECE tech elective"}, {"name": "ECE 485", "title": "MEMS Devices & Systems", "subfield": "Microelectronics and Photonics", "coreqs": [[]], "prereqs": [[]], "crosslist": ["ME 485"], "type": "ECE tech elective"}, {"name": "ECE 486", "title": "Control Systems", "subfield": "Control Systems", "coreqs": [[]], "pagetitle": "ECE 486 - Control Systems", "prereqs": [["ECE 210"]], "link": "https://wiki.engr.illinois.edu/x/OKGUCw", "type": "ECE tech elective / lab"}, {"name": "ECE 487", "title": "Intro to Quantum Electr for EEs", "subfield": "Microelectronics and Photonics", "coreqs": [[]], "prereqs": [["PHYS 485"]], "type": "ECE tech elective"}, {"name": "ECE 488", "title": "Compound Semicond & Devices", "subfield": "Microelectronics and Photonics", "coreqs": [[]], "prereqs": [["ECE 340", "ECE 350"]], "type": "ECE tech elective"}, {"name": "ECE 490", "title": "Introduction to Optimization", "subfield": "Control Systems", "coreqs": [[]], "pagetitle": "ECE 490 (CSE 441) - Introduction to Optimization", "prereqs": [["ECE 190", "MATH 415"]], "link": "https://wiki.engr.illinois.edu/x/OqGUCw", "crosslist": ["CSE 441"], "type": "ECE tech elective"}, {"name": "CS 450", "title": "Numerical Analysis", "subfield": "Computer Science: Numerical Analysis and Scientific Computing", "coreqs": [[]], "pagetitle": "CS 450 (ECE 491, MATH 450, CSE 401) - Numerical Analysis", "prereqs": [["CS 101", "CS 357", "MATH 285"], ["CS 125", "CS 357", "MATH 285"], ["CS 101", "MATH 415", "MATH 285"], ["CS 125", "MATH 415", "MATH 285"]], "link": "https://wiki.engr.illinois.edu/x/_Q-zCw", "crosslist": ["ECE 491", "MATH 450", "CSE 401"], "type": "ECE tech elective"}, {"name": "CS 420", "title": "Parallel Progrmg: Sci & Engrg", "subfield": "Computer Science: Parallel Programming", "coreqs": [[]], "prereqs": [["CS 225"]], "crosslist": ["ECE 492", "CSE 402"], "type": "ECE tech elective"}, {"name": "ECE 493", "title": "Advanced Engineering Math", "subfield": "Biomedical Imaging, Bioengineering, and Acoustics", "coreqs": [[]], "prereqs": [["MATH 284"], ["MATH 285"], ["MATH 286"], ["MATH 441"]], "crosslist": ["MATH 487"], "type": "ECE tech elective"}, {"name": "ECE 495", "title": "Photonic Device Laboratory", "subfield": "Microelectronics and Photonics", "coreqs": [[]], "prereqs": [["ECE 487"]], "type": "ECE tech elective / lab"}, {"name": "CS 373", "title": "Theory of Computation", "subfield": "Computer Science: Theory", "coreqs": [[]], "pagetitle": "CS 373 - Theory of Computation", "prereqs": [["CS 225", "CS 173"], ["CS 225", "MATH 213"]], "link": "https://wiki.engr.illinois.edu/x/LVGfCw", "type": "CS tech elective"}, {"name": "CS 473", "title": "Fundamental Algorithms", "subfield": "Computer Science: Theory", "coreqs": [[]], "pagetitle": "CS 473 (CSE 414, MATH 473) - Fundamental Algorithms", "prereqs": [["CS 373"]], "link": "https://wiki.engr.illinois.edu/x/EBDzCw", "crosslist": ["CSE 414", "MATH 473"], "type": "CS tech elective"}, {"coreqs": [[]], "prereqs": [["MATH 286", "PHYS 214"], ["MATH 285", "PHYS 214"]], "type": "tech elective", "name": "PHYS 485", "title": "Atomic Phys and Quantum Theory"}, {"name": "CHEM 102", "title": "General Chemistry I", "coreqs": [[]], "pagetitle": "CHEM 102 & 103 - General Chemistry I + Lab", "nocredit": ["CHEM 202"], "prereqs": [[]], "link": "https://wiki.engr.illinois.edu/x/AYnXCw", "type": "required"}, {"coreqs": [["CHEM 102"]], "prereqs": [[]], "type": "required", "name": "CHEM 103", "title": "General Chemistry Lab I"}, {"name": "MATH 461", "title": "Probability Theory", "coreqs": [[]], "pagetitle": "MATH 461 (STAT 451) - Probability Theory", "nocredit": ["STAT 408", "ECE 313"], "prereqs": [["MATH 241"]], "link": "https://wiki.engr.illinois.edu/x/YQzzCw", "crosslist": ["STAT 451"], "type": "elective"}, {"name": "STAT 400", "title": "Statistics and Probability I", "coreqs": [[]], "nocredit": ["STAT 408"], "prereqs": [["MATH 241"]], "crosslist": ["MATH 463"], "type": "elective"}, {"name": "STAT 410", "title": "Statistics and Probability II", "coreqs": [[]], "pagetitle": "STAT 410 - Statistics and Probability II", "nocredit": ["STAT 409"], "prereqs": [["STAT 400"], ["STAT 100", "MATH 461"]], "link": "https://wiki.engr.illinois.edu/x/9ANMDQ", "crosslist": ["MATH 464"], "type": "required"}, {"name": "CS 242", "title": "Programming Studio", "subfield": "Computer Science: Programming and Software Engineering", "coreqs": [[]], "prereqs": [["CS 241"], ["ECE 391"]], "type": "CS tech elective"}, {"name": "CS 357", "title": "Numerical Methods I", "subfield": "Computer Science: Numerical Analysis and Scientific Computing", "coreqs": [[]], "pagetitle": "CS 357 (MATH 357) - Numerical Methods I", "nocredit": ["CS 450"], "prereqs": [["ECE 190", "MATH 241", "MATH 415"], ["ECE 190", "MATH 241", "MATH 225"]], "link": "https://wiki.engr.illinois.edu/x/VIa1D", "crosslist": ["MATH 357"], "type": "CS tech elective"}, {"name": "CS 410", "title": "Text Information Systems", "subfield": "Computer Science: Data Systems", "coreqs": [[]], "prereqs": [["CS 225"]], "type": "CS tech elective"}, {"name": "CS 411", "title": "Database Systems", "subfield": "Computer Science: Data Systems", "coreqs": [[]], "pagetitle": "CS 411 - Database Systems", "prereqs": [["CS 225"]], "link": "https://wiki.engr.illinois.edu/x/OoDoD", "type": "CS tech elective"}, {"name": "CS 412", "title": "Introduction to Data Mining", "subfield": "Computer Science: Data Systems", "coreqs": [[]], "pagetitle": "CS 412 - Introduction to Data Mining", "prereqs": [["CS 225"]], "link": "https://wiki.engr.illinois.edu/x/-ARMDQ", "type": "CS tech elective"}, {"name": "MATH 413", "title": "Intro to Combinatorics", "coreqs": [[]], "prereqs": [["MATH 347"], ["MATH 348"]], "crosslist": ["CS 413"], "type": "CS tech elective"}, {"name": "CS 414", "title": "Multimedia Systems", "subfield": "Computer Science: Systems", "coreqs": [[]], "prereqs": [["CS 241"], ["ECE 391"]], "type": "CS tech elective"}, {"name": "CS 418", "title": "Interactive Computer Graphics", "subfield": "Computer Science: Graphics & HCI", "coreqs": [[]], "pagetitle": "CS 418 (CSE 427) - Interactive Computer Graphics", "prereqs": [["CS 225", "MATH 241", "MATH 415"], ["CS 225", "MATH 241", "MATH 225"]], "link": "https://wiki.engr.illinois.edu/x/9QXsCw", "crosslist": ["CSE 427"], "type": "CS tech elective"}, {"name": "CS 419", "title": "Production Computer Graphics", "subfield": "Computer Science: Graphics & HCI", "coreqs": [[]], "pagetitle": "CS 419 - Production Computer Graphics", "prereqs": [["CS 418"]], "link": "https://wiki.engr.illinois.edu/x/KAfiCw", "type": "CS tech elective"}, {"name": "CS 421", "title": "Progrmg Languages & Compilers", "subfield": "Computer Science: Programming Languages and Compilers", "coreqs": [[]], "pagetitle": "CS 421 - Programming Languages & Compilers", "prereqs": [["CS 232", "CS 373"]], "link": "https://wiki.engr.illinois.edu/x/_AJuDQ", "type": "CS tech elective"}, {"name": "CS 422", "title": "Programming Language Design", "subfield": "Computer Science: Programming Languages and Compilers", "coreqs": [[]], "prereqs": [["CS 421"]], "type": "CS tech elective"}, {"name": "CS 423", "title": "Operating Systems Design", "subfield": "Computer Science: Systems", "coreqs": [[]], "pagetitle": "CS 423 (CSE 423) - Operating Systems Design", "prereqs": [["CS 241"], ["ECE 391"]], "link": "https://wiki.engr.illinois.edu/x/kgVVDQ", "crosslist": ["CSE 423"], "type": "CS tech elective"}, {"name": "CS 424", "title": "Real-Time Systems", "subfield": "Computer Science: Systems", "coreqs": [[]], "pagetitle": "CS 424 - Real-Time Systems", "prereqs": [["CS 431"]], "link": "https://wiki.engr.illinois.edu/x/QYDiD", "type": "CS tech elective"}, {"name": "CS 426", "title": "Compiler Construction", "subfield": "Computer Science: Programming Languages and Compilers", "coreqs": [[]], "pagetitle": "CS 426 - Compiler Construction", "prereqs": [["CS 421"]], "link": "https://wiki.engr.illinois.edu/x/dRXiCw", "type": "CS tech elective"}, {"name": "CS 427", "title": "Software Engineering I", "subfield": "Computer Science: Programming and Software Engineering", "coreqs": [[]], "prereqs": [["CS 225", "CS 373"]], "crosslist": ["CSE 426"], "type": "CS tech elective"}, {"name": "CS 428", "title": "Software Engineering II", "subfield": "Computer Science: Programming and Software Engineering", "coreqs": [[]], "prereqs": [["CS 427"]], "crosslist": ["CSE 429"], "type": "CS tech elective"}, {"name": "CS 429", "title": "Software Engineering II ACP", "subfield": "Computer Science: Programming and Software Engineering", "coreqs": [[]], "prereqs": [["CS 427"]], "type": "CS tech elective"}, {"name": "CS 431", "title": "Embedded Systems", "subfield": "Computer Science: Systems", "coreqs": [[]], "pagetitle": "CS 431 - Embedded Systems", "prereqs": [["CS 241"], ["ECE 391"]], "link": "https://wiki.engr.illinois.edu/x/P4DiD", "type": "CS tech elective"}, {"name": "CS 433", "title": "Computer System Organization", "subfield": "Computer Engineering: Architecture / Digital Logic", "coreqs": [["ECE 391"]], "pagetitle": "CS 433 - Computer System Organization", "prereqs": [["CS 232"]], "link": "https://wiki.engr.illinois.edu/x/5x5eDQ", "crosslist": ["CSE 422"], "type": "CS tech elective"}, {"name": "CS 446", "title": "Machine Learning", "subfield": "Computer Engineering: Artificial Intelligence", "coreqs": [[]], "pagetitle": "CS 446 - Machine Learning", "prereqs": [["CS 373", "CS 440"]], "link": "https://wiki.engr.illinois.edu/x/pg9eDQ", "type": "CS tech elective"}, {"name": "CS 465", "title": "User Interface Design", "subfield": "Computer Science: Graphics & HCI", "coreqs": [[]], "pagetitle": "CS 465 - User Interface Design", "prereqs": [["CS 225"]], "link": "https://wiki.engr.illinois.edu/x/iQrzCw", "type": "CS tech elective"}, {"name": "CS 467", "title": "Social Visualization", "subfield": "Computer Science: Graphics & HCI", "coreqs": [[]], "prereqs": [["CS 225"]], "type": "CS tech elective"}, {"name": "IE 410", "title": "Stochastic Processes & Applic", "subfield": "Computer Science: Numerical Analysis and Scientific Computing", "coreqs": [[]], "prereqs": [["IE 310"]], "crosslist": ["CS 481"], "type": "CS tech elective"}, {"name": "MATH 347", "title": "Fundamental Mathematics", "coreqs": [[]], "nocredit": ["MATH 348"], "prereqs": [["MATH 231"]], "type": "tech elective"}, {"name": "IE 310", "title": "Operations Research", "coreqs": [["MATH 415"]], "nocredit": ["CEE 201"], "prereqs": [[]], "type": "tech elective"}]
+[
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "Senior Standing - Senior Standing",
+        "name": "Senior Standing",
+        "prereqs": [
+            [
+                "Junior Standing"
+            ]
+        ],
+        "title": "Senior Standing"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "Junior Standing - Junior Standing",
+        "name": "Junior Standing",
+        "prereqs": [
+            []
+        ],
+        "title": "Junior Standing"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "MATH 221 - Calculus I",
+        "link": "https://wiki.engr.illinois.edu/x/Q7rCCw",
+        "name": "MATH 221",
+        "pagetitle": "MATH 221 - Calculus I",
+        "prereqs": [
+            []
+        ],
+        "title": "Calculus I",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "MATH 231 - Calculus II",
+        "link": "https://wiki.engr.illinois.edu/x/H6HXCw",
+        "name": "MATH 231",
+        "pagetitle": "MATH 231 - Calculus II",
+        "prereqs": [
+            [
+                "MATH 221"
+            ]
+        ],
+        "title": "Calculus II",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "MATH 241 - Calculus III",
+        "link": "https://wiki.engr.illinois.edu/x/1RDzCw",
+        "name": "MATH 241",
+        "pagetitle": "MATH 241 - Calculus III",
+        "prereqs": [
+            [
+                "MATH 231"
+            ]
+        ],
+        "title": "Calculus III",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "What's the Difference between MATH 286 and MATH 415?",
+        "link": "https://wiki.engr.illinois.edu/x/wQlVDQ",
+        "name": "MATH 286",
+        "pagetitle": "What's the Difference between MATH 286 and MATH 415?",
+        "prereqs": [
+            [
+                "MATH 241"
+            ]
+        ],
+        "title": "Intro to Differential Eq Plus",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            [
+                "MATH 231"
+            ]
+        ],
+        "internallink": "PHYS 211 - University Physics, Mechanics",
+        "link": "https://wiki.engr.illinois.edu/x/3RBbD",
+        "name": "PHYS 211",
+        "pagetitle": "PHYS 211 - University Physics, Mechanics",
+        "prereqs": [
+            []
+        ],
+        "title": "University Physics, Mechanics",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            [
+                "MATH 241"
+            ]
+        ],
+        "internallink": "Should I take PHYS 212 with PHYS 213?",
+        "link": "https://wiki.engr.illinois.edu/x/Vg5eDQ",
+        "name": "PHYS 212",
+        "pagetitle": "Should I take PHYS 212 with PHYS 213?",
+        "prereqs": [
+            [
+                "PHYS 211"
+            ]
+        ],
+        "title": "University Physics, Electricity and Magnetism",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            [
+                "MATH 241"
+            ]
+        ],
+        "internallink": "Should I take PHYS 212 with PHYS 213?",
+        "link": "https://wiki.engr.illinois.edu/x/Vg5eDQ",
+        "name": "PHYS 213",
+        "pagetitle": "Should I take PHYS 212 with PHYS 213?",
+        "prereqs": [
+            [
+                "PHYS 211"
+            ]
+        ],
+        "title": "University Physics, Thermal Physics",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "PHYS 214 - University Physics, Quantum Physics",
+        "link": "https://wiki.engr.illinois.edu/x/lI7XCw",
+        "name": "PHYS 214",
+        "pagetitle": "PHYS 214 - University Physics, Quantum Physics",
+        "prereqs": [
+            [
+                "PHYS 212"
+            ]
+        ],
+        "title": "University Physics, Quantum Mechanics",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "Should I take ECE 110 with ECE 190?",
+        "link": "https://wiki.engr.illinois.edu/x/FJtDDQ",
+        "name": "ECE 110",
+        "pagetitle": "Should I take ECE 110 with ECE 190?",
+        "prereqs": [
+            []
+        ],
+        "title": "Introduction to Electrical and Computer Engineering",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "Should I take ECE 110 with ECE 190?",
+        "link": "https://wiki.engr.illinois.edu/x/FJtDDQ",
+        "name": "ECE 190",
+        "pagetitle": "Should I take ECE 110 with ECE 190?",
+        "prereqs": [
+            [
+                "ECE 110"
+            ]
+        ],
+        "title": "Introduction to Computing Systems",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            [
+                "MATH 286"
+            ]
+        ],
+        "internallink": "Should I take ECE 190 with ECE 210?",
+        "link": "https://wiki.engr.illinois.edu/x/_45DDQ",
+        "name": "ECE 210",
+        "pagetitle": "Should I take ECE 190 with ECE 210?",
+        "prereqs": [
+            [
+                "ECE 110",
+                "PHYS 212"
+            ]
+        ],
+        "title": "Analog Signal Processing",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "Should I take ECE 210 with ECE 290?",
+        "link": "https://wiki.engr.illinois.edu/x/-Y5DDQ",
+        "name": "ECE 290",
+        "pagetitle": "Should I take ECE 210 with ECE 290?",
+        "prereqs": [
+            [
+                "ECE 190"
+            ]
+        ],
+        "title": "Computer Engineering I",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 329 - Fields and Waves I",
+        "link": "https://wiki.engr.illinois.edu/x/R5_UCw",
+        "name": "ECE 329",
+        "pagetitle": "ECE 329 - Fields and Waves I",
+        "prereqs": [
+            [
+                "ECE 210"
+            ]
+        ],
+        "title": "Fields and Waves I",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            [
+                "ECE 329"
+            ]
+        ],
+        "internallink": "Should I take ECE 340 with ECE 304?",
+        "link": "https://wiki.engr.illinois.edu/x/ww1VDQ",
+        "name": "ECE 340",
+        "pagetitle": "Should I take ECE 340 with ECE 304?",
+        "prereqs": [
+            [
+                "PHYS 214"
+            ]
+        ],
+        "title": "Solid State Electronic Devices",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "RHET 105 - Principles of Composition",
+        "link": "https://wiki.engr.illinois.edu/x/PqHXCw",
+        "name": "RHET 105",
+        "pagetitle": "RHET 105 - Principles of Composition",
+        "prereqs": [
+            []
+        ],
+        "title": "Principles of Composition",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "Should I take ECE 340 with ECE 304?",
+        "link": "https://wiki.engr.illinois.edu/x/ww1VDQ",
+        "name": "ECE 304",
+        "pagetitle": "Should I take ECE 340 with ECE 304?",
+        "prereqs": [
+            [
+                "PHYS 214"
+            ]
+        ],
+        "subfield": "Microelectronics and Photonics",
+        "title": "Photonic Devices",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            [
+                "ECE 313"
+            ]
+        ],
+        "internallink": "ECE 307 - Techniques for Engrg Decisions",
+        "name": "ECE 307",
+        "prereqs": [
+            [
+                "ECE 210"
+            ]
+        ],
+        "title": "Techniques for Engrg Decisions",
+        "type": "ECE tech elective"
+    },
+    {
+        "cetype": "ECE tech elective",
+        "coreqs": [
+            []
+        ],
+        "eetype": "3of5",
+        "internallink": "Should I take ECE 311 with ECE 310?",
+        "link": "https://wiki.engr.illinois.edu/x/yAdVDQ",
+        "name": "ECE 310",
+        "pagetitle": "Should I take ECE 311 with ECE 310?",
+        "prereqs": [
+            [
+                "ECE 210"
+            ]
+        ],
+        "subfield": "Signal Processing",
+        "title": "Digital Signal Processing"
+    },
+    {
+        "coreqs": [
+            [
+                "ECE 310"
+            ]
+        ],
+        "internallink": "Should I take ECE 311 with ECE 310?",
+        "link": "https://wiki.engr.illinois.edu/x/yAdVDQ",
+        "name": "ECE 311",
+        "pagetitle": "Should I take ECE 311 with ECE 310?",
+        "prereqs": [
+            []
+        ],
+        "subfield": "Signal Processing",
+        "title": "Digital Signal Processing Lab",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "MATH 362"
+        ],
+        "internallink": "ECE 313 (MATH 362) - Probability with Engrg Applic",
+        "link": "https://wiki.engr.illinois.edu/x/Qp_UCw",
+        "name": "ECE 313",
+        "nocredit": [
+            "MATH 461"
+        ],
+        "pagetitle": "ECE 313 (MATH 362) - Probability with Engrg Applic",
+        "prereqs": [
+            [
+                "ECE 210"
+            ]
+        ],
+        "title": "Probability with Engrg Applic",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 316"
+        ],
+        "internallink": "PHIL 316 (ECE 316) - Ethics and Engineering",
+        "name": "PHIL 316",
+        "prereqs": [
+            [
+                "RHET 105",
+                "Junior Standing"
+            ]
+        ],
+        "title": "Ethics and Engineering",
+        "type": "elective"
+    },
+    {
+        "cetype": "ECE tech elective",
+        "coreqs": [
+            []
+        ],
+        "eetype": "3of5",
+        "internallink": "ECE 330 - Power Circuits and Electromechanics",
+        "link": "https://wiki.engr.illinois.edu/x/JaGUCw",
+        "name": "ECE 330",
+        "pagetitle": "ECE 330 - Power Circuits and Electromechanics",
+        "prereqs": [
+            [
+                "ECE 210"
+            ]
+        ],
+        "subfield": "Power and Energy Systems",
+        "title": "Power Circuits and Electromechanics"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 333 - Green Electric Energy",
+        "link": "https://wiki.engr.illinois.edu/x/NwTPCw",
+        "name": "ECE 333",
+        "pagetitle": "ECE 333 - Green Electric Energy",
+        "prereqs": [
+            [
+                "ECE 210"
+            ]
+        ],
+        "subfield": "Power and Energy Systems",
+        "title": "Green Electric Energy",
+        "type": "ECE tech elective"
+    },
+    {
+        "cetype": "ECE tech elective",
+        "coreqs": [
+            []
+        ],
+        "eetype": "3of5",
+        "internallink": "ECE 342 - Electronic Circuits",
+        "link": "https://wiki.engr.illinois.edu/x/MKGUCw",
+        "name": "ECE 342",
+        "pagetitle": "ECE 342 - Electronic Circuits",
+        "prereqs": [
+            [
+                "ECE 210"
+            ]
+        ],
+        "subfield": "Integrated Circuits and Systems",
+        "title": "Electronic Circuits"
+    },
+    {
+        "coreqs": [
+            [
+                "ECE 342"
+            ]
+        ],
+        "internallink": "ECE 343 - Electronic Circuits Laboratory",
+        "link": "https://wiki.engr.illinois.edu/x/xQFeDQ",
+        "name": "ECE 343",
+        "pagetitle": "ECE 343 - Electronic Circuits Laboratory",
+        "prereqs": [
+            []
+        ],
+        "subfield": "Integrated Circuits and Systems",
+        "title": "Electronic Circuits Laboratory",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "cetype": "ECE tech elective",
+        "coreqs": [
+            []
+        ],
+        "eetype": "3of5",
+        "internallink": "ECE 350 - Fields and Waves II",
+        "link": "https://wiki.engr.illinois.edu/x/NKGUCw",
+        "name": "ECE 350",
+        "pagetitle": "ECE 350 - Fields and Waves II",
+        "prereqs": [
+            [
+                "ECE 329"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Fields and Waves II"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 361 - Fundamentals of Digital Communications",
+        "link": "https://wiki.engr.illinois.edu/x/TZ_UCw",
+        "name": "ECE 361",
+        "pagetitle": "ECE 361 - Fundamentals of Digital Communications",
+        "prereqs": [
+            [
+                "ECE 210",
+                "ECE 313"
+            ]
+        ],
+        "subfield": "Communications",
+        "title": "Fundamentals of Digital Communications",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "BIOE 380"
+        ],
+        "internallink": "ECE 380 (BIOE 380) - Biomedical Imaging",
+        "link": "https://wiki.engr.illinois.edu/x/Uw6rCw",
+        "name": "ECE 380",
+        "pagetitle": "ECE 380 (BIOE 380) - Biomedical Imaging",
+        "prereqs": [
+            [
+                "MATH 286"
+            ],
+            [
+                "MATH 285"
+            ]
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Biomedical Imaging",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "Should I take ECE 385 with ECE 391?",
+        "link": "https://wiki.engr.illinois.edu/x/XbA1DQ",
+        "name": "ECE 385",
+        "pagetitle": "Should I take ECE 385 with ECE 391?",
+        "prereqs": [
+            [
+                "ECE 290",
+                "ECE 110"
+            ]
+        ],
+        "title": "Digital Systems Laboratory",
+        "type": "required"
+    },
+    {
+        "cetype": "required",
+        "coreqs": [
+            []
+        ],
+        "eetype": "3of5 / lab",
+        "internallink": "Should I take CS 225 with ECE 391?",
+        "link": "https://wiki.engr.illinois.edu/x/0glVDQ",
+        "name": "ECE 391",
+        "pagetitle": "Should I take CS 225 with ECE 391?",
+        "prereqs": [
+            [
+                "ECE 290"
+            ]
+        ],
+        "subfield": "Computer Science: Systems",
+        "title": "Computer Systems Engineering"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 395 - Advanced Digital Systems Laboratory",
+        "link": "https://wiki.engr.illinois.edu/x/8bXCCw",
+        "name": "ECE 395",
+        "pagetitle": "ECE 395 - Advanced Digital Systems Laboratory",
+        "prereqs": [
+            [
+                "ECE 385"
+            ]
+        ],
+        "subfield": "Computer Engineering: Architecture / Digital Logic",
+        "title": "Advanced Digital Systems Laboratory",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 402 - Electronic Music Synthesis",
+        "link": "https://wiki.engr.illinois.edu/x/V5_UCw",
+        "name": "ECE 402",
+        "pagetitle": "ECE 402 - Electronic Music Synthesis",
+        "prereqs": [
+            [
+                "MUS 103",
+                "ECE 290",
+                "ECE 310"
+            ]
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Electronic Music Synthesis",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 403 - Audio Engineering",
+        "name": "ECE 403",
+        "prereqs": [
+            [
+                "ECE 290",
+                "ECE 310",
+                "ECE 473"
+            ]
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Audio Engineering",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CS 483"
+        ],
+        "internallink": "ECE 408 (CS 483) - Applied Parallel Programming",
+        "name": "ECE 408",
+        "prereqs": [
+            [
+                "ECE 190"
+            ]
+        ],
+        "subfield": "Computer Science: Parallel Programming",
+        "title": "Applied Parallel Programming",
+        "type": "ECE tech elective"
+    },
+    {
+        "cetype": "required",
+        "coreqs": [
+            []
+        ],
+        "eetype": "ECE tech elective / lab",
+        "internallink": "ECE 411 - Computer Organization and Design",
+        "link": "https://wiki.engr.illinois.edu/x/Yp_UCw",
+        "name": "ECE 411",
+        "pagetitle": "ECE 411 - Computer Organization and Design",
+        "prereqs": [
+            [
+                "ECE 391"
+            ]
+        ],
+        "subfield": "Computer Engineering: Architecture / Digital Logic",
+        "title": "Computer Organization and Design"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 412 - Microcomputer Laboratory",
+        "link": "https://wiki.engr.illinois.edu/x/ZZ_UCw",
+        "name": "ECE 412",
+        "pagetitle": "ECE 412 - Microcomputer Laboratory",
+        "prereqs": [
+            [
+                "ECE 385",
+                "ECE 391"
+            ]
+        ],
+        "title": "Microcomputer Laboratory",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "BIOE 414"
+        ],
+        "internallink": "ECE 414 (BIOE 414) - Biomedical Instrumentation",
+        "link": "https://wiki.engr.illinois.edu/x/R4C1D",
+        "name": "ECE 414",
+        "pagetitle": "ECE 414 (BIOE 414) - Biomedical Instrumentation",
+        "prereqs": [
+            [
+                "ECE 210"
+            ]
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Biomedical Instrumentation",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            [
+                "ECE 414"
+            ]
+        ],
+        "crosslist": [
+            "BIOE 415"
+        ],
+        "internallink": "ECE 415 (BIOE 415) - Biomedical Instrumentation Lab",
+        "name": "ECE 415",
+        "prereqs": [
+            []
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Biomedical Instrumentation Lab",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "BIOE 416"
+        ],
+        "internallink": "ECE 416 (BIOE 416) - Biosensors",
+        "link": "https://wiki.engr.illinois.edu/x/XxRbD",
+        "name": "ECE 416",
+        "pagetitle": "ECE 416 (BIOE 416) - Biosensors",
+        "prereqs": [
+            [
+                "ECE 329"
+            ]
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Biosensors",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 417 - Multimedia Signal Processing",
+        "name": "ECE 417",
+        "prereqs": [
+            [
+                "ECE 310",
+                "ECE 313"
+            ]
+        ],
+        "subfield": "Signal Processing",
+        "title": "Multimedia Signal Processing",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 418 - Image & Video Processing",
+        "name": "ECE 418",
+        "prereqs": [
+            [
+                "ECE 310",
+                "MATH 415",
+                "ECE 313"
+            ],
+            [
+                "ECE 310",
+                "MATH 415",
+                "STAT 400"
+            ],
+            [
+                "ECE 310",
+                "MATH 415",
+                "IE 300"
+            ],
+            [
+                "ECE 310",
+                "MATH 415",
+                "MATH 461"
+            ]
+        ],
+        "subfield": "Signal Processing",
+        "title": "Image & Video Processing",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 419"
+        ],
+        "internallink": "CS 460 (ECE 419) - Security Laboratory",
+        "link": "https://wiki.engr.illinois.edu/x/HohDDQ",
+        "name": "CS 460",
+        "pagetitle": "CS 460 (ECE 419) - Security Laboratory",
+        "prereqs": [
+            [
+                "CS 461"
+            ]
+        ],
+        "subfield": "Computer Science: Security & Information Assurance",
+        "title": "Security Laboratory",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 420 - Embedded DSP Laboratory",
+        "link": "https://wiki.engr.illinois.edu/x/Z5_UCw",
+        "name": "ECE 420",
+        "pagetitle": "ECE 420 - Embedded DSP Laboratory",
+        "prereqs": [
+            [
+                "ECE 310"
+            ]
+        ],
+        "subfield": "Signal Processing",
+        "title": "Embedded DSP Laboratory",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 422"
+        ],
+        "internallink": "CS 461 (ECE 422) - Computer Security I",
+        "link": "https://wiki.engr.illinois.edu/x/r4i9D",
+        "name": "CS 461",
+        "pagetitle": "CS 461 (ECE 422) - Computer Security I",
+        "prereqs": [
+            [
+                "ECE 391"
+            ],
+            [
+                "CS 241"
+            ]
+        ],
+        "subfield": "Computer Science: Security & Information Assurance",
+        "title": "Computer Security I",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 424"
+        ],
+        "internallink": "CS 463 (ECE 424) - Computer Security II",
+        "link": "https://wiki.engr.illinois.edu/x/sSheDQ",
+        "name": "CS 463",
+        "pagetitle": "CS 463 (ECE 424) - Computer Security II",
+        "prereqs": [
+            [
+                "ECE 422"
+            ],
+            [
+                "CS 461"
+            ]
+        ],
+        "subfield": "Computer Science: Security & Information Assurance",
+        "title": "Computer Security II",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 425 - Intro to VLSI System Design",
+        "link": "https://wiki.engr.illinois.edu/x/TQWfCw",
+        "name": "ECE 425",
+        "pagetitle": "ECE 425 - Intro to VLSI System Design",
+        "prereqs": [
+            [
+                "ECE 385",
+                "ECE 411"
+            ],
+            [
+                "CS 232"
+            ]
+        ],
+        "subfield": "Computer Engineering: Architecture / Digital Logic",
+        "title": "Intro to VLSI System Design",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 428"
+        ],
+        "internallink": "CS 425 (ECE 428) - Distributed Systems",
+        "link": "https://wiki.engr.illinois.edu/x/5UmfCw",
+        "name": "CS 425",
+        "pagetitle": "CS 425 (ECE 428) - Distributed Systems",
+        "prereqs": [
+            [
+                "ECE 391"
+            ],
+            [
+                "CS 232"
+            ]
+        ],
+        "subfield": "Computer Science: Systems",
+        "title": "Distributed Systems",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 431 - Electric Machinery",
+        "link": "https://wiki.engr.illinois.edu/x/PIa1D",
+        "name": "ECE 431",
+        "pagetitle": "ECE 431 - Electric Machinery",
+        "prereqs": [
+            [
+                "ECE 330"
+            ]
+        ],
+        "subfield": "Power and Energy Systems",
+        "title": "Electric Machinery",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 432 - Advanced Electric Machinery",
+        "name": "ECE 432",
+        "prereqs": [
+            [
+                "ECE 431"
+            ]
+        ],
+        "subfield": "Power and Energy Systems",
+        "title": "Advanced Electric Machinery",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 435"
+        ],
+        "internallink": "CS 436 (ECE 435) - Computer Networking Laboratory",
+        "name": "CS 436",
+        "prereqs": [
+            [
+                "CS 438"
+            ]
+        ],
+        "subfield": "Computer Engineering: Networking",
+        "title": "Computer Networking Laboratory",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 437 - Sensors and Instrumentation",
+        "link": "https://wiki.engr.illinois.edu/x/KqGUCw",
+        "name": "ECE 437",
+        "pagetitle": "ECE 437 - Sensors and Instrumentation",
+        "prereqs": [
+            [
+                "ECE 329"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Sensors and Instrumentation",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 438"
+        ],
+        "internallink": "CS 438 (ECE 438) - Communication Networks",
+        "link": "https://wiki.engr.illinois.edu/x/uoIMD",
+        "name": "CS 438",
+        "pagetitle": "CS 438 (ECE 438) - Communication Networks",
+        "prereqs": [
+            [
+                "ECE 391",
+                "ECE 313"
+            ],
+            [
+                "ECE 391",
+                "MATH 461"
+            ],
+            [
+                "ECE 391",
+                "STAT 400"
+            ],
+            [
+                "CS 241",
+                "ECE 313"
+            ],
+            [
+                "CS 241",
+                "MATH 461"
+            ],
+            [
+                "CS 241",
+                "STAT 400"
+            ]
+        ],
+        "subfield": "Computer Engineering: Networking",
+        "title": "Communication Networks",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CS 439"
+        ],
+        "internallink": "ECE 439 (CS 439) - Wireless Networks",
+        "name": "ECE 439",
+        "prereqs": [
+            [
+                "ECE 391",
+                "ECE 313"
+            ],
+            [
+                "ECE 391",
+                "MATH 461"
+            ],
+            [
+                "ECE 391",
+                "STAT 400"
+            ],
+            [
+                "CS 241",
+                "ECE 313"
+            ],
+            [
+                "CS 241",
+                "MATH 461"
+            ],
+            [
+                "CS 241",
+                "STAT 400"
+            ]
+        ],
+        "subfield": "Computer Engineering: Networking",
+        "title": "Wireless Networks",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 441 - Physics and Modeling Semicond Dev",
+        "link": "https://wiki.engr.illinois.edu/x/FxjzCw",
+        "name": "ECE 441",
+        "pagetitle": "ECE 441 - Physics and Modeling Semicond Dev",
+        "prereqs": [
+            [
+                "ECE 340"
+            ]
+        ],
+        "subfield": "Microelectronics and Photonics",
+        "title": "Physics & Modeling Semicond Dev",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 444 - Theory and Fabrication of Integrated Circuits",
+        "link": "https://wiki.engr.illinois.edu/x/MqGUCw",
+        "name": "ECE 444",
+        "pagetitle": "ECE 444 - Theory and Fabrication of Integrated Circuits",
+        "prereqs": [
+            [
+                "ECE 340"
+            ]
+        ],
+        "subfield": "Microelectronics and Photonics",
+        "title": "Theory and Fabrication of Integrated Circuits",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "cetype": "ECE tech elective",
+        "coreqs": [
+            []
+        ],
+        "eetype": "required",
+        "internallink": "ECE 445 - Senior Design",
+        "link": "https://wiki.engr.illinois.edu/x/dBLPCw",
+        "name": "ECE 445",
+        "pagetitle": "ECE 445 - Senior Design",
+        "prereqs": [
+            [
+                "Senior Standing"
+            ]
+        ],
+        "title": "Senior Design"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 447 - Active Microwave Circuits",
+        "link": "https://wiki.engr.illinois.edu/x/lh5eDQ",
+        "name": "ECE 447",
+        "pagetitle": "ECE 447 - Active Microwave Circuits",
+        "prereqs": [
+            [
+                "ECE 350",
+                "ECE 453"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Active Microwave Ckt Design",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 448"
+        ],
+        "internallink": "CS 440 (ECE 448) - Artificial Intelligence",
+        "link": "https://wiki.engr.illinois.edu/x/6IhDDQ",
+        "name": "CS 440",
+        "pagetitle": "CS 440 (ECE 448) - Artificial Intelligence",
+        "prereqs": [
+            [
+                "ECE 391"
+            ],
+            [
+                "CS 225"
+            ]
+        ],
+        "subfield": "Computer Engineering: Artificial Intelligence",
+        "title": "Artificial Intelligence",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 451 - Adv Microwave Measurements",
+        "name": "ECE 451",
+        "prereqs": [
+            [
+                "ECE 350"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Adv Microwave Measurements",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 452 - Electromagnetic Fields and Electro-Optics",
+        "link": "https://wiki.engr.illinois.edu/x/qwWfCw",
+        "name": "ECE 452",
+        "pagetitle": "ECE 452 - Electromagnetic Fields and Electro-Optics",
+        "prereqs": [
+            [
+                "ECE 350"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Electromagnetic Fields and Electro-Optics",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            [
+                "ECE 342"
+            ]
+        ],
+        "internallink": "Should I take ECE 453 with ECE 459?",
+        "link": "https://wiki.engr.illinois.edu/x/yglVDQ",
+        "name": "ECE 453",
+        "pagetitle": "Should I take ECE 453 with ECE 459?",
+        "prereqs": [
+            [
+                "ECE 329"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Wireless Communication Systems",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 454 - Antennas",
+        "link": "https://wiki.engr.illinois.edu/x/HQWfCw",
+        "name": "ECE 454",
+        "pagetitle": "ECE 454 - Antennas",
+        "prereqs": [
+            [
+                "ECE 350"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Antennas",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 455 - Optical Electronics",
+        "link": "https://wiki.engr.illinois.edu/x/2RafCw",
+        "name": "ECE 455",
+        "pagetitle": "ECE 455 - Optical Electronics",
+        "prereqs": [
+            [
+                "ECE 350"
+            ]
+        ],
+        "subfield": "Microelectronics and Photonics",
+        "title": "Optical Electronics",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 456 - Global Satellite Navigation Systems",
+        "link": "https://wiki.engr.illinois.edu/x/rSVeDQ",
+        "name": "ECE 456",
+        "pagetitle": "ECE 456 - Global Satellite Navigation Systems",
+        "prereqs": [
+            [
+                "ECE 329",
+                "ECE 310"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Global Nav Satellite Systems",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 457 - Microwave Devices and Circuits",
+        "link": "https://wiki.engr.illinois.edu/x/xBDzCw",
+        "name": "ECE 457",
+        "pagetitle": "ECE 457 - Microwave Devices and Circuits",
+        "prereqs": [
+            [
+                "ECE 350"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Microwave Devices and Circuits",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 458 - Applic of Radio Wave Propag",
+        "name": "ECE 458",
+        "prereqs": [
+            [
+                "ECE 350"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Applic of Radio Wave Propag",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "Should I take ECE 453 with ECE 459?",
+        "link": "https://wiki.engr.illinois.edu/x/yglVDQ",
+        "name": "ECE 459",
+        "pagetitle": "Should I take ECE 453 with ECE 459?",
+        "prereqs": [
+            [
+                "ECE 313"
+            ]
+        ],
+        "subfield": "Communications",
+        "title": "Communications Systems",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            [
+                "ECE 313"
+            ]
+        ],
+        "internallink": "ECE 460 - Optical Imaging",
+        "name": "ECE 460",
+        "prereqs": [
+            [
+                "ECE 329"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Optical Imaging",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "cetype": "required",
+        "coreqs": [
+            []
+        ],
+        "eetype": "CS tech elective",
+        "internallink": "Should I take CS 225 with CS 173?",
+        "link": "https://wiki.engr.illinois.edu/x/pwNMDQ",
+        "name": "CS 173",
+        "pagetitle": "Should I take CS 225 with CS 173?",
+        "prereqs": [
+            [
+                "CS 101",
+                "MATH 220"
+            ],
+            [
+                "CS 125",
+                "MATH 220"
+            ],
+            [
+                "ECE 190",
+                "MATH 220"
+            ],
+            [
+                "INFO 103",
+                "MATH 220"
+            ],
+            [
+                "CS 101",
+                "MATH 221"
+            ],
+            [
+                "CS 125",
+                "MATH 221"
+            ],
+            [
+                "ECE 190",
+                "MATH 221"
+            ],
+            [
+                "INFO 103",
+                "MATH 221"
+            ],
+            [
+                "CS 101",
+                "MATH 234"
+            ],
+            [
+                "CS 125",
+                "MATH 234"
+            ],
+            [
+                "ECE 190",
+                "MATH 234"
+            ],
+            [
+                "INFO 103",
+                "MATH 234"
+            ]
+        ],
+        "subfield": "Computer Science: Theory",
+        "title": "Discrete Structures"
+    },
+    {
+        "cetype": "required",
+        "coreqs": [
+            []
+        ],
+        "eetype": "3of5",
+        "internallink": "Should I take CS 225 with CS 173?",
+        "link": "https://wiki.engr.illinois.edu/x/pwNMDQ",
+        "name": "CS 225",
+        "pagetitle": "Should I take CS 225 with CS 173?",
+        "prereqs": [
+            [
+                "ECE 190",
+                "CS 173"
+            ],
+            [
+                "ECE 190",
+                "MATH 213"
+            ],
+            [
+                "CS 125",
+                "MATH 213"
+            ],
+            [
+                "CS 125",
+                "CS 173"
+            ]
+        ],
+        "subfield": "Computer Science: Programming and Software Engineering",
+        "title": "Data Structures"
+    },
+    {
+        "cetype": "required",
+        "coreqs": [
+            []
+        ],
+        "eetype": "tech elective",
+        "internallink": "MATH 213 - Basic Discrete Mathematics",
+        "link": "https://wiki.engr.illinois.edu/x/1AX8D",
+        "name": "MATH 213",
+        "pagetitle": "MATH 213 - Basic Discrete Mathematics",
+        "prereqs": [
+            [
+                "MATH 220"
+            ],
+            [
+                "MATH 221"
+            ]
+        ],
+        "title": "Basic Discrete Mathematics"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "What's the Difference between MATH 286 and MATH 415?",
+        "link": "https://wiki.engr.illinois.edu/x/wQlVDQ",
+        "name": "MATH 415",
+        "pagetitle": "What's the Difference between MATH 286 and MATH 415?",
+        "prereqs": [
+            [
+                "MATH 241"
+            ]
+        ],
+        "title": "Applied Linear Algebra",
+        "type": "tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 462 - Logic Design",
+        "link": "https://wiki.engr.illinois.edu/x/6xLiCw",
+        "name": "ECE 462",
+        "pagetitle": "ECE 462 - Logic Design",
+        "prereqs": [
+            [
+                "ECE 290"
+            ]
+        ],
+        "subfield": "Computer Engineering: Architecture / Digital Logic",
+        "title": "Logic Design",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 463 - Digital Communications Lab",
+        "name": "ECE 463",
+        "prereqs": [
+            [
+                "ECE 361"
+            ],
+            [
+                "ECE 459"
+            ]
+        ],
+        "subfield": "Communications",
+        "title": "Digital Communications Lab",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 464 - Power Electronics",
+        "link": "https://wiki.engr.illinois.edu/x/DALzCw",
+        "name": "ECE 464",
+        "pagetitle": "ECE 464 - Power Electronics",
+        "prereqs": [
+            [
+                "ECE 342"
+            ]
+        ],
+        "subfield": "Power and Energy Systems",
+        "title": "Power Electronics",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 465 - Optical Communications Systems",
+        "name": "ECE 465",
+        "prereqs": [
+            [
+                "ECE 313",
+                "ECE 350"
+            ]
+        ],
+        "subfield": "Communications",
+        "title": "Optical Communications Systems",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            [
+                "ECE 465"
+            ]
+        ],
+        "internallink": "ECE 466 - Optical Communications Lab",
+        "name": "ECE 466",
+        "prereqs": [
+            []
+        ],
+        "subfield": "Communications",
+        "title": "Optical Communications Lab",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "BIOE 467"
+        ],
+        "internallink": "ECE 467 (BIOE 467) - Biophotonics",
+        "name": "ECE 467",
+        "prereqs": [
+            [
+                "ECE 455"
+            ],
+            [
+                "ECE 460"
+            ],
+            [
+                "PHYS 402"
+            ]
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Biophotonics",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "AE 468"
+        ],
+        "internallink": "ECE 468 (AE 468) - Optical Remote Sensing",
+        "name": "ECE 468",
+        "prereqs": [
+            [
+                "ECE 329",
+                "ECE 313"
+            ]
+        ],
+        "subfield": "Electromagnetics, Optics and Remote Sensing",
+        "title": "Optical Remote Sensing",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            [
+                "ECE 464"
+            ]
+        ],
+        "internallink": "ECE 469 - Power Electronics Laboratory",
+        "link": "https://wiki.engr.illinois.edu/x/LoDoD",
+        "name": "ECE 469",
+        "pagetitle": "ECE 469 - Power Electronics Laboratory",
+        "prereqs": [
+            [
+                "ECE 343"
+            ]
+        ],
+        "subfield": "Power and Energy Systems",
+        "title": "Power Electronics Laboratory",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "AE 482",
+            "ME 445"
+        ],
+        "internallink": "ECE 470 (AE 482, ME 445) - Introduction to Robotics",
+        "link": "https://wiki.engr.illinois.edu/x/04DoD",
+        "name": "ECE 470",
+        "pagetitle": "ECE 470 (AE 482, ME 445) - Introduction to Robotics",
+        "prereqs": [
+            [
+                "MATH 225"
+            ],
+            [
+                "MATH 286"
+            ],
+            [
+                "MATH 415"
+            ],
+            [
+                "MATH 418"
+            ]
+        ],
+        "subfield": "Computer Engineering: Artificial Intelligence",
+        "title": "Introduction to Robotics",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 472 - Biomedical Ultrasound Imaging",
+        "name": "ECE 472",
+        "prereqs": [
+            [
+                "ECE 329"
+            ]
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Biomedical Ultrasound Imaging",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "TAM 413"
+        ],
+        "internallink": "ECE 473 (TAM 413) - Fund of Engrg Acoustics",
+        "name": "ECE 473",
+        "prereqs": [
+            [
+                "MATH 285"
+            ],
+            [
+                "MATH 286"
+            ]
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Fund of Engrg Acoustics",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 476 - Power System Analysis",
+        "name": "ECE 476",
+        "prereqs": [
+            [
+                "ECE 330"
+            ]
+        ],
+        "subfield": "Power and Energy Systems",
+        "title": "Power System Analysis",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 478"
+        ],
+        "internallink": "CS 477 (ECE 478) - Formal Software Development Methods",
+        "name": "CS 477",
+        "prereqs": [
+            [
+                "CS 225",
+                "CS 373"
+            ],
+            [
+                "CS 225",
+                "MATH 414"
+            ]
+        ],
+        "subfield": "Computer Science: Theory",
+        "title": "Formal Software Development Methods",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "BIOE 480"
+        ],
+        "internallink": "ECE 480 (BIOE 480) - Magnetic Resonance Imaging",
+        "name": "ECE 480",
+        "prereqs": [
+            [
+                "ECE 310"
+            ]
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Magnetic Resonance Imaging",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 481 - Nanotechnology",
+        "name": "ECE 481",
+        "prereqs": [
+            [
+                "CHEM 442"
+            ],
+            [
+                "CHBE 457"
+            ],
+            [
+                "ECE 485"
+            ],
+            [
+                "MSE 401"
+            ],
+            [
+                "PHYS 460"
+            ]
+        ],
+        "subfield": "Microelectronics and Photonics",
+        "title": "Nanotechnology",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 482 - Digital IC Design",
+        "link": "https://wiki.engr.illinois.edu/x/LTafCw",
+        "name": "ECE 482",
+        "pagetitle": "ECE 482 - Digital IC Design",
+        "prereqs": [
+            [
+                "ECE 290",
+                "ECE 342"
+            ]
+        ],
+        "subfield": "Integrated Circuits and Systems",
+        "title": "Digital IC Design",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 483 - Analog IC Design",
+        "name": "ECE 483",
+        "prereqs": [
+            [
+                "ECE 342"
+            ]
+        ],
+        "subfield": "Integrated Circuits and Systems",
+        "title": "Analog IC Design",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 484 - Prin Adv Microelec Processing",
+        "name": "ECE 484",
+        "prereqs": [
+            [
+                "ECE 444"
+            ]
+        ],
+        "subfield": "Microelectronics and Photonics",
+        "title": "Prin Adv Microelec Processing",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ME 485"
+        ],
+        "internallink": "ECE 485 (ME 485) - MEMS Devices & Systems",
+        "name": "ECE 485",
+        "prereqs": [
+            []
+        ],
+        "subfield": "Microelectronics and Photonics",
+        "title": "MEMS Devices & Systems",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 486 - Control Systems",
+        "link": "https://wiki.engr.illinois.edu/x/OKGUCw",
+        "name": "ECE 486",
+        "pagetitle": "ECE 486 - Control Systems",
+        "prereqs": [
+            [
+                "ECE 210"
+            ]
+        ],
+        "subfield": "Control Systems",
+        "title": "Control Systems",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 487 - Intro to Quantum Electr for EEs",
+        "name": "ECE 487",
+        "prereqs": [
+            [
+                "PHYS 485"
+            ]
+        ],
+        "subfield": "Microelectronics and Photonics",
+        "title": "Intro to Quantum Electr for EEs",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 488 - Compound Semicond & Devices",
+        "name": "ECE 488",
+        "prereqs": [
+            [
+                "ECE 340",
+                "ECE 350"
+            ]
+        ],
+        "subfield": "Microelectronics and Photonics",
+        "title": "Compound Semicond & Devices",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CSE 441"
+        ],
+        "internallink": "ECE 490 (CSE 441) - Introduction to Optimization",
+        "link": "https://wiki.engr.illinois.edu/x/OqGUCw",
+        "name": "ECE 490",
+        "pagetitle": "ECE 490 (CSE 441) - Introduction to Optimization",
+        "prereqs": [
+            [
+                "ECE 190",
+                "MATH 415"
+            ]
+        ],
+        "subfield": "Control Systems",
+        "title": "Introduction to Optimization",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 491",
+            "MATH 450",
+            "CSE 401"
+        ],
+        "internallink": "CS 450 (ECE 491, MATH 450, CSE 401) - Numerical Analysis",
+        "link": "https://wiki.engr.illinois.edu/x/_Q-zCw",
+        "name": "CS 450",
+        "pagetitle": "CS 450 (ECE 491, MATH 450, CSE 401) - Numerical Analysis",
+        "prereqs": [
+            [
+                "CS 101",
+                "CS 357",
+                "MATH 285"
+            ],
+            [
+                "CS 125",
+                "CS 357",
+                "MATH 285"
+            ],
+            [
+                "CS 101",
+                "MATH 415",
+                "MATH 285"
+            ],
+            [
+                "CS 125",
+                "MATH 415",
+                "MATH 285"
+            ]
+        ],
+        "subfield": "Computer Science: Numerical Analysis and Scientific Computing",
+        "title": "Numerical Analysis",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "ECE 492",
+            "CSE 402"
+        ],
+        "internallink": "CS 420 (ECE 492, CSE 402) - Parallel Progrmg: Sci & Engrg",
+        "name": "CS 420",
+        "prereqs": [
+            [
+                "CS 225"
+            ]
+        ],
+        "subfield": "Computer Science: Parallel Programming",
+        "title": "Parallel Progrmg: Sci & Engrg",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "MATH 487"
+        ],
+        "internallink": "ECE 493 (MATH 487) - Advanced Engineering Math",
+        "name": "ECE 493",
+        "prereqs": [
+            [
+                "MATH 284"
+            ],
+            [
+                "MATH 285"
+            ],
+            [
+                "MATH 286"
+            ],
+            [
+                "MATH 441"
+            ]
+        ],
+        "subfield": "Biomedical Imaging, Bioengineering, and Acoustics",
+        "title": "Advanced Engineering Math",
+        "type": "ECE tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "ECE 495 - Photonic Device Laboratory",
+        "name": "ECE 495",
+        "prereqs": [
+            [
+                "ECE 487"
+            ]
+        ],
+        "subfield": "Microelectronics and Photonics",
+        "title": "Photonic Device Laboratory",
+        "type": "ECE tech elective / lab"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 373 - Theory of Computation",
+        "link": "https://wiki.engr.illinois.edu/x/LVGfCw",
+        "name": "CS 373",
+        "pagetitle": "CS 373 - Theory of Computation",
+        "prereqs": [
+            [
+                "CS 225",
+                "CS 173"
+            ],
+            [
+                "CS 225",
+                "MATH 213"
+            ]
+        ],
+        "subfield": "Computer Science: Theory",
+        "title": "Theory of Computation",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CSE 414",
+            "MATH 473"
+        ],
+        "internallink": "CS 473 (CSE 414, MATH 473) - Fundamental Algorithms",
+        "link": "https://wiki.engr.illinois.edu/x/EBDzCw",
+        "name": "CS 473",
+        "pagetitle": "CS 473 (CSE 414, MATH 473) - Fundamental Algorithms",
+        "prereqs": [
+            [
+                "CS 373"
+            ]
+        ],
+        "subfield": "Computer Science: Theory",
+        "title": "Fundamental Algorithms",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "PHYS 485 - Atomic Phys and Quantum Theory",
+        "name": "PHYS 485",
+        "prereqs": [
+            [
+                "MATH 286",
+                "PHYS 214"
+            ],
+            [
+                "MATH 285",
+                "PHYS 214"
+            ]
+        ],
+        "title": "Atomic Phys and Quantum Theory",
+        "type": "tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CHEM 102 & 103 - General Chemistry I + Lab",
+        "link": "https://wiki.engr.illinois.edu/x/AYnXCw",
+        "name": "CHEM 102",
+        "nocredit": [
+            "CHEM 202"
+        ],
+        "pagetitle": "CHEM 102 & 103 - General Chemistry I + Lab",
+        "prereqs": [
+            []
+        ],
+        "title": "General Chemistry I",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            [
+                "CHEM 102"
+            ]
+        ],
+        "internallink": "CHEM 103 - General Chemistry Lab I",
+        "name": "CHEM 103",
+        "prereqs": [
+            []
+        ],
+        "title": "General Chemistry Lab I",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "STAT 451"
+        ],
+        "internallink": "MATH 461 (STAT 451) - Probability Theory",
+        "link": "https://wiki.engr.illinois.edu/x/YQzzCw",
+        "name": "MATH 461",
+        "nocredit": [
+            "STAT 408",
+            "ECE 313"
+        ],
+        "pagetitle": "MATH 461 (STAT 451) - Probability Theory",
+        "prereqs": [
+            [
+                "MATH 241"
+            ]
+        ],
+        "title": "Probability Theory",
+        "type": "elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "MATH 463"
+        ],
+        "internallink": "STAT 400 (MATH 463) - Statistics and Probability I",
+        "name": "STAT 400",
+        "nocredit": [
+            "STAT 408"
+        ],
+        "prereqs": [
+            [
+                "MATH 241"
+            ]
+        ],
+        "title": "Statistics and Probability I",
+        "type": "elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "MATH 464"
+        ],
+        "internallink": "STAT 410 - Statistics and Probability II",
+        "link": "https://wiki.engr.illinois.edu/x/9ANMDQ",
+        "name": "STAT 410",
+        "nocredit": [
+            "STAT 409"
+        ],
+        "pagetitle": "STAT 410 - Statistics and Probability II",
+        "prereqs": [
+            [
+                "STAT 400"
+            ],
+            [
+                "STAT 100",
+                "MATH 461"
+            ]
+        ],
+        "title": "Statistics and Probability II",
+        "type": "required"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 242 - Programming Studio",
+        "name": "CS 242",
+        "prereqs": [
+            [
+                "CS 241"
+            ],
+            [
+                "ECE 391"
+            ]
+        ],
+        "subfield": "Computer Science: Programming and Software Engineering",
+        "title": "Programming Studio",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "MATH 357"
+        ],
+        "internallink": "CS 357 (MATH 357) - Numerical Methods I",
+        "link": "https://wiki.engr.illinois.edu/x/VIa1D",
+        "name": "CS 357",
+        "nocredit": [
+            "CS 450"
+        ],
+        "pagetitle": "CS 357 (MATH 357) - Numerical Methods I",
+        "prereqs": [
+            [
+                "ECE 190",
+                "MATH 241",
+                "MATH 415"
+            ],
+            [
+                "ECE 190",
+                "MATH 241",
+                "MATH 225"
+            ]
+        ],
+        "subfield": "Computer Science: Numerical Analysis and Scientific Computing",
+        "title": "Numerical Methods I",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 410 - Text Information Systems",
+        "name": "CS 410",
+        "prereqs": [
+            [
+                "CS 225"
+            ]
+        ],
+        "subfield": "Computer Science: Data Systems",
+        "title": "Text Information Systems",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 411 - Database Systems",
+        "link": "https://wiki.engr.illinois.edu/x/OoDoD",
+        "name": "CS 411",
+        "pagetitle": "CS 411 - Database Systems",
+        "prereqs": [
+            [
+                "CS 225"
+            ]
+        ],
+        "subfield": "Computer Science: Data Systems",
+        "title": "Database Systems",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 412 - Introduction to Data Mining",
+        "link": "https://wiki.engr.illinois.edu/x/-ARMDQ",
+        "name": "CS 412",
+        "pagetitle": "CS 412 - Introduction to Data Mining",
+        "prereqs": [
+            [
+                "CS 225"
+            ]
+        ],
+        "subfield": "Computer Science: Data Systems",
+        "title": "Introduction to Data Mining",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CS 413"
+        ],
+        "internallink": "MATH 413 (CS 413) - Intro to Combinatorics",
+        "name": "MATH 413",
+        "prereqs": [
+            [
+                "MATH 347"
+            ],
+            [
+                "MATH 348"
+            ]
+        ],
+        "title": "Intro to Combinatorics",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 414 - Multimedia Systems",
+        "name": "CS 414",
+        "prereqs": [
+            [
+                "CS 241"
+            ],
+            [
+                "ECE 391"
+            ]
+        ],
+        "subfield": "Computer Science: Systems",
+        "title": "Multimedia Systems",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CSE 427"
+        ],
+        "internallink": "CS 418 (CSE 427) - Interactive Computer Graphics",
+        "link": "https://wiki.engr.illinois.edu/x/9QXsCw",
+        "name": "CS 418",
+        "pagetitle": "CS 418 (CSE 427) - Interactive Computer Graphics",
+        "prereqs": [
+            [
+                "CS 225",
+                "MATH 241",
+                "MATH 415"
+            ],
+            [
+                "CS 225",
+                "MATH 241",
+                "MATH 225"
+            ]
+        ],
+        "subfield": "Computer Science: Graphics & HCI",
+        "title": "Interactive Computer Graphics",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 419 - Production Computer Graphics",
+        "link": "https://wiki.engr.illinois.edu/x/KAfiCw",
+        "name": "CS 419",
+        "pagetitle": "CS 419 - Production Computer Graphics",
+        "prereqs": [
+            [
+                "CS 418"
+            ]
+        ],
+        "subfield": "Computer Science: Graphics & HCI",
+        "title": "Production Computer Graphics",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 421 - Programming Languages & Compilers",
+        "link": "https://wiki.engr.illinois.edu/x/_AJuDQ",
+        "name": "CS 421",
+        "pagetitle": "CS 421 - Programming Languages & Compilers",
+        "prereqs": [
+            [
+                "CS 232",
+                "CS 373"
+            ]
+        ],
+        "subfield": "Computer Science: Programming Languages and Compilers",
+        "title": "Progrmg Languages & Compilers",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 422 - Programming Language Design",
+        "name": "CS 422",
+        "prereqs": [
+            [
+                "CS 421"
+            ]
+        ],
+        "subfield": "Computer Science: Programming Languages and Compilers",
+        "title": "Programming Language Design",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CSE 423"
+        ],
+        "internallink": "CS 423 (CSE 423) - Operating Systems Design",
+        "link": "https://wiki.engr.illinois.edu/x/kgVVDQ",
+        "name": "CS 423",
+        "pagetitle": "CS 423 (CSE 423) - Operating Systems Design",
+        "prereqs": [
+            [
+                "CS 241"
+            ],
+            [
+                "ECE 391"
+            ]
+        ],
+        "subfield": "Computer Science: Systems",
+        "title": "Operating Systems Design",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 424 - Real-Time Systems",
+        "link": "https://wiki.engr.illinois.edu/x/QYDiD",
+        "name": "CS 424",
+        "pagetitle": "CS 424 - Real-Time Systems",
+        "prereqs": [
+            [
+                "CS 431"
+            ]
+        ],
+        "subfield": "Computer Science: Systems",
+        "title": "Real-Time Systems",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 426 - Compiler Construction",
+        "link": "https://wiki.engr.illinois.edu/x/dRXiCw",
+        "name": "CS 426",
+        "pagetitle": "CS 426 - Compiler Construction",
+        "prereqs": [
+            [
+                "CS 421"
+            ]
+        ],
+        "subfield": "Computer Science: Programming Languages and Compilers",
+        "title": "Compiler Construction",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CSE 426"
+        ],
+        "internallink": "CS 427 (CSE 426) - Software Engineering I",
+        "name": "CS 427",
+        "prereqs": [
+            [
+                "CS 225",
+                "CS 373"
+            ]
+        ],
+        "subfield": "Computer Science: Programming and Software Engineering",
+        "title": "Software Engineering I",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CSE 429"
+        ],
+        "internallink": "CS 428 (CSE 429) - Software Engineering II",
+        "name": "CS 428",
+        "prereqs": [
+            [
+                "CS 427"
+            ]
+        ],
+        "subfield": "Computer Science: Programming and Software Engineering",
+        "title": "Software Engineering II",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 429 - Software Engineering II ACP",
+        "name": "CS 429",
+        "prereqs": [
+            [
+                "CS 427"
+            ]
+        ],
+        "subfield": "Computer Science: Programming and Software Engineering",
+        "title": "Software Engineering II ACP",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 431 - Embedded Systems",
+        "link": "https://wiki.engr.illinois.edu/x/P4DiD",
+        "name": "CS 431",
+        "pagetitle": "CS 431 - Embedded Systems",
+        "prereqs": [
+            [
+                "CS 241"
+            ],
+            [
+                "ECE 391"
+            ]
+        ],
+        "subfield": "Computer Science: Systems",
+        "title": "Embedded Systems",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            [
+                "ECE 391"
+            ]
+        ],
+        "crosslist": [
+            "CSE 422"
+        ],
+        "internallink": "CS 433 - Computer System Organization",
+        "link": "https://wiki.engr.illinois.edu/x/5x5eDQ",
+        "name": "CS 433",
+        "pagetitle": "CS 433 - Computer System Organization",
+        "prereqs": [
+            [
+                "CS 232"
+            ]
+        ],
+        "subfield": "Computer Engineering: Architecture / Digital Logic",
+        "title": "Computer System Organization",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 446 - Machine Learning",
+        "link": "https://wiki.engr.illinois.edu/x/pg9eDQ",
+        "name": "CS 446",
+        "pagetitle": "CS 446 - Machine Learning",
+        "prereqs": [
+            [
+                "CS 373",
+                "CS 440"
+            ]
+        ],
+        "subfield": "Computer Engineering: Artificial Intelligence",
+        "title": "Machine Learning",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 465 - User Interface Design",
+        "link": "https://wiki.engr.illinois.edu/x/iQrzCw",
+        "name": "CS 465",
+        "pagetitle": "CS 465 - User Interface Design",
+        "prereqs": [
+            [
+                "CS 225"
+            ]
+        ],
+        "subfield": "Computer Science: Graphics & HCI",
+        "title": "User Interface Design",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 467 - Social Visualization",
+        "name": "CS 467",
+        "prereqs": [
+            [
+                "CS 225"
+            ]
+        ],
+        "subfield": "Computer Science: Graphics & HCI",
+        "title": "Social Visualization",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CS 481"
+        ],
+        "internallink": "IE 410 (CS 481) - Stochastic Processes & Applic",
+        "name": "IE 410",
+        "prereqs": [
+            [
+                "IE 310"
+            ]
+        ],
+        "subfield": "Computer Science: Numerical Analysis and Scientific Computing",
+        "title": "Stochastic Processes & Applic",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "MATH 347 - Fundamental Mathematics",
+        "name": "MATH 347",
+        "nocredit": [
+            "MATH 348"
+        ],
+        "prereqs": [
+            [
+                "MATH 231"
+            ]
+        ],
+        "title": "Fundamental Mathematics",
+        "type": "tech elective"
+    },
+    {
+        "coreqs": [
+            [
+                "MATH 415"
+            ]
+        ],
+        "internallink": "IE 310 - Operations Research",
+        "name": "IE 310",
+        "nocredit": [
+            "CEE 201"
+        ],
+        "prereqs": [
+            []
+        ],
+        "title": "Operations Research",
+        "type": "tech elective"
+    }
+]

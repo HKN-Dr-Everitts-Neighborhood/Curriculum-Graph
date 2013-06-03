@@ -1,6 +1,7 @@
 #! python
 
 import json, os, sys
+from link_utils import make_internal_link
 
 # The point of this script is to take raw_data.json and links.json
 # and combine it into data.json.
@@ -34,8 +35,11 @@ for course in data:
             course['link'] = link_info['tinylink']
             course['pagetitle'] = link_info['pagetitle']
             break
+    course['internallink'] = make_internal_link(course)
 
 # write to data.json
 with open('../data.json', 'w') as outfile:
-    outfile.write(json.dumps(data))
+    outfile.write(
+        json.dumps(data, indent=4, sort_keys=True, separators=(',', ': '))
+    )
 
