@@ -8,9 +8,9 @@ with open('data/links.json', 'r') as f:
 
 links = json.loads(links_json)
 
-def find_link(course):
+def find_link(course_name):
     for link_info in links:
-        if course['name'] in link_info['pagetitle']:
+        if link_info['pagetitle'].startswith(course_name):
             return link_info
 
 def make_internal_link(course):

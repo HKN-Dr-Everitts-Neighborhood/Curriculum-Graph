@@ -73,10 +73,10 @@
         "coreqs": [
             []
         ],
-        "internallink": "What's the Difference between MATH 286 and MATH 415?",
-        "link": "https://wiki.engr.illinois.edu/x/wQlVDQ",
+        "internallink": "MATH 286 - Intro to Differential Eq Plus",
+        "link": "https://wiki.engr.illinois.edu/x/0COfCw",
         "name": "MATH 286",
-        "pagetitle": "What's the Difference between MATH 286 and MATH 415?",
+        "pagetitle": "MATH 286 - Intro to Differential Eq Plus",
         "prereqs": [
             [
                 "MATH 241"
@@ -107,10 +107,10 @@
                 "MATH 241"
             ]
         ],
-        "internallink": "Should I take PHYS 212 with PHYS 213?",
-        "link": "https://wiki.engr.illinois.edu/x/Vg5eDQ",
+        "internallink": "PHYS 212 - University Physics, Electricity and Magnetism",
+        "link": "https://wiki.engr.illinois.edu/x/ULrCCw",
         "name": "PHYS 212",
-        "pagetitle": "Should I take PHYS 212 with PHYS 213?",
+        "pagetitle": "PHYS 212 - University Physics, Electricity and Magnetism",
         "prereqs": [
             [
                 "PHYS 211"
@@ -125,10 +125,10 @@
                 "MATH 241"
             ]
         ],
-        "internallink": "Should I take PHYS 212 with PHYS 213?",
-        "link": "https://wiki.engr.illinois.edu/x/Vg5eDQ",
+        "internallink": "PHYS 213 - University Physics, Thermal Physics",
+        "link": "https://wiki.engr.illinois.edu/x/A4HoD",
         "name": "PHYS 213",
-        "pagetitle": "Should I take PHYS 212 with PHYS 213?",
+        "pagetitle": "PHYS 213 - University Physics, Thermal Physics",
         "prereqs": [
             [
                 "PHYS 211"
@@ -157,10 +157,10 @@
         "coreqs": [
             []
         ],
-        "internallink": "Should I take ECE 110 with ECE 190?",
-        "link": "https://wiki.engr.illinois.edu/x/FJtDDQ",
+        "internallink": "ECE 110 - Introduction to Electrical and Computer Engineering",
+        "link": "https://wiki.engr.illinois.edu/x/DJ_UCw",
         "name": "ECE 110",
-        "pagetitle": "Should I take ECE 110 with ECE 190?",
+        "pagetitle": "ECE 110 - Introduction to Electrical and Computer Engineering",
         "prereqs": [
             []
         ],
@@ -171,10 +171,10 @@
         "coreqs": [
             []
         ],
-        "internallink": "Should I take ECE 110 with ECE 190?",
-        "link": "https://wiki.engr.illinois.edu/x/FJtDDQ",
+        "internallink": "ECE 190 - Introduction to Computing Systems",
+        "link": "https://wiki.engr.illinois.edu/x/F5_UCw",
         "name": "ECE 190",
-        "pagetitle": "Should I take ECE 110 with ECE 190?",
+        "pagetitle": "ECE 190 - Introduction to Computing Systems",
         "prereqs": [
             [
                 "ECE 110"
@@ -189,10 +189,10 @@
                 "MATH 286"
             ]
         ],
-        "internallink": "Should I take ECE 190 with ECE 210?",
-        "link": "https://wiki.engr.illinois.edu/x/_45DDQ",
+        "internallink": "ECE 210 - Analog Signal Processing",
+        "link": "https://wiki.engr.illinois.edu/x/IZ_UCw",
         "name": "ECE 210",
-        "pagetitle": "Should I take ECE 190 with ECE 210?",
+        "pagetitle": "ECE 210 - Analog Signal Processing",
         "prereqs": [
             [
                 "ECE 110",
@@ -206,10 +206,10 @@
         "coreqs": [
             []
         ],
-        "internallink": "Should I take ECE 210 with ECE 290?",
-        "link": "https://wiki.engr.illinois.edu/x/-Y5DDQ",
+        "internallink": "ECE 290 - Computer Engineering I",
+        "link": "https://wiki.engr.illinois.edu/x/Kp_UCw",
         "name": "ECE 290",
-        "pagetitle": "Should I take ECE 210 with ECE 290?",
+        "pagetitle": "ECE 290 - Computer Engineering I",
         "prereqs": [
             [
                 "ECE 190"
@@ -240,10 +240,10 @@
                 "ECE 329"
             ]
         ],
-        "internallink": "Should I take ECE 340 with ECE 304?",
-        "link": "https://wiki.engr.illinois.edu/x/ww1VDQ",
+        "internallink": "ECE 340 - Solid State Electronic Devices",
+        "link": "https://wiki.engr.illinois.edu/x/LaGUCw",
         "name": "ECE 340",
-        "pagetitle": "Should I take ECE 340 with ECE 304?",
+        "pagetitle": "ECE 340 - Solid State Electronic Devices",
         "prereqs": [
             [
                 "PHYS 214"
@@ -270,10 +270,10 @@
         "coreqs": [
             []
         ],
-        "internallink": "Should I take ECE 340 with ECE 304?",
-        "link": "https://wiki.engr.illinois.edu/x/ww1VDQ",
+        "internallink": "ECE 304 - Photonic Devices",
+        "link": "https://wiki.engr.illinois.edu/x/pAdVDQ",
         "name": "ECE 304",
-        "pagetitle": "Should I take ECE 340 with ECE 304?",
+        "pagetitle": "ECE 304 - Photonic Devices",
         "prereqs": [
             [
                 "PHYS 214"
@@ -305,10 +305,10 @@
             []
         ],
         "eetype": "3of5",
-        "internallink": "Should I take ECE 311 with ECE 310?",
-        "link": "https://wiki.engr.illinois.edu/x/yAdVDQ",
+        "internallink": "ECE 310 - Digital Signal Processing",
+        "link": "https://wiki.engr.illinois.edu/x/XZ_UCw",
         "name": "ECE 310",
-        "pagetitle": "Should I take ECE 311 with ECE 310?",
+        "pagetitle": "ECE 310 - Digital Signal Processing",
         "prereqs": [
             [
                 "ECE 210"
@@ -323,10 +323,10 @@
                 "ECE 310"
             ]
         ],
-        "internallink": "Should I take ECE 311 with ECE 310?",
-        "link": "https://wiki.engr.illinois.edu/x/yAdVDQ",
+        "internallink": "ECE 311 - Digital Signal Processing Lab",
+        "link": "https://wiki.engr.illinois.edu/x/KxyfCw",
         "name": "ECE 311",
-        "pagetitle": "Should I take ECE 311 with ECE 310?",
+        "pagetitle": "ECE 311 - Digital Signal Processing Lab",
         "prereqs": [
             []
         ],
@@ -507,10 +507,10 @@
         "coreqs": [
             []
         ],
-        "internallink": "Should I take ECE 385 with ECE 391?",
-        "link": "https://wiki.engr.illinois.edu/x/XbA1DQ",
+        "internallink": "ECE 385 - Digital Systems Laboratory",
+        "link": "https://wiki.engr.illinois.edu/x/UZ_UCw",
         "name": "ECE 385",
-        "pagetitle": "Should I take ECE 385 with ECE 391?",
+        "pagetitle": "ECE 385 - Digital Systems Laboratory",
         "prereqs": [
             [
                 "ECE 290",
@@ -526,10 +526,10 @@
             []
         ],
         "eetype": "3of5 / lab",
-        "internallink": "Should I take CS 225 with ECE 391?",
-        "link": "https://wiki.engr.illinois.edu/x/0glVDQ",
+        "internallink": "ECE 391 - Computer Systems Engineering",
+        "link": "https://wiki.engr.illinois.edu/x/VZ_UCw",
         "name": "ECE 391",
-        "pagetitle": "Should I take CS 225 with ECE 391?",
+        "pagetitle": "ECE 391 - Computer Systems Engineering",
         "prereqs": [
             [
                 "ECE 290"
@@ -1154,10 +1154,10 @@
                 "ECE 342"
             ]
         ],
-        "internallink": "Should I take ECE 453 with ECE 459?",
-        "link": "https://wiki.engr.illinois.edu/x/yglVDQ",
+        "internallink": "ECE 453 - Wireless Communication Systems",
+        "link": "https://wiki.engr.illinois.edu/x/tBDzCw",
         "name": "ECE 453",
-        "pagetitle": "Should I take ECE 453 with ECE 459?",
+        "pagetitle": "ECE 453 - Wireless Communication Systems",
         "prereqs": [
             [
                 "ECE 329"
@@ -1255,10 +1255,10 @@
         "coreqs": [
             []
         ],
-        "internallink": "Should I take ECE 453 with ECE 459?",
-        "link": "https://wiki.engr.illinois.edu/x/yglVDQ",
+        "internallink": "ECE 459 - Communications Systems",
+        "link": "https://wiki.engr.illinois.edu/x/NqGUCw",
         "name": "ECE 459",
-        "pagetitle": "Should I take ECE 453 with ECE 459?",
+        "pagetitle": "ECE 459 - Communications Systems",
         "prereqs": [
             [
                 "ECE 313"
@@ -1291,10 +1291,10 @@
             []
         ],
         "eetype": "CS tech elective",
-        "internallink": "Should I take CS 225 with CS 173?",
-        "link": "https://wiki.engr.illinois.edu/x/pwNMDQ",
+        "internallink": "CS 173 - Discrete Structures",
+        "link": "https://wiki.engr.illinois.edu/x/GiafCw",
         "name": "CS 173",
-        "pagetitle": "Should I take CS 225 with CS 173?",
+        "pagetitle": "CS 173 - Discrete Structures",
         "prereqs": [
             [
                 "CS 101",
@@ -1354,10 +1354,10 @@
             []
         ],
         "eetype": "3of5",
-        "internallink": "Should I take CS 225 with CS 173?",
-        "link": "https://wiki.engr.illinois.edu/x/pwNMDQ",
+        "internallink": "CS 225 - Data Structures",
+        "link": "https://wiki.engr.illinois.edu/x/PaGUCw",
         "name": "CS 225",
-        "pagetitle": "Should I take CS 225 with CS 173?",
+        "pagetitle": "CS 225 - Data Structures",
         "prereqs": [
             [
                 "ECE 190",
@@ -1403,10 +1403,10 @@
         "coreqs": [
             []
         ],
-        "internallink": "What's the Difference between MATH 286 and MATH 415?",
-        "link": "https://wiki.engr.illinois.edu/x/wQlVDQ",
+        "internallink": "MATH 415 - Applied Linear Algebra",
+        "link": "https://wiki.engr.illinois.edu/x/rwNbD",
         "name": "MATH 415",
-        "pagetitle": "What's the Difference between MATH 286 and MATH 415?",
+        "pagetitle": "MATH 415 - Applied Linear Algebra",
         "prereqs": [
             [
                 "MATH 241"

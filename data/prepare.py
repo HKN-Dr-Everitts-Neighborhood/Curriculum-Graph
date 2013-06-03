@@ -17,7 +17,7 @@ data = json.loads(raw_data)
 # but crosslisted courses caused trouble - hence now we look through
 # all links looking for a match
 for course in data:
-    link_info = link_utils.find_link(course)
+    link_info = link_utils.find_link(course['name'])
     if link_info:
         course['link'] = link_info['tinylink']
         course['pagetitle'] = link_info['pagetitle']
