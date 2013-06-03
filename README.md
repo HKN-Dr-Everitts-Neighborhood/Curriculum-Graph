@@ -15,7 +15,12 @@ We want the graph to be interactive.  We want the code to be easy to develop, ma
 Requirements
 ============
 
-To run our code from the command line, install the latest version of nodejs.
+Code in this repo depends on:
+
+* nodejs for running the javascript on the commandline
+* python 2.7 for running the python scripts.  A little of the code is incompatible with python 3, but this could easily be ported (at the expense of python 2.7 compatibility).
+* graphviz tools (namely, dot)
+* various python packages.  Currently this is requests and beatifulsoup4.  It is recommended to install these via pip, though downloading them and installying with the included setup.py should work too (hint: 'python setup.py install --user' on EWS machines - to install globally you need sudo privileges).
 
 Design Decisions
 ================
