@@ -11,7 +11,11 @@ links = json.loads(links_json)
 def find_link(course_name):
     for link_info in links:
         if link_info['pagetitle'].startswith(course_name):
+            print "Matched", course_name, "to", repr(link_info['pagetitle'])
             return link_info
+
+    print "Failed to find page matching", course_name
+    return None
 
 def make_internal_link(course):
     '''takes a course, and returns the pagetitle of the course OR if there is
