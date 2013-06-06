@@ -21,6 +21,10 @@ def make_internal_link(course):
     '''takes a course, and returns the pagetitle of the course OR if there is
     no corresponding wiki page, creates a title for the course based on the
     encoded convention.
+
+    WARNING: Changing this code could change red links generated in the future;
+    if these are different that old red links that should point to the same
+    page, it will cause red links to not link up automatically as they should.
     '''
 
     if 'pagetitle' in course:
