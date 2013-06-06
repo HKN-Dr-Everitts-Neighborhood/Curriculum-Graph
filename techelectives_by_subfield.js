@@ -67,10 +67,7 @@ for (var j = 0; j < fields.length; j++)
   {
     var course = subfields[subfield][i];
 	  
-    if (course.link)
-      output += "* [" + course.name + " - " + course.title + "|" + course.internallink + "]";
-    else
-      output += "* " + course.name + " - " + course.title;
+    output += "* [" + course.name + " - " + course.title + "|" + course.internallink + "]";
     
     output += common.same_as(course) + "\n";
   }

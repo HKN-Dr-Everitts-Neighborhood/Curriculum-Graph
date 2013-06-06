@@ -1,8 +1,9 @@
 #! python
 
 import csv, sys, os, codecs, re, collections
-from data import link_utils
 from unidecode import unidecode
+
+import utils
 
 # this code is copied from the csv module documentation; it gives me a version that includes unicode support
 def unicode_csv_reader(unicode_csv_data, dialect=csv.excel, **kwargs):
@@ -116,14 +117,22 @@ def main():
                             # if there are two or more dashes, the last one
                             # separates the link. only one dash = no link.                                
                             course, link = a.rsplit('-', 1)
+                        else:
+                            course = a
+
+                        course_info = utils.find_course(
+                            course.split('-')[0].strip()
+                        )
+                        
+                        if course_info:
                             processed_answers.append(
                                 "* [" + course.strip() + "|" + 
-                                link_utils.find_link(
-                                    course.split('-')[0].strip()
-                                )['pagetitle'] + "]\n"
+                                course_info['internallink'] + "]\n"
                             )
                         else:
-                            processed_answers.append("* " + a +"\n")
+                            print "No info found for course", course
+                            processed_answers.append("* " + course.strip() + "\n")
+
                     answer = ''.join(processed_answers)
                 
                 # beginning section drawn as a table; rest dumped as h5's & text
