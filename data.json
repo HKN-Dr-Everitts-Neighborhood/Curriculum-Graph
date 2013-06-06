@@ -914,10 +914,10 @@
             []
         ],
         "crosslist": [
-            "ECE 435"
+            "CS 436"
         ],
-        "internallink": "CS 436 (ECE 435) - Computer Networking Laboratory",
-        "name": "CS 436",
+        "internallink": "ECE 435 (CS 436) - Computer Networking Laboratory",
+        "name": "ECE 435",
         "prereqs": [
             [
                 "CS 438"
@@ -2517,6 +2517,26 @@
         ],
         "subfield": "Computer Science: Graphics & HCI",
         "title": "Social Visualization",
+        "type": "CS tech elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 476 - Program Verification",
+        "name": "CS 476",
+        "prereqs": [
+            [
+                "CS 225",
+                "CS 373"
+            ],
+            [
+                "CS 225",
+                "MATH 414"
+            ]
+        ],
+        "subfield": "Computer Science: Theory",
+        "title": "Program Verification",
         "type": "CS tech elective"
     },
     {

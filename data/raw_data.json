@@ -406,10 +406,10 @@
     "subfield": "Power and Energy Systems"
   },
   {
-    "name": "CS 436",
+    "name": "ECE 435",
     "title": "Computer Networking Laboratory",
     "type": "ECE tech elective / lab",
-    "crosslist": ["ECE 435"],
+    "crosslist": ["CS 436"],
     "prereqs": [ ["CS 438"]],
     "coreqs": [ [] ],
     "subfield": "Computer Engineering: Networking"
@@ -1096,6 +1096,14 @@
     "prereqs": [["CS 225"]],
     "coreqs": [[]],
     "subfield": "Computer Science: Graphics & HCI"
+  },
+  {
+    "name": "CS 476",
+    "title": "Program Verification",
+    "type": "CS tech elective",
+    "subfield": "Computer Science: Theory",
+    "coreqs": [[]],
+    "prereqs": [["CS 225", "CS 373"], ["CS 225", "MATH 414"]]
   },
   {
     "name": "IE 410",
