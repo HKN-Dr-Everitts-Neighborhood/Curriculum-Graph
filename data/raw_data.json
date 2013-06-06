@@ -884,7 +884,8 @@
     "title": "General Chemistry Lab I",
     "type": "required",
     "prereqs": [[]],
-    "coreqs": [["CHEM 102"]]
+    "coreqs": [["CHEM 102"]],
+    "link_fallback": "CHEM 102"
   },
   {
     "name": "MATH 461",

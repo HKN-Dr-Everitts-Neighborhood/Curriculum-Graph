@@ -18,6 +18,14 @@ data = json.loads(raw_data)
 # all links looking for a match
 for course in data:
     link_info = link_utils.find_link(course['name'])
+    
+    if 'link_fallback' in course:
+        if not link_info:
+            print 'Searching', course['name'], 'for fallback link'
+            link_info = link_utils.find_link(course['link_fallback'])
+    
+        del course['link_fallback']
+    
     if link_info:
         course['link'] = link_info['tinylink']
         course['pagetitle'] = link_info['pagetitle']

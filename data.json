@@ -2027,8 +2027,10 @@
                 "CHEM 102"
             ]
         ],
-        "internallink": "CHEM 103 - General Chemistry Lab I",
+        "internallink": "CHEM 102 & 103 - General Chemistry I + Lab",
+        "link": "https://wiki.engr.illinois.edu/x/AYnXCw",
         "name": "CHEM 103",
+        "pagetitle": "CHEM 102 & 103 - General Chemistry I + Lab",
         "prereqs": [
             []
         ],
