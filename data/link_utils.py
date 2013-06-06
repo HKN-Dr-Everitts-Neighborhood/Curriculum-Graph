@@ -35,7 +35,7 @@ def make_internal_link(course):
         if ('crosslist' in course) else ''
     )
     should_be_named = (course['name'].replace(':', ',') +
-        crosslist_str + " - " + course['title'])
+        crosslist_str + " - " + course['title'].replace(':', ','))
 
     return should_be_named
 
