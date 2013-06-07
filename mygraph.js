@@ -204,7 +204,14 @@ function DAG() {
         str += start + " -> " + end;
 
         if (!html)
-          str += " [tooltip=\"" + start_name + " -> " + end_name + "\"]";
+          str += " [tooltip=\"" + start_name + " -> " + end_name + "\""
+          
+          // Hack: make sure MATH 415 -> CS 418 is ignored.
+          // This transitions is one of the few EE / CS connections,
+          // so it helps to keep CS and CE together.
+          if (end_name === "CS 418" && start_name === "MATH 415")
+            str += " constraint=\"false\"";
+          str += "]";
 
         str += ";\n";
       }
