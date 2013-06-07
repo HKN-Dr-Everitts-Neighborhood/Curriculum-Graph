@@ -2051,6 +2051,7 @@
             "STAT 408",
             "ECE 313"
         ],
+        "omit_from_graph": true,
         "pagetitle": "MATH 461 (STAT 451) - Probability Theory",
         "prereqs": [
             [

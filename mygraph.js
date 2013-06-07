@@ -250,37 +250,43 @@ var makegraph = function(json) {
   var index = {}; // keep a set of class names that we've seen in our json data.
 
   for (var i = 0; i < json.length; i++) {
-    index[json[i].name] = 1;
-    g.addNode(json[i]);
+    if (!json[i].omit_from_graph)
+    {
+      index[json[i].name] = 1;
+      g.addNode(json[i]);
+    }
   }
 
   for (var i = 0; i < json.length; i++)
   {
-    // handle prereqs
-    for (var j = 0; j < json[i].prereqs.length; j++)
+    if (!json[i].omit_from_graph)
     {
-      var p = json[i].prereqs[j];
-      for (var k = 0; k < p.length; k++)
+      // handle prereqs
+      for (var j = 0; j < json[i].prereqs.length; j++)
       {
-        // ignore prereqs not in our dataset
-        if (p[k] in index)
-            g.addPrereq(p[k], json[i].name);
-        else
-            console.error("Warning: ignoring prereq " + p[k]);
+        var p = json[i].prereqs[j];
+        for (var k = 0; k < p.length; k++)
+        {
+          // ignore prereqs not in our dataset
+          if (p[k] in index)
+              g.addPrereq(p[k], json[i].name);
+          else
+              console.error("Warning: ignoring prereq " + p[k]);
+        }
       }
-    }
-    
-    // handle coreqs
-    for (var j = 0; j < json[i].coreqs.length; j++)
-    {
-      var c = json[i].coreqs[j];
-      for (var k = 0; k < c.length; k++)
+      
+      // handle coreqs
+      for (var j = 0; j < json[i].coreqs.length; j++)
       {
-        // ignore coreqs not in our dataset
-        if (c[k] in index)
-            g.addCoreq(c[k], json[i].name);
-        else
-            console.error("Warning: ignoring coreq " + c[k]);
+        var c = json[i].coreqs[j];
+        for (var k = 0; k < c.length; k++)
+        {
+          // ignore coreqs not in our dataset
+          if (c[k] in index)
+              g.addCoreq(c[k], json[i].name);
+          else
+              console.error("Warning: ignoring coreq " + c[k]);
+        }
       }
     }
   }
