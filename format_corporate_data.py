@@ -95,7 +95,7 @@ def main():
                         answer = 'No response'
                 
                 # insert the headers in the proper places
-                if i == 1:
+                if i == 1: # 0 is the timestamp
                     output_list.append("h3. Basic Information:")
                 elif i == BEGIN_COURSES:
                     output_list.append("h3. Desired Courses:")
@@ -141,7 +141,7 @@ def main():
                     submit_time = datetime.strptime(answer, "%m/%d/%Y %H:%M:%S")
                     fall_or_spring = "Spring" if submit_time.month <= 6 else "Fall"
                     output_list.append(
-                        "Collected %s %s\n" % (fall_or_spring, submit_time.year)
+                        "*Collected %s %s*\n" % (fall_or_spring, submit_time.year)
                     )
                     output_list.append("{div:class=hidden}Timestamp: %s{div}\n" % answer)
                 elif i < BEGIN_COURSES:
