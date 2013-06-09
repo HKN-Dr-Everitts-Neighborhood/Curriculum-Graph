@@ -2,6 +2,7 @@
 
 import csv, sys, os, codecs, re, collections
 from unidecode import unidecode
+from datetime import datetime
 
 import utils
 
@@ -94,7 +95,7 @@ def main():
                         answer = 'No response'
                 
                 # insert the headers in the proper places
-                if i == 0:
+                if i == 1:
                     output_list.append("h3. Basic Information:")
                 elif i == BEGIN_COURSES:
                     output_list.append("h3. Desired Courses:")
@@ -137,6 +138,11 @@ def main():
                 
                 # beginning section drawn as a table; rest dumped as h5's & text
                 if question == "Timestamp":
+                    submit_time = datetime.strptime(answer, "%m/%d/%Y %H:%M:%S")
+                    fall_or_spring = "Spring" if submit_time.month <= 6 else "Fall"
+                    output_list.append(
+                        "Collected %s %s\n" % (fall_or_spring, submit_time.year)
+                    )
                     output_list.append("{div:class=hidden}Timestamp: %s{div}\n" % answer)
                 elif i < BEGIN_COURSES:
                     output_list.append("|*%s*:| %s |" % (question, answer))
