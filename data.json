@@ -2536,7 +2536,7 @@
                 "MATH 414"
             ]
         ],
-        "subfield": "Computer Science: Theory",
+        "subfield": "Computer Science: Programming and Software Engineering",
         "title": "Program Verification",
         "type": "CS tech elective"
     },
@@ -2590,6 +2590,86 @@
             []
         ],
         "title": "Operations Research",
+        "type": "tech elective"
+    },
+    {
+        "coreqs": [
+            [
+                "CS 232"
+            ]
+        ],
+        "internallink": "CS 241 - System Programming",
+        "name": "CS 241",
+        "nocredit": [
+            "ECE 391"
+        ],
+        "omit_from_graph": true,
+        "prereqs": [
+            [
+                "CS 225"
+            ]
+        ],
+        "subfield": "Computer Science: Systems",
+        "title": "System Programming",
+        "type": "elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 466 - Introduction to Bioinformatics",
+        "name": "CS 466",
+        "prereqs": [
+            [
+                "CS 225"
+            ]
+        ],
+        "title": "Introduction to Bioinformatics",
+        "type": "elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "internallink": "CS 457 - Numerical Methods II",
+        "name": "CS 457",
+        "nocredit": [
+            "CS 450"
+        ],
+        "omit_from_graph": true,
+        "prereqs": [
+            [
+                "CS 357"
+            ]
+        ],
+        "subfield": "Computer Science: Numerical Analysis and Scientific Computing",
+        "title": "Numerical Methods II",
+        "type": "elective"
+    },
+    {
+        "coreqs": [
+            []
+        ],
+        "crosslist": [
+            "CS 482"
+        ],
+        "internallink": "IE 413 (CS 482) - Simulation",
+        "name": "IE 413",
+        "prereqs": [
+            [
+                "CS 101",
+                "IE 310"
+            ],
+            [
+                "ECE 190",
+                "IE 310"
+            ],
+            [
+                "CS 125",
+                "IE 310"
+            ]
+        ],
+        "title": "Simulation",
         "type": "tech elective"
     }
 ]

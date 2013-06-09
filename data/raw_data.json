@@ -1102,7 +1102,7 @@
     "name": "CS 476",
     "title": "Program Verification",
     "type": "CS tech elective",
-    "subfield": "Computer Science: Theory",
+    "subfield": "Computer Science: Programming and Software Engineering",
     "coreqs": [[]],
     "prereqs": [["CS 225", "CS 373"], ["CS 225", "MATH 414"]]
   },
@@ -1130,5 +1130,41 @@
     "nocredit": ["CEE 201"],
     "prereqs": [[]],
     "coreqs": [["MATH 415"]]
+  },
+  {
+    "name": "CS 241",
+    "title": "System Programming",
+    "type": "elective",
+    "nocredit": ["ECE 391"],
+    "prereqs": [["CS 225"]],
+    "coreqs": [["CS 232"]],
+    "subfield": "Computer Science: Systems",
+    "omit_from_graph": true
+  },
+  {
+    "name": "CS 466",
+    "title": "Introduction to Bioinformatics",
+    "type": "elective",
+    "prereqs": [["CS 225"]],
+    "coreqs": [[]]
+  },
+  {
+    "name": "CS 457",
+    "title": "Numerical Methods II",
+    "nocredit": ["CS 450"],
+    "prereqs": [["CS 357"]],
+    "coreqs": [[]],
+    "type": "elective",
+    "subfield": "Computer Science: Numerical Analysis and Scientific Computing",
+    "omit_from_graph": true
+  },
+  {
+    "name": "IE 413",
+    "title": "Simulation",
+    "crosslist": ["CS 482"],
+    "type": "tech elective",
+    "prereqs": [["CS 101", "IE 310"], ["ECE 190", "IE 310"], ["CS 125", "IE 310"]],
+    "coreqs": [[]]
+
   }
 ]
