@@ -43,10 +43,12 @@ When I came back to this project in december, I found the following library had 
 
 *But the dagre layout sucked.*
 
-Our original intention was for everything to run in a browser, but we've since found that command line tools such as graphviz can do a much better job (although generating static graphs) - hence our use of nodejs; the svg format allows many features, such as tooltips and links, which allow for a decent amount of interactivity, though not quite as much as we had hoped for.  It may be possible to build more interactivity on top of the pre-layed-out graphiz generated svg, by manipulating this svg from javascript.
+Our original intention was for everything to run in a browser, but we've since found that command line tools such as graphviz can do a much better job (although generating static graphs).  The project moved to nodejs so that we wouldn't have to port the code, and additionally, if for some reason we want to use dagre, our code is still compatible - this could make sense if we have an application that renders small graphs on the fly.
+
+The svg format allows many features, such as tooltips and links, which allow for a decent amount of interactivity, though not quite as much as we had hoped for.  It may be possible to build more interactivity on top of the pre-layed-out graphiz generated svg, by manipulating this svg from javascript.
 
 Building & Deploying
-===================
+======================
 
 Running build.sh rebuilds everything (it's not smart about dependencies - it does extra work, as compared to a makefile).  Note that the scrapers need to be run first, if you want to update the input data - see the readme in the data_scrapers directory.
 
