@@ -1,9 +1,10 @@
 #! python
 
 import json
+from utils import relative_to
 
 # read in links.json
-with open('data/links.json', 'r') as f:
+with open(relative_to(__file__, './links.json'), 'r') as f:
     links_json = f.read()
 
 links = json.loads(links_json)

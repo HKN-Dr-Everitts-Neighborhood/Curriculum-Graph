@@ -1,7 +1,7 @@
 
 import json
 
-with open('data.json', 'r') as data_file:
+with open('../data.json', 'r') as data_file:
     data = json.loads(data_file.read())
     course_map = dict((x['name'],x) for x in data)
     for course in data:

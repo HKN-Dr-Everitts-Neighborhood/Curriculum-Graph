@@ -2,12 +2,13 @@
 
 import json
 import link_utils
+from utils import relative_to
 
 # The point of this script is to take raw_data.json and links.json
 # and combine it into data.json.
 
 # read in raw_data.json
-with open('./data/raw_data.json', 'r') as f:
+with open(relative_to(__file__, './raw_data.json'), 'r') as f:
     raw_data = f.read()
 
 data = json.loads(raw_data)
@@ -32,7 +33,7 @@ for course in data:
     course['internallink'] = link_utils.make_internal_link(course)
 
 # write to data.json
-with open('data.json', 'w') as outfile:
+with open(relative_to(__file__, '../data.json'), 'w') as outfile:
     outfile.write(
         json.dumps(data, indent=4, sort_keys=True, separators=(',', ': '))
     )
