@@ -35,13 +35,13 @@ def main():
         return -1
 
     # make sure output directory exists
-    if os.path.exists('survey_output'):
-        if not os.path.isdir('survey_output'):
-            print 'Error: \'survey_output\' exists, but isn\'t a directory'
+    if os.path.exists('output'):
+        if not os.path.isdir('output'):
+            print 'Error: \'output\' exists, but isn\'t a directory'
             return -2
     else:
         # if output folder doesn't exist, make it
-        os.makedirs('survey_output')
+        os.makedirs('output')
 
     # filename is the command line parameter
     csv_filename = sys.argv[1]
@@ -66,7 +66,7 @@ def main():
     for (i, response) in enumerate(data):
   
         # generate 1 file per response.
-        output_filename = 'survey_output/response%d.txt' % (i)
+        output_filename = 'output/response%d.txt' % (i)
         
         # note we're using an ASCII output file; this works because we're
         # forcing everything written to it to be translated to ascii via
@@ -208,7 +208,7 @@ def build_index(questions, answers):
             )
         output_lines.append("\n")
     
-    with open('survey_output/index.txt', 'w') as index:
+    with open('output/index.txt', 'w') as index:
         index.write(''.join(output_lines))
 
 if __name__ == '__main__':
