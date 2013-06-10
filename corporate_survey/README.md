@@ -11,4 +11,4 @@ The format_corporate_survey.py script takes one argument: the path to the csv fi
 Dependencies
 ==============
 
-format_corporate_data.py requires python 2.7 (3.0+ may work, but hasn't been tested; it requires the unidecode package, which can easily be installed with pip.
+format_corporate_data.py requires python 2.7 (3.0+ may work, but hasn't been tested); it requires the unidecode package, which can easily be installed with pip.
