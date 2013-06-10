@@ -3,9 +3,9 @@ curriculum_graph
 
 This subfolder holds all the code necessary for
 
-# The Curriculum Graphs on the wiki, including the EE, CompE, and subfield graphs
-# The code to generate tech electives by subfields
-# Code for an interactive, javascript/html version of the graph.
+* The Curriculum Graphs on the wiki, including the EE, CompE, and subfield graphs
+* The code to generate tech electives by subfields
+* Code for an interactive, javascript/html version of the graph.
 
 Design Goals
 ============
@@ -41,7 +41,7 @@ A bunch of d3 tutorials can be found at https://github.com/mbostock/d3/wiki/Tuto
 
 When I came back to this project in december, I found the following library had popped up: https://github.com/cpettitt/dagre.  The in-browser version is built on it.
 
-* But the dagre layout sucked.*
+*But the dagre layout sucked.*
 
 Our original intention was for everything to run in a browser, but we've since found that command line tools such as graphviz can do a much better job (although generating static graphs) - hence our use of nodejs; the svg format allows many features, such as tooltips and links, which allow for a decent amount of interactivity, though not quite as much as we had hoped for.  It may be possible to build more interactivity on top of the pre-layed-out graphiz generated svg, by manipulating this svg from javascript.
 
