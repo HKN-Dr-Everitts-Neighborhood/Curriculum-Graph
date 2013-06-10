@@ -82,9 +82,9 @@ var make_svg_from_dot = function(dot, name, dot_folder, svg_folder)
 };
 
 // function to create and save graphs
-var make_svg = function(g, options, coloring, name)
+var make_svg = function(g, options, coloring, name, constraints)
 {
-  var dot = g.make_dot(false, true, options, coloring);
+  var dot = g.make_dot(false, true, options, coloring, constraints);
 
   // main graphs: svg is final output, so it goes in the output folder.  dot
   // goes in the temp folder.
@@ -106,13 +106,18 @@ var make_subfield_svg = function(g, options, coloring, subfield)
 
 var options = {"rankdir": "LR", "ranksep": "1", "size": "\"8.5,13\""};
 
+// Picks out the math 415 to CS 418 transition.  Many graphs we don't
+// want to be constrained by it - it seems to be the last straw that
+// finally fucks up the whole layout.
+var constrained = {"MATH 415 -> CS 418": false} 
+
 // parse the data
 var g = mygraph.makegraph(data.json);
 
-make_svg(g, options, coloring_func, "thegraph-small");
-make_svg(g, {"rankdir": "LR", "ranksep": "1"}, coloring_func, "thegraph");
-make_svg(g, options, ee_coloring, "thegraph-ee");
-make_svg(g, options, compe_coloring, "thegraph-compe");
+make_svg(g, options, coloring_func, "thegraph-small", constrained);
+make_svg(g, {"rankdir": "LR", "ranksep": "1"}, coloring_func, "thegraph", constrained);
+make_svg(g, options, ee_coloring, "thegraph-ee", constrained);
+make_svg(g, options, compe_coloring, "thegraph-compe", constrained);
 
 // subfield graphs
 // first, identify all subfields.

@@ -117,10 +117,10 @@ function DAG() {
       }
     }
     
-    return this.make_dot_of_classes(html, include_root, options, color_func, classes_to_include);
+    return this.make_dot_of_classes(html, include_root, options, color_func, classes_to_include, {});
   }
   
-  this.make_dot = function(html, include_root, options, color_func)
+  this.make_dot = function(html, include_root, options, color_func, constraints)
   {
     // include all nodes
     var classes_to_include = {};
@@ -128,10 +128,10 @@ function DAG() {
       classes_to_include[this.nodes[n].name] = 1;
     }
     
-    return this.make_dot_of_classes(html, include_root, options, color_func, classes_to_include);
+    return this.make_dot_of_classes(html, include_root, options, color_func, classes_to_include, constraints);
   }
   
-  this.make_dot_of_classes = function(html, include_root, options, color_func, classes_to_include)
+  this.make_dot_of_classes = function(html, include_root, options, color_func, classes_to_include, constraints)
   {
     nodes_from_name = {};
 
@@ -204,14 +204,16 @@ function DAG() {
         str += start + " -> " + end;
 
         if (!html)
+        {
           str += " [tooltip=\"" + start_name + " -> " + end_name + "\""
           
-          // Hack: make sure MATH 415 -> CS 418 is ignored.
-          // This transitions is one of the few EE / CS connections,
-          // so it helps to keep CS and CE together.
-          if (end_name === "CS 418" && start_name === "MATH 415")
-            str += " constraint=\"false\"";
+          // Used to tell dot layout engine to ignore certain edges.
+          transition_name = start_name + " -> " + end_name
+          if (transition_name in constraints)
+            str += " constraint=\""+ constraints[transition_name]+"\"";
+          
           str += "]";
+        }
 
         str += ";\n";
       }
@@ -231,7 +233,14 @@ function DAG() {
         if (html)
           str += " [label=\"is a coreq for\"];\n";
         else
+        {
           str += " [style=dotted, tooltip=\"" + start_name + " -> " + end_name + "\"];\n";
+
+          // Used to tell dot layout engine to ignore certain edges.
+          transition_name = start_name + " -> " + end_name
+          if (transition_name in constraints)
+            str += " constraint=\""+ constraints[transition_name]+"\"";
+        }
       }
     }
     
