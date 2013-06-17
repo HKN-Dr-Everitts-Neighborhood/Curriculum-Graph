@@ -103,7 +103,8 @@ By using a convention to generate the "add page here" internal links to nonexist
 * For courses without course reviews, the name, title, and crosslist of the course currently determines the title generated for internallink.  If any of these change in data/raw_data.json, the "add page here" links generated with the old data won't automatically link up with a page added at a new link, or vice versa.
 * People who ignore the "add page here" links and title the page themselves might not follow the conventions, in which the "add page here" links won't automatically link up to the new page.
 
-The first 2 of these 3 issues can be avoided by running data_scrapers/links.py to get up-to-date links data.
+The first 2 of these 4 issues can be avoided by running data_scrapers/links.py to get up-to-date links data.
+What absolutely cannot happen though, is that if a link works at some point, it won't later break (because of a page being renamed).  Well, at least, other than that page being removed from the wiki altogether.
 
 Building & Deploying
 ===================
