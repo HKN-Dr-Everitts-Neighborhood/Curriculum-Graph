@@ -57,4 +57,4 @@ Deploying new graphs takes several steps:
 * copying thegraph-ee.svg to the EE Curriculum Graph page on the wiki (between {html} tags in wiki markup)
 * copying thegraph-compe.svg to the CompE curriculum Graph page on the wiki (between {html} tags in wiki markup)
 * uploading thegraph.svg as an attachment to the Curriculum Graph page
-* copying tech_electives_by_subfields.txt to the ECE & CS Tech Electives by Subfields page on the wiki - this should replace most the wiki markup of the page (currently, all).
+* copying tech_electives_by_subfields.txt to the ECE & CS Tech Electives by Subfields page on the wiki - this should replace most the wiki markup of the page, though be careful to not erase the introductory material.
