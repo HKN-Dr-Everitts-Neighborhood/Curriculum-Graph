@@ -101,6 +101,7 @@ By using a convention to generate the "add page here" internal links to nonexist
 * If links data is out of date (new course reviews since the data was last gathered), then some classes will be missing their "link" field.
 * If pagetitles for existing pages change, then the internal links generated with these pagetitles will be brown "add page here" links instead of pointing to existing pages.  However, link should still work.
 * For courses without course reviews, the name, title, and crosslist of the course currently determines the title generated for internallink.  If any of these change in data/raw_data.json, the "add page here" links generated with the old data won't automatically link up with a page added at a new link, or vice versa.
+* People who ignore the "add page here" links and title the page themselves might not follow the conventions, in which the "add page here" links won't automatically link up to the new page.
 
 The first 2 of these 3 issues can be avoided by running data_scrapers/links.py to get up-to-date links data.
 
