@@ -1,4 +1,4 @@
-Curriculum-Graph
+Wiki-Tools
 ================
 
 This Repo contains the code for several projects for the DEN wiki.  It started off as just being used for the Curriculum Graph, but as the dataset for that project has found many uses, it has evolved to also support tech electives by subfields, as well as the less-related data processing for Engineering Industry Prospectus (aka the corporate survey).  As this repo provides a good set of data & tools for anything that is going to interact with the wiki, it is expected that more subprojects will be added to it in the future.
