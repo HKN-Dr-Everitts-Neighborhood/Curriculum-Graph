@@ -7,7 +7,7 @@ def post_process_file(file_path):
     with open(file_path, 'r') as file:
         with open(file_path + ".pp", 'w') as output:
             for line in file:
-                line = line.replace("<title>", "<text>")
+                line = line.replace("<title>", "<text style='display:none'>")
                 line = line.replace("</title>", "</text>")
                 output.write(line)
     os.remove(file_path)
