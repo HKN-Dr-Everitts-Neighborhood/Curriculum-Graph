@@ -5,7 +5,8 @@ This subfolder holds all the code necessary for
 
 * The Curriculum Graphs on the wiki, including the EE, CompE, and subfield graphs
 * The code to generate tech electives by subfields
-* Code for an interactive, javascript/html version of the graph.
+* Code for an interactive, javascript/html version of the graph. (not used)
+* Code for interactivity support on the wiki
 
 Design Goals
 ============
@@ -58,3 +59,16 @@ Deploying new graphs takes several steps:
 * copying thegraph-compe.svg to the CompE curriculum Graph page on the wiki (between {html} tags in wiki markup)
 * uploading thegraph.svg as an attachment to the Curriculum Graph page
 * copying tech_electives_by_subfields.txt to the ECE & CS Tech Electives by Subfields page on the wiki - this should replace most the wiki markup of the page, though be careful to not erase the introductory material.
+
+See below section for info about changing / deploying the interactivity support.
+
+Interactivity
+==============
+
+Interactivity can be added to the graph via several files:
+* graph_interactivity.js is the most important one - it does all the cool effects.
+* make_html.sh is used by the build script to generate an html preview of the graph.
+* graph.css: the little bit of non-inline css used for interactivity; these rules should be added to the wiki style sheet so they can be used everywhere.
+* graph.html: the html preview of the graph, for local development.
+
+Note that the interactivity requires jQuery to work.
