@@ -1,6 +1,8 @@
 
 var InteractiveGraph = (function() {
 
+    var $ = jQuery;
+
     // map node id's (A) to list of ids ([B1, B2, ...]) of nodes where
     // B1 -> A, B2 -> A, ... are all edges in our svg
     var backtrack_map = {};
@@ -13,7 +15,7 @@ var InteractiveGraph = (function() {
        - i.e. you can use them to figure out which edges and nodes are
        associated. */
     var get_id = function(node) {
-        return $(node).find("title")[0].textContent;
+        return $(node).find("text")[0].textContent;
     };
 
     var setup = function() {

@@ -9,6 +9,8 @@
 # all from data.json
 node ./make_dot.js
 
+python post_process_svg.py
+
 # makes output/tech_electives_by_subfields.txt from temp/*.svg files and data.json
 node ./techelectives_by_subfield.js
 
