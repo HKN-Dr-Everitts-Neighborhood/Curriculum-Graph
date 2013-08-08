@@ -1,6 +1,13 @@
-echo '<html><head><link rel="stylesheet" type="text/css" href="../graph.css" /></head><body>' > output/graph.html
-cat output/thegraph-small.svg >> output/graph.html
+#! bash
 
-echo '<script type="text/javascript" src="../jquery-1.10.2.min.js"></script>' >> output/graph.html
-echo '<script type="text/javascript" src="../graph_interactivity.js"></script>' >> output/graph.html
-echo "</body></html>" >> output/graph.html
+echo '<html><head><style type="text/css">' > output/graph.html
+cat graph.css >> output/graph.html
+echo '</style></head><body>' >> output/graph.html
+cat output/thegraph.svg                 >> output/graph.html
+
+echo '<script type="text/javascript">'  >> output/graph.html
+cat jquery-1.10.2.min.js             >> output/graph.html
+echo '</script>'                        >> output/graph.html
+echo '<script type="text/javascript">'  >> output/graph.html
+cat graph_interactivity.js           >> output/graph.html
+echo "</script></body></html>"                   >> output/graph.html
