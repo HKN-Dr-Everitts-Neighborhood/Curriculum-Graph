@@ -67,8 +67,16 @@ Interactivity
 
 Interactivity can be added to the graph via several files:
 * graph_interactivity.js is the most important one - it does all the cool effects.
-* make_html.sh is used by the build script to generate an html preview of the graph.
-* graph.css: the little bit of non-inline css used for interactivity; these rules should be added to the wiki style sheet so they can be used everywhere.
+* make_html.sh is used by the build script to generate an html preview of the graph. Warning: it doesn't emulate the environment of the wiki very well.
+* graph.css: the little bit of non-inline css used for interactivity.
 * graph.html: the html preview of the graph, for local development.
 
 Note that the interactivity requires jQuery to work.
+
+*Deploying*
+
+The javascript is attached to the wiki on the Curriculum Graph page (both graph_interactivity.js and jquery-1.10.2.min.js).
+Both scripts are included on the Graph Interactivity page, so adding interactivity to a graph is as simple as
+adding {include:Graph Interactivity} to that page.
+
+The css rules in graph.css should be added to the wiki style sheet so they can be used everywhere.
