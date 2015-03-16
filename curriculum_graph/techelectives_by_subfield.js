@@ -61,7 +61,7 @@ for (var j = 0; j < fields.length; j++)
 {
   var subfield = fields[j];
   output += "{anchor:" + to_anchor(subfield) + "}\n";
-  output += "h3. " + subfield + "\n";
+  output += "h3. " + subfield + "\n\n";
   subfields[subfield].sort(function(course1, course2){return course1.name > course2.name;});
   for (var i = 0; i < subfields[subfield].length; i++)
   {
@@ -71,13 +71,21 @@ for (var j = 0; j < fields.length; j++)
     
     output += common.same_as(course) + "\n";
   }
-  output += "\n{html}"
+  output += "\n"
+
+  // ideally we'd include the svg directly in the html, but since the
+  // cites wiki doesn't support the {html} macro we can't do this anymore.
+  // so instead include it as a data uri - keeps us from having to upload
+  // 1 image per subfield.
+  // TODO (david): ideally this would not base64 encode svg, as that actually
+  // increases pagesize ~33% and doesn't compress as well as raw svg.
+  output += "{img:src=data&colon;image&sol;svg+xml;base64&comma;"
   var graph = fs.readFileSync(
     "temp/" + common.subfield_to_file_name(subfield) + ".svg"
   );
-  output += graph;
-  output += "{html}"
-  output += "\n\n";
+  output += new Buffer(graph).toString('base64');
+  output += "}"
+  output += "\n\n\n";
 }
 
 fs.writeFileSync("output/tech_electives_by_subfields.txt", output);
